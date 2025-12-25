@@ -123,11 +123,43 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 
 ---
 
-## État Actuel (2025-12-23)
-- **Architecture complète** : 9 sous-dossiers dans `core/`.
-- **62 règles narratives** couvrant : Logic, Structure, Casting, Style, Worldbuilding, Tension, POV, Theme, Arc.
-- **Aucun workflow créé** : Le `core/` est maintenant suffisamment riche pour servir de base aux workflows.
-- **Prochaine étape** : Créer le premier workflow de test pour valider l'utilisation des règles.
+## Structure de `audit/` (11 protocoles de test)
+
+### `audit/forensic/` (2 protocoles)
+| Fichier | Résumé |
+|---|---|
+| `consistency_check.md` | Vérification des noms, lieux, âges, chronologie. |
+| `worldbuilding_clash.md` | Détection des violations du lore établi. |
+
+### `audit/narrative/` (3 protocoles)
+| Fichier | Résumé |
+|---|---|
+| `cliche_blacklist.md` | Liste noire des métaphores usées et situations prévisibles. |
+| `pacing_anomalies.md` | Détection des ventres mous et précipitations. |
+| `plot_hole_tracker.md` | Traçage des trous d'intrigue et Fusils non tirés. |
+
+### `audit/style/` (3 protocoles)
+| Fichier | Résumé |
+|---|---|
+| `filter_word_ruthless.md` | Traque des verbes de perception (Deep POV). |
+| `dialogue_health_report.md` | Diagnostic de santé des dialogues. |
+| `prose_rhythm_analysis.md` | Analyse de la musicalité du texte. |
+
+### `audit/psychology/` (3 protocoles)
+| Fichier | Résumé |
+|---|---|
+| `mru_sequencing_validation.md` | Validation des séquences Motivation-Réaction. |
+| `melodrama_detector.md` | Détection des réactions disproportionnées. |
+| `subtext_density_test.md` | Test de densité du sous-texte. |
+
+---
+
+## État Actuel (2025-12-25)
+- **Architecture complète** : 9 sous-dossiers dans `core/`, 4 sous-dossiers dans `audit/`.
+- **62 règles narratives** dans `core/` couvrant : Logic, Structure, Casting, Style, Worldbuilding, Tension, POV, Theme, Arc.
+- **11 protocoles de test** dans `audit/` couvrant : Forensic, Narrative, Style, Psychology.
+- **Aucun workflow créé** : Finir les règles/protocoles avant de créer les workflows.
+- **Prochaine étape** : Interroger des LLMs externes pour compléter/raffiner les protocoles d'audit.
 
 ---
 *Note : Ce fichier sert d'ancre pour les sessions futures afin de maintenir la cohérence et d'éviter la dérive du projet.*
