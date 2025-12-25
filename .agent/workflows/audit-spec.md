@@ -23,7 +23,7 @@ L'objectif est d'identifier les faiblesses et de proposer des améliorations.
 
 **Exemples :**
 - `/audit-spec 01` → Audite `01_spec/01_intention.md`
-- `/audit-spec 06` → Audite `01_spec/06_cast.md`
+- `/audit-spec 06` → Audite `01_spec/06_characters.md`
 
 ---
 

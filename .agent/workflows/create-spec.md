@@ -38,7 +38,7 @@ L'agent identifie l'étape demandée parmi :
 | 03 | Genre | `01_spec/03_genre.md` |
 | 04 | Prémisse | `01_spec/04_premise.md` |
 | 05 | Conflit | `01_spec/05_conflict.md` |
-| 06 | Personnages | `01_spec/06_cast.md` |
+| 06 | Personnages | `01_spec/06_characters.md` |
 | 07 | Univers | `01_spec/07_world.md` |
 | 08 | Structure | `01_spec/08_structure.md` |
 | 09 | Voix | `01_spec/09_voice.md` |
