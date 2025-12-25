@@ -5,7 +5,7 @@ description: Créer un brouillon de spécification pour une étape donnée (01-0
 # Workflow : Créer une Spec (Brouillon)
 
 Ce workflow guide la création d'un **brouillon de spécification** pour une étape du processus narratif.
-L'audit sera effectué par un workflow séparé.
+Il utilise un mapping strict pour garantir qu'aucune règle du framework n'est oubliée.
 
 ---
 
@@ -22,96 +22,60 @@ L'audit sera effectué par un workflow séparé.
 ```
 
 **Exemples :**
-- `/create-spec 01` → Crée `01_spec/01_intention.md`
-- `/create-spec 06` → Crée `01_spec/06_cast.md`
+- `/create-spec 01` → Lance l'interview pour l'Intention.
 
 ---
 
 ## Étapes du Workflow
 
-### 1. Identification de l'étape
-L'agent identifie l'étape demandée parmi :
-| # | Nom | Fichier de sortie |
-|---|---|---|
-| 01 | Intention | `01_spec/01_intention.md` |
-| 02 | Thème | `01_spec/02_theme.md` |
-| 03 | Genre | `01_spec/03_genre.md` |
-| 04 | Prémisse | `01_spec/04_premise.md` |
-| 05 | Conflit | `01_spec/05_conflict.md` |
-| 06 | Personnages | `01_spec/06_characters.md` |
-| 07 | Univers | `01_spec/07_world.md` |
-| 08 | Structure | `01_spec/08_structure.md` |
-| 09 | Voix | `01_spec/09_voice.md` |
+### 1. Identification et Chargement
+L'agent identifie l'étape demandée et charge **immédiatement** les règles spécifiées dans le [Mapping de Création](#mapping-de-création) ci-dessous.
 
-### 2. Imprégnation (Chargement des règles)
-L'agent charge AUTOMATIQUEMENT :
-1. La règle méthodologique : `00_core/spec/[XX]_[nom].md`
-2. L'index de croisement : `00_core/spec/00_cross_reference_index.md` (section correspondante)
-3. Toutes les règles Core listées dans l'index pour cette étape
-
-**L'utilisateur n'a PAS besoin de citer les fichiers — l'agent les connaît.**
+### 2. Imprégnation (Lecture Obligatoire)
+L'agent DOIT confirmer la lecture des fichiers du mapping avant de poser la première question.
+**Contrainte d'immersion :** L'agent commence son interview par un résumé ultra-concis des 3 principes fondamentaux qu'il vient de lire pour prouver son imprégnation.
 
 ### 3. Interview Guidée
 L'agent pose des questions ciblées basées sur les règles chargées.
-
-**Objectif :** Extraire la vision de l'auteur en respectant les points à définir listés dans la règle méthodologique.
-
-**Approche :**
-- Une question à la fois
-- Questions ouvertes pour laisser l'auteur s'exprimer
-- Relances si la réponse est trop vague
-- Aucune question ne doit rester sans réponse
+- Une question à la fois.
+- Questions ouvertes pour explorer la vision.
+- Relances si la réponse est trop vague.
 
 ### 4. Synthèse du Brouillon
-L'agent rédige le fichier de spec dans `01_spec/` en structurant les réponses selon le format attendu.
-
-**Format du fichier de sortie :**
-```markdown
-# [Nom de l'étape] — [Titre du projet]
-
-## Question Fondamentale
-[Question de l'étape]
-
-## Contenu
-[Synthèse des réponses de l'auteur]
-
-## Points Clés
-- Point 1
-- Point 2
-- ...
-
-## Notes de Session
-- Date : [date]
-- Statut : BROUILLON (non audité)
-```
-
-### 5. Confirmation
-L'agent demande à l'utilisateur de valider le brouillon avant de sauvegarder.
-
-Si validé → Sauvegarde dans `01_spec/[XX]_[nom].md`
-Si rejeté → Retour à l'étape 3 (Interview)
+L'agent rédige le fichier dans `01_spec/[numéro]_[nom].md`.
+Format :
+- Titre
+- Question Fondamentale
+- Synthèse par section
+- Notes de session (Date, Statut: BROUILLON)
 
 ---
 
-## Règles de Comportement de l'Agent
+## Mapping de Création
 
-1. **Ne jamais inventer** : Ne pas ajouter d'éléments non mentionnés par l'auteur.
-2. **Ne jamais valider à la place de l'auteur** : Toujours demander confirmation.
-3. **Signaler les anti-patterns** : Si une réponse contredit une règle core, le signaler gentiment.
-4. **Respecter l'ordre** : Ne pas permettre de créer l'étape 6 si les étapes 1-5 n'existent pas.
-5. **Un brouillon, pas un chef-d'œuvre** : L'objectif est d'extraire les idées, pas de les perfectionner (l'audit viendra après).
+Pour chaque étape, l'agent **DOIT** lire les fichiers listés ci-dessous :
+
+| Étape | Règle Mère (spec/) | Règles Satellites (00_core/) |
+|---|---|---|
+| **01 Intention** | `01_intention.md` | `theme/controlling_idea.md`, `theme/thematic_question.md` |
+| **02 Thème** | `02_theme.md` | `theme/controlling_idea.md`, `theme/thematic_question.md`, `theme/motif_recurrence.md`, `theme/objective_correlative.md`, `theme/symbolic_action.md` |
+| **03 Genre** | `03_genre.md` | `structure/three_act_structure.md`, `structure/save_the_cat.md`, `structure/heros_journey.md` |
+| **04 Prémisse** | `04_premise.md` | `structure/in_medias_res.md`, `tension/promise_delay_deliver.md` |
+| **05 Conflit** | `05_conflict.md` | `structure/yes_but_no_and.md`, `structure/try_fail_cycles.md`, `tension/dramatic_irony.md`, `tension/ticking_clock.md`, `tension/micro_tension.md`, `tension/mystery_box.md`, `tension/foreshadowing.md`, `tension/red_herring.md`, `logic/pixar_coincidence_rule.md` |
+| **06 Personnages**| `06_characters.md`| `casting/*.md`, `arc/*.md`, `style/voice_contrast.md` |
+| **07 Univers** | `07_universe.md` | `worldbuilding/lived_in_universe.md`, `logic/sanderson_law_1.md`, `logic/sanderson_law_2.md`, `style/sensory_anchoring.md` |
+| **08 Structure** | `08_structure.md` | `structure/*.md`, `logic/chekhovs_gun.md`, `logic/rule_of_three.md`, `tension/promise_delay_deliver.md` |
+| **09 Voix** | `09_voice.md` | `pov/*.md`, `style/*.md`, `logic/show_dont_tell.md`, `logic/rule_2_plus_2.md` |
+
+---
+
+## Règles de Comportement
+
+1. **Ne jamais inventer** : Les idées viennent de l'auteur.
+2. **Respecter la terminologie** : Utiliser les termes techniques des règles (ex: *Ghost*, *Want vs Need*, *MRU*).
+3. **Signaler les manques** : Si l'auteur oublie un point clé d'une règle, poser la question.
 
 ---
 
 ## Après ce Workflow
-Le fichier créé est un **BROUILLON**.
-Pour le valider et l'améliorer, exécuter le workflow d'audit (à créer) :
-```
-/audit-spec [numéro_étape]
-```
-
----
-
-## Référence
-- Index de croisement : `00_core/spec/00_cross_reference_index.md`
-- Règles méthodologiques : `00_core/spec/01_intention.md` → `00_core/spec/09_voice.md`
+Le fichier créé est un **BROUILLON**. Exécuter `/02-audit-spec [numéro]` pour validation.
