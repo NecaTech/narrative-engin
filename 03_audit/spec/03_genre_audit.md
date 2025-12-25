@@ -1,7 +1,25 @@
-# Protocole : Genre Audit (Audit IMPITOYABLE — Étape 3/9)
+# Protocole : Genre Audit (Audit IMPITOYABLE — Étape 03/10)
+
+## Connexions Systèmes
+- **Règle Mère** : `00_core/spec/03_genre.md`
+- **Règles Satellites** : `reader_experience/genre_expectation.md`
+- **Dépendance Amont** : Étapes 01-02 VALIDÉES
+- **Bloque** : Étapes 04-10
 
 ## Philosophie
-Choisir un genre n'est pas cocher une case. C'est signer un contrat avec le lecteur. Si tu ne connais pas les termes du contrat, tu vas le trahir.
+Choisir un genre n'est pas cocher une case. C'est **signer un contrat** avec le lecteur. Si tu ne connais pas les termes du contrat, tu vas le trahir.
+
+---
+
+## Grille de Scoring (/10)
+
+| Critère | Score | Description |
+|---|---|---|
+| **Conventions** | /2 | 5 conventions du genre identifiées |
+| **Subversion** | /2 | Au moins 1 convention subvertie intentionnellement |
+| **Culture Genre** | /2 | 3 références récentes consommées |
+| **Lecteur Cible** | /2 | Persona lecteur définie précisément |
+| **Promesse Émotionnelle** | /2 | Émotion du genre claire |
 
 ---
 
@@ -10,10 +28,10 @@ Choisir un genre n'est pas cocher une case. C'est signer un contrat avec le lect
 ### Question Assassine
 > *"Cite les 5 conventions INCONTOURNABLES de ton genre. Pas les clichés — les ATTENTES que le lecteur a en ouvrant ce type de livre. Si tu n'en connais que 2, tu n'as pas fait tes devoirs."*
 
-### Critères d'Échec
-- ❌ Moins de 5 conventions citées
-- ❌ Confusion entre convention et cliché
-- ❌ Conventions génériques applicables à tout genre
+### Critères d'Échec (Anti-patterns)
+- ❌ **Ignorant** : Moins de 5 conventions citées
+- ❌ **Confondu** : Confusion entre convention et cliché
+- ❌ **Générique** : Conventions applicables à tout genre
 
 ---
 
@@ -22,10 +40,10 @@ Choisir un genre n'est pas cocher une case. C'est signer un contrat avec le lect
 ### Question Assassine
 > *"Quelle convention de ton genre vas-tu BRISER intentionnellement ? Et pourquoi ? Si tu ne subvertis rien, tu fais du générique. Si tu subvertis tout, tu perds ton lecteur."*
 
-### Critères d'Échec
-- ❌ Aucune subversion prévue (suiveur aveugle)
-- ❌ Subversion de TOUTES les conventions (chaos)
-- ❌ Subversion sans raison thématique
+### Critères d'Échec (Anti-patterns)
+- ❌ **Mouton** : Aucune subversion prévue
+- ❌ **Anarchiste** : Subversion de TOUTES les conventions
+- ❌ **Gratuit** : Subversion sans raison thématique
 
 ---
 
@@ -34,10 +52,10 @@ Choisir un genre n'est pas cocher une case. C'est signer un contrat avec le lect
 ### Question Assassine
 > *"Cite 3 œuvres de référence dans ton genre que tu as LUES/VUES récemment (moins de 2 ans). Si tu écris dans un genre sans le consommer, tu es un imposteur."*
 
-### Critères d'Échec
-- ❌ Références datées de plus de 10 ans uniquement
-- ❌ Moins de 3 références
-- ❌ Références qui ne sont pas vraiment dans le genre annoncé
+### Critères d'Échec (Anti-patterns)
+- ❌ **Nostalgique** : Références datées de plus de 10 ans uniquement
+- ❌ **Paresseux** : Moins de 3 références
+- ❌ **Hors-Sujet** : Références pas vraiment dans le genre annoncé
 
 ---
 
@@ -46,10 +64,10 @@ Choisir un genre n'est pas cocher une case. C'est signer un contrat avec le lect
 ### Question Assassine
 > *"Tu es devant un libraire. Il te demande : 'C'est quoi comme genre ?' Tu as 10 secondes. Pas de 'c'est un mélange de...' — UN genre principal."*
 
-### Critères d'Échec
-- ❌ Réponse de plus de 3 mots
-- ❌ Utilisation de "mélange", "hybride", "transcende les genres"
-- ❌ Incapacité à trancher
+### Critères d'Échec (Anti-patterns)
+- ❌ **Verbeux** : Réponse de plus de 3 mots
+- ❌ **Indécis** : "mélange", "hybride", "transcende les genres"
+- ❌ **Paralysé** : Incapacité à trancher
 
 ---
 
@@ -58,10 +76,10 @@ Choisir un genre n'est pas cocher une case. C'est signer un contrat avec le lect
 ### Question Assassine
 > *"Décris TON lecteur idéal. Âge, profession, derniers livres lus, pourquoi il achèterait le tien. Si tu réponds 'tout le monde', tu ne connais personne."*
 
-### Critères d'Échec
-- ❌ "Tout le monde peut aimer"
-- ❌ Description vague ("les amateurs de bons livres")
-- ❌ Aucune connaissance des habitudes de lecture du public cible
+### Critères d'Échec (Anti-patterns)
+- ❌ **Universel** : "Tout le monde peut aimer"
+- ❌ **Vague** : "Les amateurs de bons livres"
+- ❌ **Déconnecté** : Aucune connaissance du public cible
 
 ---
 
@@ -70,23 +88,20 @@ Choisir un genre n'est pas cocher une case. C'est signer un contrat avec le lect
 ### Question Assassine
 > *"Quelle ÉMOTION ton genre PROMET au lecteur ? (Thriller = tension, Romance = catharsis amoureuse, Horreur = peur). Si ton récit ne délivre pas cette émotion, tu trahis le contrat."*
 
-### Critères d'Échec
-- ❌ L'émotion promise ne correspond pas au genre
-- ❌ Confusion entre émotion thématique et émotion de genre
-- ❌ Aucune conscience de la promesse implicite
+### Critères d'Échec (Anti-patterns)
+- ❌ **Mauvais Match** : L'émotion promise ne correspond pas au genre
+- ❌ **Confusion** : Émotion thématique ≠ émotion de genre
+- ❌ **Inconscient** : Aucune conscience de la promesse implicite
 
 ---
 
 ## Verdict
 
-### VALIDÉ
-L'auteur maîtrise son genre, connaît ses conventions, et sait ce qu'il subvertit.
-
-### À APPROFONDIR
-Connaissance partielle. Lecture/visionnage supplémentaire recommandé.
-
-### REJETÉ
-L'auteur ne connaît pas son genre. Recherche obligatoire avant de continuer.
+| Score | Verdict | Action |
+|---|---|---|
+| **8-10** | ✅ VALIDÉ | Passage à l'étape 04 (Prémisse) |
+| **5-7** | ⚠️ À APPROFONDIR | Lecture/visionnage supplémentaire |
+| **0-4** | ❌ REJETÉ | Recherche genre obligatoire |
 
 ---
 

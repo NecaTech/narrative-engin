@@ -1,7 +1,25 @@
-# Protocole : Personnages Audit (Audit IMPITOYABLE — Étape 6/9)
+# Protocole : Personnages Audit (Audit IMPITOYABLE — Étape 06/10)
+
+## Connexions Systèmes
+- **Règle Mère** : `00_core/spec/06_characters.md`
+- **Règles Satellites** : `casting/ghost_wound_lie.md`, `casting/want_vs_need.md`, `casting/antagonist_mirror.md`, `arc/positive_arc.md`, `arc/negative_arc.md`, `arc/flat_arc.md`
+- **Dépendance Amont** : Étapes 01-05 VALIDÉES
+- **Bloque** : Étapes 07-10
 
 ## Philosophie
-Un personnage n'est pas une fiche. C'est un être humain avec des contradictions. Si tu peux le résumer en 3 mots, il est mort.
+Un personnage n'est pas une fiche. C'est un être humain avec des **contradictions**. Si tu peux le résumer en 3 mots, il est mort.
+
+---
+
+## Grille de Scoring (/10)
+
+| Critère | Score | Description |
+|---|---|---|
+| **Want vs Need** | /2 | Distinction claire entre désir et besoin |
+| **Ghost/Wound/Lie** | /2 | Trauma, blessure et mensonge définis |
+| **Voix Distincte** | /2 | Répliques identifiables sans nom |
+| **Antagoniste Miroir** | /2 | Opposition thématique avec le héros |
+| **Arc Mesurable** | /2 | Transformation visible du début à la fin |
 
 ---
 
@@ -10,10 +28,10 @@ Un personnage n'est pas une fiche. C'est un être humain avec des contradictions
 ### Question Assassine
 > *"Qu'est-ce que ton protagoniste VEUT (désir conscient) ? Qu'est-ce dont il a BESOIN (vérité qu'il ignore) ? Si c'est la même chose, il n'a pas d'arc."*
 
-### Critères d'Échec
-- ❌ Want = Need
-- ❌ Need trop évident dès le départ
-- ❌ Le protagoniste obtient son Want sans découvrir son Need
+### Critères d'Échec (Anti-patterns)
+- ❌ **Fusion** : Want = Need
+- ❌ **Évident** : Need trop clair dès le départ
+- ❌ **Incomplet** : Le protagoniste obtient Want sans découvrir Need
 
 ---
 
@@ -22,10 +40,10 @@ Un personnage n'est pas une fiche. C'est un être humain avec des contradictions
 ### Question Assassine
 > *"Quel TRAUMA passé (Ghost), quelle BLESSURE en résulte (Wound), et quel MENSONGE ton protagoniste se raconte à cause de ça (Lie) ? Si tu n'as pas ces 3, tu as une silhouette, pas un personnage."*
 
-### Critères d'Échec
-- ❌ Ghost générique ("enfance difficile")
-- ❌ Wound sans lien avec le Ghost
-- ❌ Lie non identifié
+### Critères d'Échec (Anti-patterns)
+- ❌ **Générique** : Ghost = "enfance difficile"
+- ❌ **Déconnecté** : Wound sans lien avec le Ghost
+- ❌ **Absent** : Lie non identifié
 
 ---
 
@@ -34,10 +52,10 @@ Un personnage n'est pas une fiche. C'est un être humain avec des contradictions
 ### Question Assassine
 > *"Si tu dînais avec ton protagoniste, de quoi parleriez-vous ? Quels sujets éviterait-il ? Lesquels l'enflammeraient ? Si tu ne sais pas, tu ne le connais pas."*
 
-### Critères d'Échec
-- ❌ Réponses superficielles
-- ❌ L'auteur ne peut pas imaginer une conversation
-- ❌ Le personnage n'a pas de vie hors de l'intrigue
+### Critères d'Échec (Anti-patterns)
+- ❌ **Superficiel** : Réponses de surface
+- ❌ **Muet** : L'auteur ne peut pas imaginer une conversation
+- ❌ **Fonctionnel** : Le personnage n'existe que pour l'intrigue
 
 ---
 
@@ -46,10 +64,10 @@ Un personnage n'est pas une fiche. C'est un être humain avec des contradictions
 ### Question Assassine
 > *"Écris une réplique de dialogue pour CHAQUE personnage majeur sur le même sujet (ex: 'il pleut'). Si les répliques sont interchangeables, tes personnages n'ont pas de voix."*
 
-### Critères d'Échec
-- ❌ Répliques similaires
-- ❌ Différences superficielles (vocabulaire mais pas de personnalité)
-- ❌ Incapacité à écrire des répliques distinctes
+### Critères d'Échec (Anti-patterns)
+- ❌ **Interchangeable** : Répliques similaires
+- ❌ **Cosmétique** : Différences superficielles (vocabulaire sans personnalité)
+- ❌ **Bloqué** : Incapacité à écrire des répliques distinctes
 
 ---
 
@@ -58,10 +76,10 @@ Un personnage n'est pas une fiche. C'est un être humain avec des contradictions
 ### Question Assassine
 > *"En quoi ton antagoniste est-il une VERSION SOMBRE de ton protagoniste ? Quelles valeurs partagent-ils ? Si l'antagoniste n'est pas un miroir, le conflit manque de profondeur."*
 
-### Critères d'Échec
-- ❌ Antagoniste sans lien thématique avec le protagoniste
-- ❌ Aucune valeur partagée
-- ❌ L'antagoniste est un obstacle, pas un personnage
+### Critères d'Échec (Anti-patterns)
+- ❌ **Déconnecté** : Antagoniste sans lien thématique
+- ❌ **Opposé Simple** : Aucune valeur partagée
+- ❌ **Obstacle** : L'antagoniste est une force, pas un personnage
 
 ---
 
@@ -70,10 +88,10 @@ Un personnage n'est pas une fiche. C'est un être humain avec des contradictions
 ### Question Assassine
 > *"Ligne du temps : où est ton protagoniste émotionnellement au début, au milieu, à la fin ? Si les 3 points sont trop proches, il n'y a pas de transformation."*
 
-### Critères d'Échec
-- ❌ Protagoniste statique
-- ❌ Transformation soudaine sans progression
-- ❌ Arc visible uniquement dans la dernière scène
+### Critères d'Échec (Anti-patterns)
+- ❌ **Statique** : Protagoniste identique début/fin
+- ❌ **Soudain** : Transformation sans progression
+- ❌ **Tardif** : Arc visible uniquement à la dernière scène
 
 ---
 
@@ -82,23 +100,20 @@ Un personnage n'est pas une fiche. C'est un être humain avec des contradictions
 ### Question Assassine
 > *"Pour chaque personnage secondaire : quelle est sa FONCTION narrative ? S'il n'en a pas, coupe-le. S'il en a, pourquoi ne peut-elle pas être remplie par un autre personnage ?"*
 
-### Critères d'Échec
-- ❌ Personnages redondants
-- ❌ Personnages sans fonction
-- ❌ Fusion possible sans perte
+### Critères d'Échec (Anti-patterns)
+- ❌ **Redondant** : Personnages qui font doublon
+- ❌ **Inutile** : Personnages sans fonction
+- ❌ **Fusionnable** : Deux personnages peuvent être combinés sans perte
 
 ---
 
 ## Verdict
 
-### VALIDÉ
-Personnages avec Want/Need, Ghost/Wound/Lie, voix distinctes et arcs mesurables.
-
-### À APPROFONDIR
-Les bases sont là mais certains personnages manquent de profondeur.
-
-### REJETÉ
-Personnages superficiels ou interchangeables. Reconception du casting.
+| Score | Verdict | Action |
+|---|---|---|
+| **8-10** | ✅ VALIDÉ | Passage à l'étape 07 (Univers) |
+| **5-7** | ⚠️ À APPROFONDIR | Renforcer Ghost/Wound/Lie ou voix |
+| **0-4** | ❌ REJETÉ | Reconception du casting |
 
 ---
 
