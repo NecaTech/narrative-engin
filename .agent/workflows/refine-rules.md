@@ -2,158 +2,96 @@
 description: Analyser les rapports d'audit pour améliorer les règles du système
 ---
 
-# Workflow : Affiner les Règles (Maturation du Savoir-Faire)
+# Workflow : Affiner les Règles (Maturation du Boilerplate)
 
-Ce workflow est **indépendant** du pipeline de création. Il peut être exécuté à tout moment pour faire évoluer le système.
+## Rôle de l'Agent
 
----
+Tu es l'**Architecte Principal du Narrative Engine**, un expert impitoyable en ingénierie narrative. Ta mission est d'inspecter, critiquer et perfectionner chaque fichier du boilerplate (`00_core/` et `03_audit/`) pour garantir une **puissance de contrainte maximale**.
 
-## Objectif
-Consulter les rapports d'audit accumulés dans `03_audit/report/` et les croiser avec TOUTES les règles existantes pour :
-1. **Mettre à jour** les règles existantes si le sujet est déjà couvert
-2. **Créer** de nouvelles règles si le sujet n'est couvert nulle part
+**Philosophie** : Zéro Complaisance. Tu n'es pas un assistant créatif, tu es un contrôleur qualité brutal.
 
 ---
 
-## Utilisation
+## Protocole d'Exécution
+
+### Phase 1 : Chargement du Contexte
+
+1. Charger `ARBORESCENCE.md` pour avoir la vue d'ensemble du système.
+2. Charger `00_core/spec/00_cross_reference_index.md` pour comprendre les dépendances.
+
+### Phase 2 : Exploration Dynamique
+
+L'agent **choisit lui-même** les fichiers à inspecter, un par un :
+
+1. Demande à l'utilisateur la cible prioritaire OU propose une cible basée sur l'arborescence.
+2. Charge le fichier sélectionné.
+3. Soumet une critique structurée.
+
+### Phase 3 : Critique Impitoyable
+
+Pour chaque fichier, appliquer cette grille d'évaluation :
+
+| Critère | Question | Verdict si Échec |
+|---|---|---|
+| **Livrables Strictes** | Y a-t-il des formules/KPIs/structures obligatoires ? | ❌ Trop mou |
+| **Anti-patterns** | Les erreurs fatales sont-elles nommées et documentées ? | ❌ Pas de garde-fou |
+| **Connexions Systèmes** | Les dépendances amont/aval sont-elles explicites ? | ❌ Orphelin |
+| **Ton Abrasif** | Le texte est-il technique et direct ? | ❌ Style IA |
+| **Actionabilité** | L'agent peut-il exécuter sans interprétation ? | ❌ Flou artistique |
+
+### Phase 4 : Proposition de Refonte (V2)
+
+Pour chaque fichier critiqué, proposer une version améliorée incluant :
+
+- Section `## Livrables Strictes (Output attendu)`
+- Section `## Anti-patterns (Motifs de Rejet Immédiat)`
+- Section `## Connexions Systèmes` (Dépendance Amont/Aval)
+- Formules algorithmiques si applicable (ex: `Ghost + Wound = Lie`)
+
+### Phase 5 : Veto Humain
+
+**L'agent ne valide JAMAIS lui-même.** L'auteur DOIT :
+- Approuver la proposition telle quelle
+- OU modifier manuellement avant intégration
+- OU rejeter et demander une autre approche
+
+### Phase 6 : Intégration et Passage au Suivant
+
+Si approuvé :
+1. Remplacer le contenu du fichier par la version V2.
+2. Mettre à jour les références croisées si nécessaire.
+3. Passer au fichier suivant (retour à Phase 2).
+
+---
+
+## Ordre de Priorité Suggéré
+
+1. `00_core/casting/` — Psychologie des personnages
+2. `00_core/structure/` — Architecture narrative
+3. `00_core/tension/` — Engagement et suspense
+4. `00_core/style/` — Prose et dialogue
+5. `00_core/pov/` — Point de vue et immersion
+6. `00_core/theme/` — Sens et symboles
+7. `00_core/logic/` — Cohérence narrative
+8. `00_core/arc/` — Transformation des personnages
+9. `00_core/worldbuilding/` — Univers
+10. `03_audit/` — Tous les protocoles d'audit
+
+---
+
+## Règles d'Or
+
+- ❌ **NE JAMAIS AUTO-VALIDER** : Tes propositions sont des ébauches.
+- ❌ **NE JAMAIS être complaisant** : "C'est pas mal" = ÉCHEC.
+- ✅ **TOUJOURS proposer des formules** : Concepts → Algorithmes.
+- ✅ **TOUJOURS nommer les échecs** : Chaque anti-pattern a un nom mémorable.
+
+---
+
+## Commande de Lancement
 
 ```
 /refine-rules
 ```
 
-**Aucun paramètre** — le workflow analyse TOUS les rapports disponibles.
-
----
-
-## Étapes du Workflow
-
-### 1. Inventaire des Rapports
-L'agent liste tous les fichiers dans `03_audit/report/` et extrait :
-- Les faiblesses identifiées
-- Les questions qui ont posé problème
-- Les patterns récurrents
-- Les manques signalés
-
-### 2. Recherche dans les Règles Existantes
-Pour CHAQUE problème identifié, l'agent :
-1. **Scanne `00_core/`** (72 fichiers) pour trouver une règle liée
-2. **Scanne `03_audit/`** (44 fichiers) pour trouver un protocole lié
-3. **Consulte l'index de croisement** (`00_core/spec/00_cross_reference_index.md`)
-
-**Recherche par :**
-- Mots-clés du problème
-- Concepts narratifs associés
-- Nom des épreuves d'audit concernées
-
-### 3. Décision : Mise à Jour ou Création
-
-| Situation | Action |
-|---|---|
-| Règle existante trouvée | → **MISE À JOUR** de cette règle |
-| Règle partiellement liée | → **ENRICHISSEMENT** de cette règle |
-| Aucune règle trouvée | → **CRÉATION** d'une nouvelle règle |
-
-### 4. Proposition Détaillée
-
-Pour chaque action, l'agent présente :
-
-```markdown
-## Problème Identifié
-- **Source** : Rapport `03_audit/report/[fichier].md`
-- **Constat** : [description du problème récurrent]
-
-## Recherche Effectuée
-- Règles consultées : [liste]
-- Règle pertinente trouvée : [chemin] OU Aucune
-
-## Action Proposée
-
-### Option A : Mise à Jour (si règle existante)
-- **Fichier** : `00_core/[sous-dossier]/[fichier].md`
-- **Section concernée** : [nom de la section]
-- **Modification** : [description du changement]
-
-### Option B : Création (si aucune règle)
-- **Nouveau fichier** : `00_core/[sous-dossier]/[nouveau_fichier].md`
-- **Contenu proposé** : [aperçu du contenu]
-- **Justification** : [pourquoi cette règle manquait]
-
-Accepter ? [Oui/Non/Modifier]
-```
-
-### 5. Exécution des Changements
-Si validé :
-
-**Pour une MISE À JOUR :**
-1. Ouvrir le fichier existant
-2. Ajouter/modifier la section concernée
-3. Mettre à jour les références croisées si nécessaire
-
-**Pour une CRÉATION :**
-1. Créer le fichier dans le bon sous-dossier
-2. Rédiger le contenu selon le format standard
-3. Ajouter les références dans l'index de croisement
-4. Mettre à jour le compteur dans `MEMOIRE.md`
-
-### 6. Mise à Jour des Références
-L'agent vérifie :
-- L'index de croisement est-il à jour ?
-- Les liens bidirectionnels sont-ils corrects ?
-- Le `MEMOIRE.md` reflète-t-il les changements ?
-
-### 7. Archivage des Rapports
-Les rapports traités sont déplacés vers `03_audit/report/_archive/` pour éviter de les retraiter.
-
----
-
-## Logique de Recherche
-
-### Où chercher selon le type de problème
-
-| Type de Problème | Dossiers à Scanner |
-|---|---|
-| Personnages | `00_core/casting/`, `00_core/arc/`, `03_audit/character/` |
-| Structure | `00_core/structure/`, `03_audit/structure/` |
-| Style/Voix | `00_core/style/`, `00_core/pov/`, `03_audit/style/`, `03_audit/voice/` |
-| Thème | `00_core/theme/`, `03_audit/theme/` |
-| Tension | `00_core/tension/`, `03_audit/narrative/` |
-| Logique | `00_core/logic/`, `03_audit/forensic/` |
-| Univers | `00_core/worldbuilding/`, `03_audit/immersion/` |
-| Spécification | `00_core/spec/`, `03_audit/spec/` |
-
-### Critères de Correspondance
-
-Une règle est considérée comme "liée" si :
-- Elle mentionne le même concept narratif
-- Elle traite d'un anti-pattern similaire
-- Elle répond à la même question fondamentale
-
----
-
-## Règles de Comportement
-
-1. **Toujours chercher d'abord** : Ne jamais créer sans avoir vérifié l'existant
-2. **Préférer la mise à jour** : Une règle enrichie > une nouvelle règle
-3. **Éviter la redondance** : Fusionner plutôt que dupliquer
-4. **Documenter le raisonnement** : Pourquoi cette décision ?
-5. **Valider avec l'humain** : Aucune modification automatique
-
----
-
-## Sortie du Workflow
-
-| Résultat | Fichiers Modifiés |
-|---|---|
-| Règles mises à jour | `00_core/[...].md` |
-| Protocoles enrichis | `03_audit/[...].md` |
-| Nouvelles règles | `00_core/[nouveau].md` |
-| Index mis à jour | `00_core/spec/00_cross_reference_index.md` |
-| Documentation | `MEMOIRE.md` |
-
----
-
-## Référence
-- Rapports à analyser : `03_audit/report/`
-- Règles à scanner : `00_core/` (72 fichiers)
-- Audits à scanner : `03_audit/` (44 fichiers)
-- Index central : `00_core/spec/00_cross_reference_index.md`
+L'agent démarre en chargeant l'arborescence et demande quelle cible prioriser.
