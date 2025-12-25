@@ -1,157 +1,112 @@
-# Index de Croisement des Règles (Cross-Reference Map)
+# Index de Croisement des Règles (Kernel)
 
-**Statut** : PIVOT DU SYSTÈME (Source de Vérité)
-**Fonction** : Mappe chaque étape de spécification (01-10) avec les règles `00_core` et les audits `03_audit` obligatoires.
-
----
-
-## PROTOCOLE D'USAGE POUR L'AGENT
-
-1.  **Identifier l'étape active** (ex: `/06-characters`).
-2.  **Charger TOUTES les règles "Input"** listées ci-dessous pour cette étape.
-3.  **Exécuter la tâche** de spécification.
-4.  **Appliquer TOUS les audits "Output"** avant de soumettre à l'humain.
+**Statut** : NOYAU D'EXÉCUTION (Read-Only)
+**Fonction** : Routeur logique imposant les contraintes d'Intégrité Référentielle entre Spec, Core et Audit.
 
 ---
 
-## Étape 01 : INTENTION (La Source)
-> *"Quelle est l'urgence vitale ?"*
+## ALGORITHME D'EXÉCUTION STRICT
 
-| Type | Fichier | Pourquoi c'est critique |
-|---|---|---|
-| **Input (Core)** | `00_core/theme/controlling_idea.md` | Pour formuler la "Thèse Provocatrice". |
-| **Input (Core)** | `00_core/theme/thematic_question.md` | Pour définir l'impact intellectuel. |
-| **Validation** | `03_audit/spec/01_intention_audit.md` | Audit des "6 Épreuves Impitoyables". |
+Pour chaque étape `N` du workflow :
 
----
-
-## Étape 02 : THÈME (Le Système Moral)
-> *"Quel est le combat moral ?"*
-
-| Type | Fichier | Pourquoi c'est critique |
-|---|---|---|
-| **Input (Core)** | `00_core/theme/controlling_idea.md` | **OBLIGATOIRE** pour la formule Valeur + Cause. |
-| **Input (Core)** | `00_core/theme/motif_recurrence.md` | Pour ancrer le thème dans le physique. |
-| **Input (Core)** | `00_core/theme/objective_correlative.md` | Objets symboliques. |
-| **Validation** | `03_audit/spec/02_theme_audit.md` | Vérification du Contre-Thème. |
-| **Validation** | `03_audit/theme/symbolic_motif_coherence.md` | Cohérence des symboles. |
+1.  **LOAD_DEPENDENCIES(N-1)** : Charger les variables d'état de l'étape précédente (ex: on ne crée pas un Personnage sans charger le Thème).
+2.  **INJECT_CONSTRAINTS** : Charger les règles `00_core` listées en mémoire active.
+3.  **EXECUTE_DRAFT** : Générer le contenu en respectant les contraintes injectées.
+4.  **RUN_AUDIT** : Exécuter les protocoles `03_audit` correspondants.
+5.  **IF "FAIL"** : Rejeter le draft. Interdiction de passer à `N+1`.
+6.  **IF "PASS"** : Verrouiller le fichier et passer à `N+1`.
 
 ---
 
-## Étape 03 : GENRE (Le Contrat)
-> *"Quelles sont les promesses ?"*
+## MAP D'EXÉCUTION SÉQUENTIELLE
 
-| Type | Fichier | Pourquoi c'est critique |
-|---|---|---|
-| **Input (Core)** | `00_core/structure/save_the_cat.md` | Si genre commercial (Thriller/Romance). |
-| **Input (Core)** | `00_core/structure/heros_journey.md` | Si genre mythique (Fantasy/SF). |
-| **Input (Core)** | `00_core/tension/mystery_box.md` | Si genre à suspense/mystère. |
-| **Validation** | `03_audit/spec/03_genre_audit.md` | Vérification des "Comps". |
-| **Validation** | `03_audit/reader_experience/genre_expectation_audit.md` | Respect des Commandements. |
+### 01. INTENTION (L'Urgence)
+*Dépendance : Aucune (Origine du système)*
 
----
+| Inputs (Core) | Fonction Technique | Gatekeeper (Audit) | Condition d'Échec Fatal (Abort) |
+|---|---|---|---|
+| `theme/controlling_idea` | Définir la structure de la thèse | `spec/01_intention_audit` | **"Tourisme"** : L'auteur n'a pas d'enjeu personnel viscéral. |
+| `theme/thematic_question` | Définir le vecteur intellectuel | | **Générique** : L'intention pourrait s'appliquer à n'importe quel livre. |
 
-## Étape 04 : PRÉMISSE (Le Hook)
-> *"Pourquoi payer pour lire ?"*
+### 02. THÈME (Le Système Moral)
+*Dépendance : 01. Intention*
 
-| Type | Fichier | Pourquoi c'est critique |
-|---|---|---|
-| **Input (Core)** | `00_core/tension/promise_delay_deliver.md` | La prémisse est une Promesse. |
-| **Input (Core)** | `00_core/structure/in_medias_res.md` | Pour l'Incident Déclencheur. |
-| **Validation** | `03_audit/spec/04_premise_audit.md` | Test de l'Ironie et des Enjeux. |
-| **Validation** | `03_audit/reader_experience/opening_hook_strength.md` | Force de l'accroche. |
+| Inputs (Core) | Fonction Technique | Gatekeeper (Audit) | Condition d'Échec Fatal (Abort) |
+|---|---|---|---|
+| `theme/controlling_idea` | **OBLIGATOIRE** : Formule Valeur/Cause | `spec/02_theme_audit` | **Flou Artistique** : Pas de verbe d'action dans la thèse. |
+| `theme/objective_correlative` | Ancrage physique du concept | `theme/symbolic_motif_coherence` | **Abstrait** : Le thème n'est pas visible physiquement. |
 
----
+### 03. GENRE (Le Contrat)
+*Dépendance : 01. Intention + 02. Thème*
 
-## Étape 05 : CONFLIT (Le Moteur)
-> *"Pourquoi ne peut-il pas abandonner ?"*
+| Inputs (Core) | Fonction Technique | Gatekeeper (Audit) | Condition d'Échec Fatal (Abort) |
+|---|---|---|---|
+| `structure/save_the_cat` | (Si Commercial) Beat sheet template | `spec/03_genre_audit` | **Fraude** : Promesse d'un genre sans ses scènes obligatoires. |
+| `structure/heros_journey` | (Si Mythique) Beat sheet template | `reader_experience/genre_expectation` | **Incohérence** : Ton inadapté au public cible (ex: Gore en YA). |
 
-| Type | Fichier | Pourquoi c'est critique |
-|---|---|---|
-| **Input (Core)** | `00_core/structure/try_fail_cycles.md` | Mécanique de l'échec nécessaire. |
-| **Input (Core)** | `00_core/tension/ticking_clock.md` | Pour le "Verrouillage" temporel. |
-| **Input (Core)** | `00_core/logic/pixar_coincidence_rule.md` | Coïncidences pour créer des problèmes. |
-| **Input (Core)** | `00_core/casting/antagonist_mirror.md` | Convergence Interne/Externe. |
-| **Validation** | `03_audit/spec/05_conflict_audit.md` | Test du "Gap" et du "Lock-in". |
-| **Validation** | `03_audit/structure/tension_gradient_analysis.md` | Escalade des enjeux. |
+### 04. PRÉMISSE (Le Hook)
+*Dépendance : 03. Genre (Le Hook doit vendre le Genre)*
 
----
+| Inputs (Core) | Fonction Technique | Gatekeeper (Audit) | Condition d'Échec Fatal (Abort) |
+|---|---|---|---|
+| `tension/promise_delay_deliver` | Structure de la promesse narrative | `spec/04_premise_audit` | **Ennui** : Pas d'ironie ou de paradoxe dans le pitch. |
+| `structure/in_medias_res` | Point d'entrée de la démo | `reader_experience/opening_hook_strength` | **Déjà-vu** : Pitch interchangeable avec un best-seller existant. |
 
-## Étape 06 : PERSONNAGES (Les Névroses)
-> *"Qui est assez brisé ?"*
+### 05. CONFLIT (Le Moteur)
+*Dépendance : 04. Prémisse (Le Conflit teste le Hook)*
 
-| Type | Fichier | Pourquoi c'est critique |
-|---|---|---|
-| **Input (Core)** | `00_core/casting/ghost_wound_lie.md` | **OBLIGATOIRE** (Le Triptyque). |
-| **Input (Core)** | `00_core/casting/want_vs_need.md` | Moteur psychologique. |
-| **Input (Core)** | `00_core/arc/positive_arc.md` | (Ou Negative/Flat selon le choix). |
-| **Input (Core)** | `00_core/style/voice_contrast.md` | Pour le "Voice Sample". |
-| **Validation** | `03_audit/spec/06_characters_audit.md` | Les 7 Épreuves (Dîner, Voix, etc.). |
-| **Validation** | `03_audit/character/character_agency_audit.md` | Vérifier que le héros est actif. |
+| Inputs (Core) | Fonction Technique | Gatekeeper (Audit) | Condition d'Échec Fatal (Abort) |
+|---|---|---|---|
+| `structure/try_fail_cycles` | Mécanique d'itération | `spec/05_conflict_audit` | **Porte de Sortie** : Le héros peut abandonner sans conséquences graves. |
+| `tension/ticking_clock` | Compresseur temporel | `structure/tension_gradient_analysis` | **Stagnation** : Les enjeux n'augmentent pas après un échec. |
 
----
+### 06. PERSONNAGES (Les Névroses)
+*Dépendance : 02. Thème + 05. Conflit*
 
-## Étape 07 : UNIVERS (L'Arène)
-> *"Pourquoi ce monde est hostile ?"*
+| Inputs (Core) | Fonction Technique | Gatekeeper (Audit) | Condition d'Échec Fatal (Abort) |
+|---|---|---|---|
+| `casting/want_vs_need` | Conflit interne systémique | `spec/06_characters_audit` | **Santé Mentale** : Personnage trop sain/équilibré pour l'histoire. |
+| `casting/ghost_wound_lie` | **ROOT** : Origine du trauma | `character/character_agency_audit` | **Passivité** : Le héros subit l'intrigue au lieu de la provoquer. |
+| `casting/antagonist_mirror` | Reflet inversé du héros | | **Vilain Cartoon** : Antagoniste méchant "parce que". |
 
-| Type | Fichier | Pourquoi c'est critique |
-|---|---|---|
-| **Input (Core)** | `00_core/worldbuilding/lived_in_universe.md` | Pour la Texture et l'Usure. |
-| **Input (Core)** | `00_core/logic/sanderson_law_2.md` | Pour les Coûts et Limitations. |
-| **Input (Core)** | `00_core/style/sensory_anchoring.md` | Pour la description sensorielle. |
-| **Validation** | `03_audit/spec/07_universe_audit.md` | Test de la Friction. |
-| **Validation** | `03_audit/forensic/worldbuilding_clash.md` | Logique interne. |
+### 07. UNIVERS (L'Arène)
+*Dépendance : 05. Conflit (Le monde doit générer ce conflit spécifique)*
 
----
+| Inputs (Core) | Fonction Technique | Gatekeeper (Audit) | Condition d'Échec Fatal (Abort) |
+|---|---|---|---|
+| `logic/sanderson_law_2` | Définition des coûts/limites | `spec/07_universe_audit` | **Magie Gratuite** : Solution sans coût pour le héros. |
+| `worldbuilding/lived_in_universe` | Texture et temporalité | `forensic/worldbuilding_clash` | **Décor Carton** : Monde qui semble né à la page 1. |
 
-## Étape 08 : STRUCTURE (Le Squelette)
-> *"Le squelette tient-il debout ?"*
+### 08. STRUCTURE (Le Squelette)
+*Dépendance : 06. Personnages (L'arc dicte la structure)*
 
-| Type | Fichier | Pourquoi c'est critique |
-|---|---|---|
-| **Input (Core)** | `00_core/structure/save_the_cat.md` | Les 15 Beats (Standard). |
-| **Input (Core)** | `00_core/structure/midpoint_reversal.md` | Bascule Réactif → Proactif. |
-| **Input (Core)** | `00_core/logic/chekhovs_gun.md` | Setup / Payoff. |
-| **Input (Core)** | `00_core/structure/yes_but_no_and.md` | Causalité "Therefore/But". |
-| **Validation** | `03_audit/spec/08_structure_audit.md` | Test des Piliers Porteurs. |
-| **Validation** | `03_audit/narrative/plot_hole_tracker.md` | Chasse aux trous. |
+| Inputs (Core) | Fonction Technique | Gatekeeper (Audit) | Condition d'Échec Fatal (Abort) |
+|---|---|---|---|
+| `structure/three_act_structure` | Architecture globale | `spec/08_structure_audit` | **Ventre Mou** : Acte II sans Midpoint clair. |
+| `structure/midpoint_reversal` | Pivot dynamique | `narrative/plot_hole_tracker` | **Deus Ex Machina** : Résolution non préparée dans l'Acte I. |
 
----
+### 09. VOIX (L'Optique)
+*Dépendance : 06. Personnages (C'est LEUR voix)*
 
-## Étape 09 : VOIX (La Charte Graphique)
-> *"Quel filtre optique ?"*
+| Inputs (Core) | Fonction Technique | Gatekeeper (Audit) | Condition d'Échec Fatal (Abort) |
+|---|---|---|---|
+| `pov/deep_pov` | Protocole d'immersion | `spec/09_voice_audit` | **Filtres** : Présence de "il vit", "elle sentit" (Filter Words). |
+| `style/voice_contrast` | Signature lexicale | `style/readability_metrics` | **Monotonie** : Tous les personnages parlent comme l'auteur. |
 
-| Type | Fichier | Pourquoi c'est critique |
-|---|---|---|
-| **Input (Core)** | `00_core/pov/deep_pov.md` | Standard d'immersion (Zoom). |
-| **Input (Core)** | `00_core/style/filter_word_ruthless.md` | **CRITIQUE** (La Kill List). |
-| **Input (Core)** | `00_core/style/show_dont_tell.md` | Règle d'or. |
-| **Input (Core)** | `00_core/style/active_voice.md` | Énergie de la phrase. |
-| **Validation** | `03_audit/spec/09_voice_audit.md` | Calibrage de la caméra. |
-| **Validation** | `03_audit/style/readability_metrics.md` | Niveau de langage. |
+### 10. SOMMAIRE (L'Exécution)
+*Dépendance : 08. Structure (Expansion fractale)*
+
+| Inputs (Core) | Fonction Technique | Gatekeeper (Audit) | Condition d'Échec Fatal (Abort) |
+|---|---|---|---|
+| `structure/value_charge` | Polarité +/- de la scène | `structure/scene_goal_validator` | **Inutilité** : Scène qui ne change pas la charge de valeur. |
+| `structure/scene_sequel_balance` | Rythme Action/Réaction | `narrative/pacing_anomalies` | **Remplissage** : Scènes de "transport" ou de "bonjour/au revoir". |
 
 ---
 
-## Étape 10 : SOMMAIRE (Le Plan de Bataille)
-> *"Comment chaque scène change l'histoire ?"*
+## Audits Transversaux (Background Process)
 
-| Type | Fichier | Pourquoi c'est critique |
-|---|---|---|
-| **Input (Core)** | `00_core/structure/scene_sequel_balance.md` | Choix du Type (Scène vs Sequel). |
-| **Input (Core)** | `00_core/structure/value_charge.md` | **OBLIGATOIRE** (Le +/- Shift). |
-| **Input (Core)** | `00_core/style/motivation_reaction_units.md` | Micro-structure. |
-| **Validation** | `03_audit/structure/scene_goal_validator.md` | Vérifier But/Conflit/Changement. |
-| **Validation** | `03_audit/narrative/pacing_anomalies.md` | Vérifier le rythme global. |
+Ces audits doivent être appelés **à chaque itération** de raffinement :
 
----
-
-## Règles Transversales (Toujours Actives)
-
-À vérifier en tâche de fond sur tout livrable :
-
-| Fichier | Application |
-|---|---|
-| `00_core/logic/fair_play_mystery.md` | Pas d'information cachée injustement. |
-| `00_core/logic/macguffin.md` | Si un objet moteur est utilisé. |
-| `03_audit/forensic/sensitivity_bias_scan.md` | Responsabilité narrative. |
-| `03_audit/reader_experience/cognitive_overload_check.md` | Pas d'Info-Dumps. |
+1.  **Cohérence Factuelle** : `03_audit/forensic/consistency_check.md`
+2.  **Densité de Sous-Texte** : `03_audit/character/subtext_density_test.md`
+3.  **Chasse aux Clichés** : `03_audit/narrative/cliche_blacklist.md`
