@@ -123,24 +123,24 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 
 ---
 
-## Structure de `audit/` (32 protocoles de test)
+## Structure de `audit/` (35 protocoles de test) — Version Finale
 
-### `audit/forensic/` (2 protocoles)
+### `audit/forensic/` (3 protocoles)
 | Fichier | Résumé |
 |---|---|
 | `consistency_check.md` | Vérification des noms, lieux, âges, chronologie. |
 | `worldbuilding_clash.md` | Détection des violations du lore établi. |
+| `sensitivity_bias_scan.md` | Scan de sensibilité, biais et représentations. |
 
-### `audit/narrative/` (5 protocoles)
+### `audit/narrative/` (4 protocoles)
 | Fichier | Résumé |
 |---|---|
 | `cliche_blacklist.md` | Liste noire des métaphores usées et situations prévisibles. |
 | `pacing_anomalies.md` | Détection des ventres mous et précipitations. |
 | `plot_hole_tracker.md` | Traçage des trous d'intrigue et Fusils non tirés. |
-| `info_dump_detector.md` | Détection des blocs d'exposition non intégrés. |
 | `foreshadowing_payoff.md` | Balance entre présages et résolutions. |
 
-### `audit/style/` (6 protocoles)
+### `audit/style/` (7 protocoles)
 | Fichier | Résumé |
 |---|---|
 | `filter_word_ruthless.md` | Traque des verbes de perception (Deep POV). |
@@ -149,56 +149,59 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 | `show_vs_tell_detector.md` | Localisation des passages "telling". |
 | `echo_word_scanner.md` | Détection des répétitions lexicales proches. |
 | `weak_verb_purge.md` | Chasse aux verbes ternes (être, avoir, faire). |
+| `readability_metrics.md` | Métriques de lisibilité (Flesch, longueur phrases). |
 
-### `audit/character/` (3 protocoles) — Renommé de psychology/
+### `audit/character/` (5 protocoles)
 | Fichier | Résumé |
 |---|---|
 | `mru_sequencing_validation.md` | Validation des séquences Motivation-Réaction. |
 | `melodrama_detector.md` | Détection des réactions disproportionnées. |
 | `subtext_density_test.md` | Test de densité du sous-texte. |
+| `character_agency_audit.md` | Agence du protagoniste (moteur vs passif). |
+| `relationship_matrix_tracker.md` | Évolution des relations entre personnages. |
 
-### `audit/immersion/` (3 protocoles) — NOUVEAU
+### `audit/immersion/` (2 protocoles) — Fusionné
 | Fichier | Résumé |
 |---|---|
 | `sensory_balance_check.md` | Équilibre des 5 sens dans les scènes. |
-| `white_room_detector.md` | Détection des scènes sans ancrage spatial. |
-| `spatial_anchoring_audit.md` | Vérification de la géométrie des scènes. |
+| `spatial_anchoring_audit.md` | Ancrage spatial + détection White Room. |
 
-### `audit/structure/` (4 protocoles) — NOUVEAU
+### `audit/structure/` (5 protocoles)
 | Fichier | Résumé |
 |---|---|
 | `scene_goal_validator.md` | Vérifie que chaque scène a un objectif. |
 | `character_arc_tracker.md` | Suivi de progression des arcs de personnages. |
 | `beat_structure_audit.md` | Validation des story beats attendus. |
 | `subplot_orphan_detector.md` | Détection des sous-intrigues abandonnées. |
+| `tension_gradient_analysis.md` | Courbe de tension dramatique globale. |
 
-### `audit/voice/` (3 protocoles) — NOUVEAU
+### `audit/voice/` (3 protocoles)
 | Fichier | Résumé |
 |---|---|
 | `pov_consistency.md` | Stabilité du POV et fuites de focalisation. |
 | `narrator_voice_stability.md` | Cohérence du registre et ton narratif. |
 | `voice_fingerprinting.md` | Unicité vocale de chaque personnage. |
 
-### `audit/theme/` (2 protocoles) — NOUVEAU
+### `audit/theme/` (2 protocoles)
 | Fichier | Résumé |
 |---|---|
 | `symbolic_motif_coherence.md` | Cohérence des motifs symboliques. |
 | `thematic_thread_tracer.md` | Traçage du fil thématique. |
 
-### `audit/reader_experience/` (4 protocoles) — NOUVEAU
+### `audit/reader_experience/` (4 protocoles) — Fusionné
 | Fichier | Résumé |
 |---|---|
-| `cognitive_overload_check.md` | Détection de surcharge cognitive. |
+| `cognitive_overload_check.md` | Surcharge cognitive + détection Info-Dumps. |
 | `genre_expectation_audit.md` | Conformité aux attentes de genre. |
 | `suspense_leak_detector.md` | Fuites de tension narrative. |
 | `opening_hook_strength.md` | Force du hook d'ouverture. |
 
 ---
 
-## État Actuel (2025-12-25)
+## État Actuel (2025-12-25 - Version Consolidée)
 - **Architecture complète** : 9 sous-dossiers dans `core/`, 9 sous-dossiers dans `audit/`.
 - **62 règles narratives** dans `core/`.
-- **32 protocoles de test** dans `audit/` enrichis avec feedback de 5 LLMs.
+- **35 protocoles de test** dans `audit/` (après fusions et enrichissement via 5 LLMs).
 - **Aucun workflow créé** : Prochaine étape.
 - **Prochaine étape** : Créer le premier workflow pour tester l'utilisation des règles.
 
