@@ -1,17 +1,18 @@
 ---
-description: Créer un brouillon de spécification pour une étape donnée (01-09)
+description: Créer un brouillon de spécification pour une étape donnée (01-10)
 ---
 
-# Workflow : Créer une Spec (Brouillon)
+# Workflow : Créer une Spec (Brouillon Structuré)
 
-Ce workflow guide la création d'un **brouillon de spécification** pour une étape du processus narratif.
-Il utilise un mapping strict pour garantir qu'aucune règle du framework n'est oubliée.
+Ce workflow guide la création d'un **brouillon de spécification** pour l'une des 10 étapes rituelles du processus narratif. Il impose un protocole strict d'imprégnation et d'extraction des Livrables Strictes.
 
 ---
 
 ## Prérequis
-- Aucun fichier de spec n'existe encore pour cette étape, OU vous souhaitez le réécrire.
-- Vous êtes prêt à répondre à des questions pour "vider le sac".
+
+1. L'Index Kernel (`00_core/spec/00_cross_reference_index.md`) est chargé en mémoire.
+2. Les étapes précédentes (si N > 01) sont déjà validées (statut VERROUILLÉ).
+3. L'auteur est prêt à répondre à des questions précises.
 
 ---
 
@@ -23,59 +24,136 @@ Il utilise un mapping strict pour garantir qu'aucune règle du framework n'est o
 
 **Exemples :**
 - `/create-spec 01` → Lance l'interview pour l'Intention.
+- `/create-spec 06` → Lance l'interview pour les Personnages (après validation de 01-05).
 
 ---
 
-## Étapes du Workflow
+## Les 10 Étapes Rituelles
 
-### 1. Identification et Chargement
-L'agent identifie l'étape demandée et charge **immédiatement** les règles spécifiées dans le [Mapping de Création](#mapping-de-création) ci-dessous.
+| # | Nom | Question Fondamentale | Livrable Principal |
+|---|---|---|---|
+| 01 | **Intention** | Quelle est l'urgence vitale qui impose ce livre ? | Source + Cible Émotionnelle |
+| 02 | **Thème** | Quel est le système moral de l'histoire ? | Controlling Idea (Valeur x Cause) |
+| 03 | **Genre** | Quel contrat signez-vous avec le lecteur ? | 5 Commandements + Comps |
+| 04 | **Prémisse** | Pourquoi un inconnu payerait-il pour lire ça ? | Killer Logline |
+| 05 | **Conflit** | Pourquoi le héros ne peut-il pas abandonner ? | 4 Piliers Porteurs |
+| 06 | **Personnages** | Qui est assez brisé pour vivre cette histoire ? | Fiches Ghost/Wound/Lie |
+| 07 | **Univers** | Quel monde génère CE conflit spécifique ? | Arène de Friction + Coûts |
+| 08 | **Structure** | Quel squelette porte cette histoire ? | Beat Sheet + 5 Piliers |
+| 09 | **Voix** | Par quels yeux voit-on cette histoire ? | Charte Graphique + Kill List |
+| 10 | **Sommaire** | Comment ce récit se déploie-t-il ? | Scene Cards par chapitre |
 
-### 2. Imprégnation (Lecture Obligatoire)
-L'agent DOIT confirmer la lecture des fichiers du mapping avant de poser la première question.
-**Contrainte d'immersion :** L'agent commence son interview par un résumé ultra-concis des 3 principes fondamentaux qu'il vient de lire pour prouver son imprégnation.
+---
 
-### 3. Interview Guidée
-L'agent pose des questions ciblées basées sur les règles chargées.
+## Protocole d'Exécution
+
+### Phase 1 : Chargement des Dépendances
+
+// turbo
+1. **Charger l'Index Kernel** (`00_core/spec/00_cross_reference_index.md`)
+2. **Vérifier les dépendances** : Si N > 01, confirmer que les étapes N-1 sont VERROUILLÉES.
+3. **Charger la Règle Mère** (`00_core/spec/[NN]_[nom].md`)
+4. **Charger les Règles Satellites** (cf. Mapping ci-dessous)
+
+### Phase 2 : Imprégnation Obligatoire
+
+L'agent DOIT confirmer la lecture en résumant :
+- La **Question Fondamentale** de l'étape
+- Les **3 Anti-patterns** à éviter
+- Le **Livrable Strict** attendu
+
+**Format de confirmation :**
+> "J'ai chargé [X] règles. Cette étape répond à la question '[...]'. Les erreurs fatales à éviter sont [...]. Je dois extraire [...]."
+
+### Phase 3 : Interview Structurée
+
+L'agent pose des questions pour extraire les Livrables Strictes :
+
+1. **Questions ouvertes** : Explorer la vision de l'auteur.
+2. **Questions de précision** : Forcer la spécificité (pas de réponses vagues).
+3. **Questions de stress-test** : Vérifier les Anti-patterns.
+
+**Règles d'interview :**
 - Une question à la fois.
-- Questions ouvertes pour explorer la vision.
-- Relances si la réponse est trop vague.
+- Si la réponse est vague → Relancer avec un contre-exemple.
+- Si la réponse touche un Anti-pattern → Alerter immédiatement.
 
-### 4. Synthèse du Brouillon
-L'agent rédige le fichier dans `01_spec/[numéro]_[nom].md`.
-Format :
-- Titre
-- Question Fondamentale
-- Synthèse par section
-- Notes de session (Date, Statut: BROUILLON)
+### Phase 4 : Rédaction du Brouillon
+
+L'agent rédige le fichier dans `01_spec/[NN]_[nom].md` avec ce format :
+
+```markdown
+# Spécification : [Nom de l'Étape]
+
+**Statut** : BROUILLON (Non Validé)
+**Date de Création** : [YYYY-MM-DD]
+**Dépendances** : [Lister les specs précédentes]
 
 ---
 
-## Mapping de Création
+## Question Fondamentale
+[Reprendre la question de la Règle Mère]
 
-Pour chaque étape, l'agent **DOIT** lire les fichiers listés ci-dessous :
+---
 
-| Étape | Règle Mère (spec/) | Règles Satellites (00_core/) |
+## Livrables Strictes
+
+### [Livrable 1]
+[Contenu extrait de l'interview]
+
+### [Livrable 2]
+[Contenu extrait de l'interview]
+
+---
+
+## Anti-patterns Vérifiés
+- [ ] [Anti-pattern 1] : [Statut]
+- [ ] [Anti-pattern 2] : [Statut]
+- [ ] [Anti-pattern 3] : [Statut]
+
+---
+
+## Notes de Session
+[Observations, questions en suspens, points à approfondir]
+```
+
+---
+
+## Mapping de Création (Règles à Charger)
+
+| Étape | Règle Mère | Règles Satellites (00_core/) |
 |---|---|---|
-| **01 Intention** | `01_intention.md` | `theme/controlling_idea.md`, `theme/thematic_question.md` |
-| **02 Thème** | `02_theme.md` | `theme/controlling_idea.md`, `theme/thematic_question.md`, `theme/motif_recurrence.md`, `theme/objective_correlative.md`, `theme/symbolic_action.md` |
-| **03 Genre** | `03_genre.md` | `structure/three_act_structure.md`, `structure/save_the_cat.md`, `structure/heros_journey.md` |
-| **04 Prémisse** | `04_premise.md` | `structure/in_medias_res.md`, `tension/promise_delay_deliver.md` |
-| **05 Conflit** | `05_conflict.md` | `structure/yes_but_no_and.md`, `structure/try_fail_cycles.md`, `tension/dramatic_irony.md`, `tension/ticking_clock.md`, `tension/micro_tension.md`, `tension/mystery_box.md`, `tension/foreshadowing.md`, `tension/red_herring.md`, `logic/pixar_coincidence_rule.md` |
-| **06 Personnages**| `06_characters.md`| `casting/*.md`, `arc/*.md`, `style/voice_contrast.md` |
-| **07 Univers** | `07_universe.md` | `worldbuilding/lived_in_universe.md`, `logic/sanderson_law_1.md`, `logic/sanderson_law_2.md`, `style/sensory_anchoring.md` |
-| **08 Structure** | `08_structure.md` | `structure/*.md`, `logic/chekhovs_gun.md`, `logic/rule_of_three.md`, `tension/promise_delay_deliver.md` |
-| **09 Voix** | `09_voice.md` | `pov/*.md`, `style/*.md`, `logic/show_dont_tell.md`, `logic/rule_2_plus_2.md` |
+| **01 Intention** | `spec/01_intention.md` | `theme/controlling_idea.md`, `theme/thematic_question.md` |
+| **02 Thème** | `spec/02_theme.md` | `theme/controlling_idea.md`, `theme/objective_correlative.md`, `theme/symbolic_action.md` |
+| **03 Genre** | `spec/03_genre.md` | `structure/save_the_cat.md`, `structure/heros_journey.md`, `structure/three_act_structure.md` |
+| **04 Prémisse** | `spec/04_premise.md` | `structure/in_medias_res.md`, `tension/promise_delay_deliver.md` |
+| **05 Conflit** | `spec/05_conflict.md` | `structure/try_fail_cycles.md`, `structure/yes_but_no_and.md`, `tension/ticking_clock.md` |
+| **06 Personnages** | `spec/06_characters.md` | `casting/ghost_wound_lie.md`, `casting/want_vs_need.md`, `casting/antagonist_mirror.md`, `arc/positive_arc.md` |
+| **07 Univers** | `spec/07_universe.md` | `worldbuilding/lived_in_universe.md`, `logic/sanderson_law_2.md` |
+| **08 Structure** | `spec/08_structure.md` | `structure/three_act_structure.md`, `structure/midpoint_reversal.md`, `structure/pinch_points.md`, `structure/save_the_cat.md` |
+| **09 Voix** | `spec/09_voice.md` | `pov/deep_pov.md`, `style/voice_contrast.md`, `style/show_dont_tell.md` |
+| **10 Sommaire** | `spec/10_chapter_outline.md` | `structure/scene_sequel_balance.md`, `structure/late_in_early_out.md` |
 
 ---
 
 ## Règles de Comportement
 
-1. **Ne jamais inventer** : Les idées viennent de l'auteur.
-2. **Respecter la terminologie** : Utiliser les termes techniques des règles (ex: *Ghost*, *Want vs Need*, *MRU*).
-3. **Signaler les manques** : Si l'auteur oublie un point clé d'une règle, poser la question.
+1. **Zéro Invention** : Les idées viennent de l'auteur. L'agent extrait, il n'invente pas.
+2. **Terminologie Stricte** : Utiliser les termes techniques des règles (Ghost, Lie, Controlling Idea, etc.).
+3. **Signalement Immédiat** : Si un Anti-pattern est détecté, interrompre et alerter.
+4. **Pas d'Auto-Validation** : Le brouillon est un BROUILLON. Seul le workflow `/02-audit-spec` peut valider.
 
 ---
 
 ## Après ce Workflow
-Le fichier créé est un **BROUILLON**. Exécuter `/02-audit-spec [numéro]` pour validation.
+
+Le fichier créé a le statut **BROUILLON**. 
+
+**Étape suivante obligatoire :**
+```
+/02-audit-spec [numéro_étape]
+```
+
+L'audit peut résulter en :
+- **REJETÉ** → Retour à l'interview avec les points à corriger.
+- **VALIDÉ** → Statut VERROUILLÉ, passage à l'étape N+1.
