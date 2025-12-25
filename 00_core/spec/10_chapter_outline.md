@@ -1,45 +1,49 @@
-# Règle : Sommaire des Chapitres (Chapter Outline)
+# Règle : Sommaire des Chapitres (Étape 10/10)
 
 ## Question Fondamentale
-**"Quel est le plan détaillé de chaque chapitre ?"**
+**"Comment chaque scène change-t-elle irréversiblement l'histoire ?"**
 
 ## Définition
-Le sommaire des chapitres est le document de référence central qui détaille chaque chapitre avant sa rédaction. C'est le pont entre la structure globale (`08_structure.md`) et les fichiers de rédaction (`02_draft/`).
+Ce n'est pas une "Table des matières". C'est un **Blueprint d'Exécution**.
+Chaque entrée doit prouver sa nécessité. Si une scène peut être supprimée sans que la suite ne devienne incompréhensible, elle DOIT être supprimée.
 
-## Structure du Sommaire
+## Connexions Systèmes
+- **Dépendance Amont** : `08_structure.md` (La structure globale), `05_conflict.md` (Le moteur)
+- **Dépendance Aval** : `02_draft/ch[XX].md` (L'agent de rédaction suivra ces instructions à la lettre)
+- **Référence Technique** : `00_core/structure/scene_sequel_balance.md`, `00_core/structure/value_charge.md` (Concept McKee)
+- **Audit Applicable** : `03_audit/structure/scene_goal_validator.md`
 
-Pour chaque chapitre, définir :
+## Structure de la "Scene Card" (Template Obligatoire)
 
-| Champ | Description |
+Pour chaque chapitre, l'agent doit remplir cette fiche technique.
+*Note : Un chapitre peut contenir plusieurs scènes, ou une scène peut durer plusieurs chapitres.*
+
+| Champ | Instruction Stricte |
 |---|---|
-| **Numéro** | `ch01`, `ch02`, etc. |
-| **Titre** | Titre de travail du chapitre |
-| **Acte** | I, II-1, II-2, ou III |
-| **Beat(s)** | Beat(s) Save the Cat correspondant(s) |
-| **POV** | Personnage point de vue |
-| **Lieu** | Où se déroule l'action |
-| **Temps** | Moment (jour X, nuit, flashback, etc.) |
-| **Objectif** | Ce que le protagoniste veut accomplir dans ce chapitre |
-| **Conflit** | L'obstacle ou la tension principale |
-| **Issue** | Victoire, défaite, ou complication ? |
-| **Résumé** | 2-3 phrases décrivant l'action |
-| **Arc** | Progression de l'arc du personnage (Lie → Truth) |
-| **Setup/Payoff** | Éléments plantés ou résolus (Chekhov) |
+| **0. Méta** | Numéro (`ch01`), Titre Provisoire, Acte, Beat (Save the Cat). |
+| **1. Type** | **SCÈNE** (Objectif → Conflit → Désastre) OU **SEQUEL** (Réaction → Dilemme → Décision). |
+| **2. POV & Lieu** | Qui raconte ? Où sommes-nous ? (Soyez précis : "Cuisine sale" > "Maison"). |
+| **3. L'Ancrage Sensoriel** | **1 détail physique obligatoire** pour éviter le "White Room". (ex: *L'odeur d'ozone*, *Le bruit du ventilateur*). |
+| **4. Le Désir (Want)** | Qu'est-ce que le POV veut *immédiatement* dans cette scène ? (Pas "le bonheur", mais "ouvrir ce coffre"). |
+| **5. Le Conflit (Gap)** | Qui ou quoi l'en empêche ? (Directement lié à `05_conflict.md`). |
+| **6. Le Shift (Value Change)** | **CRITIQUE**. État Début (+/-) → État Fin (-/+). <br> *Ex: Sécurité (+) → Danger (-).* <br> *Si pas de changement de polarité, la scène est rejetée.* |
+| **7. Le Résumé Causal** | Syntaxe obligatoire : *"Le héros veut [X], DONC il fait [Y], MAIS [Obstacle Z], ALORS [Nouvelle Situation W]."* |
+| **8. La Révélation** | Quelle nouvelle information le lecteur ou le personnage apprend-il ? (Indispensable pour faire avancer l'intrigue). |
 
-## Lien avec 02_draft
+## Exemple de Scene Card Valide
+> **ch03 - L'Interrogatoire** (Acte I / Debate)
+> - **Type** : SCÈNE
+> - **POV** : Sarah. **Lieu** : Salle d'interrogatoire, néon qui grésille.
+> - **Want** : Faire avouer le suspect pour rentrer chez elle.
+> - **Conflit** : Le suspect connaît son secret inavouable.
+> - **Shift** : Arrogance (+) → Terreur (-).
+> - **Résumé** : Sarah met la pression sur le suspect, DONC il craque, MAIS il révèle qu'il sait pour l'accident de Sarah, ALORS elle doit couper l'enregistrement pour se protéger.
 
-Chaque fichier dans `02_draft/ch[XX].md` DOIT correspondre à une entrée de ce sommaire. Si un chapitre n'est pas dans le sommaire, il ne devrait pas exister dans le draft.
-
-## Référence Core
-- `00_core/spec/08_structure.md` : Structure globale
-- `00_core/structure/save_the_cat.md` : Beats de référence
-- `00_core/structure/scene_sequel_balance.md` : Alternance scène/sequel
-
-## Anti-patterns
-- ❌ Rédiger un chapitre sans l'avoir d'abord défini ici
-- ❌ Résumés trop vagues ("il se passe des trucs")
-- ❌ Chapitres sans objectif clair pour le protagoniste
-- ❌ Désynchronisation entre sommaire et drafts
+## Anti-patterns (Motifs de Rejet Immédiat)
+- ❌ **La Scène de Couloir** : Personnages qui discutent en marchant sans conflit. (Info-dump).
+- ❌ **Le Statu Quo** : La situation à la fin du chapitre est la même qu'au début.
+- ❌ **Le "Et puis"** : Résumé qui liste des actions sans lien logique ("Il mange, il dort, il parle").
+- ❌ **Le POV Flou** : On ne sait pas qui mène la scène.
 
 ## Fichier de Sortie
 `01_spec/00_chapter_outline.md`

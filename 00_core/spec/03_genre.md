@@ -1,58 +1,59 @@
-# Règle : Genre (Étape 3/9)
+# Règle : Genre (Étape 3/10)
 
 ## Question Fondamentale
-**"Quelles sont les règles du genre ?"**
+**"Quel est le contrat commercial et émotionnel signé avec le lecteur ?"**
 
 ## Définition
-Le genre définit les contraintes formelles et les attentes du lecteur. C'est un contrat implicite : le lecteur qui achète un thriller s'attend à du suspense, celui qui achète une romance s'attend à une fin heureuse.
+Le genre n'est pas une étiquette de libraire. C'est un ensemble rigoureux de **promesses** que vous faites au lecteur avant même qu'il n'ouvre le livre.
+Si vous brisez ces promesses (ex: pas de coupable dans un polar), vous ne subvertissez pas le genre, vous échouez.
 
-## Points à Définir
+## Connexions Systèmes
+- **Dépendance Amont** : `02_theme.md` (Le genre est l'emballage du thème)
+- **Dépendance Aval** : `04_premise.md` (Le pitch doit sonner "genre"), `08_structure.md` (Le genre dicte le rythme)
+- **Référence Technique** : `03_audit/reader_experience/genre_expectation_audit.md`
 
-### Genre Principal
-- Quel genre littéraire ? (Thriller, Romance, SF, Fantasy, Littérature, etc.)
-- Quel sous-genre précis ? (Cozy Mystery, Dark Romance, Space Opera, etc.)
+## Livrables Strictes (Output attendu)
 
-### Tropes du Genre
-- Quels sont les tropes ATTENDUS que vous respecterez ?
-- Quels sont les tropes que vous SUBVERTIREZ intentionnellement ?
+L'agent doit forcer la définition de ces 4 paramètres de calibrage :
 
-### Format
-- Longueur cible (nouvelle, novella, roman, saga)
-- Nombre de mots estimé
-- Structure (chapitres courts/longs, parties, alternance POV)
+### 1. Le Positionnement (The Shelf)
+Ne suffit pas de dire "Science-Fiction". Exigez la précision atomique :
+- **Genre & Sous-Genre** : ex: *Cyberpunk Noir* ou *Space Opera Militaire*.
+- **Les "Comps" (Comparaisons)** : *"C'est [Livre A] rencontre [Film B]".*
+    - *Cela donne à l'IA une base de données stylistique et sémantique précise.*
 
-### Public Cible
-- Qui est votre lecteur idéal ?
-- Âge, goûts, habitudes de lecture
-- Ton adapté à ce public (YA vs Adult vs Literary)
+### 2. Les 5 Commandements (Must-Haves)
+L'agent doit générer ou demander les 5 éléments OBLIGATOIRES pour ce genre spécifique.
+- *Exemple pour Romance : 1. Rencontre mignonne/explosive, 2. Force de séparation, 3. Preuve d'amour, 4. Moment "Tout est perdu", 5. HEA (Happy Ever After).*
+- **Règle** : Si l'un de ces éléments manque, le projet est flaggé "HORS SUJET".
 
-## Obligation de Genre
-Chaque genre a des "must-have" :
-- **Thriller** : Tension, enjeux mortels, twists
-- **Romance** : HEA (Happily Ever After), développement relationnel
-- **Mystery** : Énigme, indices, résolution satisfaisante
-- **Horror** : Peur, menace, atmosphère
+### 3. Les Tropes & Subversions
+- **Tropes acceptés** : Quels clichés allons-nous embrasser ? (ex: "L'élu", "Le seul lit disponible").
+- **Subversions** : Quel trope classique allons-nous tordre pour surprendre ? (ex: "Le Mentor est en fait l'antagoniste").
+- *Attention : On ne subvertit pas les Commandements (Point 2), seulement les accessoires.*
 
-## Référence Audit
-Voir : `03_audit/reader_experience/genre_expectation_audit.md`
+### 4. Le Calibrage Technique (Format & Ton)
+- **Ton** : Adjectifs précis (ex: *Cynique, Claustrophobe, Onirique*).
+- **Format** : One-shot ou Série ?
+- **Complexité** : "Commercial" (langage simple, rythme rapide) ou "Upmarket/Littéraire" (prose complexe, rythme lent).
 
-## Anti-patterns
-- ❌ Genre flou ("un peu de tout") → Le lecteur ne saura pas quoi attendre
-- ❌ Trahir le contrat de genre → Frustration du lecteur
-- ❌ Ignorer le public cible → Ton inadapté
+## Anti-patterns (Motifs de Rejet Immédiat)
+- ❌ **La Salade de Fruits** : "C'est un thriller-romance-western-horror." (Le lecteur ne sait pas ce qu'il achète).
+- ❌ **Le Bait & Switch** : Promettre un mystère et le résoudre par un hasard ou de la magie non établie.
+- ❌ **L'Arrogance** : "Je n'ai pas de genre, c'est inclassable." (Généralement synonyme d'amateurisme).
+- ❌ **La Subversion Totale** : "Un polar sans crime." (Ce n'est plus un polar).
 
 ## Ordre dans le Processus
-```
-[1] INTENTION
- ↓
-[2] THÈME
- ↓
-[3] GENRE ← VOUS ÊTES ICI
- ↓
-[4] PRÉMISSE
- ↓
-...
-```
+
+> [01] INTENTION
+>  ↓
+> [02] THÈME
+>  ↓
+> [03] GENRE (Le Contrat) ← VOUS ÊTES ICI
+>  ↓
+> [04] PRÉMISSE (Le Pitch)
+>  ↓
+> ...
 
 ## Fichier de Sortie
 `01_spec/03_genre.md`

@@ -25,7 +25,7 @@ narrative-engin/
 │   ├── casting/          # Psychologie des personnages (8)
 │   ├── logic/            # Cohérence narrative (9)
 │   ├── pov/              # Point de vue (7)
-│   ├── spec/             # Méthodologie de spécification (10)
+│   ├── spec/             # Méthodologie de spécification (11) -> 00 à 10
 │   ├── structure/        # Architecture narrative (12)
 │   ├── style/            # Prose et écriture (9)
 │   ├── tension/          # Suspense et engagement (7)
@@ -38,14 +38,14 @@ narrative-engin/
 │   ├── immersion/        # Ancrage sensoriel (2)
 │   ├── narrative/        # Plot holes, rythme, clichés (4)
 │   ├── reader_experience/# Surcharge cognitive, hooks (4)
-│   ├── spec/             # Audits de spécification (9)
+│   ├── spec/             # Audits de spécification (10) -> 01 à 10
 │   ├── structure/        # Scènes, arcs, beats (5)
 │   ├── style/            # Dialogues, prose, filter words (7)
 │   ├── theme/            # Motifs symboliques (2)
 │   └── voice/            # POV, narration (3)
 
 ├── .agent/workflows/     # 3 WORKFLOWS POUR PILOTER LE SYSTÈME
-│   ├── 01-create-spec.md # Créer une spec (étapes 01-09)
+│   ├── 01-create-spec.md # Créer une spec (étapes 01-10)
 │   ├── 02-audit-spec.md  # Auditer et valider une spec
 │   └── refine-rules.md   # Améliorer les règles du système
 
@@ -54,7 +54,7 @@ narrative-engin/
 ├── 03_audit/report/      # RAPPORTS D'AUDIT (gitignored)
 ├── 04_publish/           # VERSION FINALE (gitignored)
 
-├── ARBORESCENCE.md       # Documentation EXHAUSTIVE (117 fichiers documentés)
+├── ARBORESCENCE.md       # Documentation EXHAUSTIVE (121 fichiers documentés)
 ├── MEMOIRE.md            # Ce fichier (mémoire vive)
 └── README.md             # Présentation publique
 ```
@@ -82,37 +82,36 @@ Créer, tester, valider avant de passer au suivant.
 - **Git** : Framework uniquement (00_core/, 03_audit/, workflows)
 - **Local** : Projets littéraires (01_spec/, 02_draft/, 04_publish/)
 
-### 7. **Audit Actif**
-L'audit déclenche le **Raffinement Actif** : si une spec est rejetée, l'IA la réécrit pour intégrer les corrections.
+### 7. **Audit Actif (Zero Complaisance)**
+L'audit déclenche le **Raffinement Actif**. N'accepte QUE des livrables stricts (formules, KPIs, structures précises). Rejette toute réponse vague ou poétique.
 
 ### 8. **Veto Humain**
-**L'IA ne s'auto-valide JAMAIS**. Validation uniquement par friction humaine. L'auteur DOIT intervenir manuellement.
+**L'IA ne s'auto-valide JAMAIS**. Validation uniquement par friction humaine. L'auteur DOIT intervenir manuellement sur les propositions de l'IA avant validation.
 
 ---
 
 ## 🚀 PIPELINE DE CRÉATION (3 PHASES)
 
 ### PHASE 1 : SPÉCIFICATION (Avant d'écrire)
-9 étapes obligatoires à compléter AVANT toute rédaction :
+10 étapes obligatoires à compléter AVANT toute rédaction :
 
-1. **01_intention.md** — Pourquoi j'écris ça ? (message profond)
-2. **02_theme.md** — De quoi ça parle vraiment ?
-3. **03_genre.md** — Quelles sont les règles du contrat avec le lecteur ?
-4. **04_premise.md** — Le pitch en une phrase
-5. **05_conflict.md** — Quel est le problème central ?
-6. **06_characters.md** — Qui va vivre ce problème ? (Want/Need, Ghost/Wound/Lie)
-7. **07_universe.md** — Où et quand ? (Worldbuilding)
-8. **08_structure.md** — Comment ça se déroule ? (Actes, Beats, Synopsis)
-9. **09_voice.md** — Comment je le raconte ? (POV, Style)
-10. **00_chapter_outline.md** — Sommaire détaillé des chapitres (créé après étape 8)
+1. **01_intention.md** — L'urgence vitale (La racine)
+2. **02_theme.md** — Le système moral (Controlling Idea)
+3. **03_genre.md** — Le contrat (Must-haves & Comps)
+4. **04_premise.md** — Le Hook (Killer Logline)
+5. **05_conflict.md** — Le moteur (Le Lock-in & Gap)
+6. **06_characters.md** — Les névroses (Dossier psychiatrique)
+7. **07_universe.md** — L'Arène (Friction & Coût)
+8. **08_structure.md** — Le squelette (5 piliers porteurs)
+9. **09_voice.md** — La charte graphique (Zoom & Kill List)
+10. **00_chapter_outline.md** — Le plan de bataille (Scene Cards)
 
-**Chaque étape** est auditée brutalement. Workflow `/02-audit-spec` refuse le vague, le cliché, et la paresse.
+**Chaque étape** est auditée brutalement selon les critères de `00_cross_reference_index.md`.
 
 ### PHASE 2 : RÉDACTION (Guidée)
 - Rédiger chapitre par chapitre dans `02_draft/chXX.md`
-- Consulter le sommaire (`01_spec/00_chapter_outline.md`)
-- Consulter les specs validées (`01_spec/`)
-- Consulter les règles pertinentes (`00_core/`)
+- Suivre les Scene Cards de `01_spec/00_chapter_outline.md`
+- Respecter la Kill List de `01_spec/09_voice.md`
 - Auditer chaque chapitre sur 35 critères avant validation
 
 ### PHASE 3 : PUBLICATION
@@ -125,15 +124,15 @@ L'audit déclenche le **Raffinement Actif** : si une spec est rejetée, l'IA la 
 ## 📚 FICHIERS CRITIQUES À CONNAÎTRE
 
 ### `00_core/spec/00_cross_reference_index.md`
-**LE PIVOT DU SYSTÈME**. Mappe chaque étape de spec (01-09) avec TOUTES les règles et audits pertinents. C'est la source de vérité pour les workflows.
+**LE PIVOT DU SYSTÈME**. Mappe chaque étape de spec (01-10) avec TOUTES les règles et audits pertinents. C'est la source de vérité pour les workflows.
 
 ### `ARBORESCENCE.md`
-Documentation EXHAUSTIVE de toutes les 73 règles + 44 audits. Chaque fichier a 2-3 paragraphes expliquant quoi, pourquoi, comment. **LISEZ-MOI pour comprendre le système en profondeur**.
+Documentation EXHAUSTIVE. Chaque fichier a 2-3 paragraphes expliquant quoi, pourquoi, comment. **LISEZ-MOI pour comprendre le système en profondeur**.
 
 ### `.agent/workflows/`
 Les 3 workflows qui pilotent tout :
-- `/01-create-spec [01-09]` : Créer une spec
-- `/02-audit-spec [01-09]` : Auditer et raffiner
+- `/01-create-spec [01-10]` : Créer une spec
+- `/02-audit-spec [01-10]` : Auditer et raffiner
 - `/refine-rules` : Améliorer les règles du système
 
 ---
@@ -144,66 +143,46 @@ Les 3 workflows qui pilotent tout :
 |---|---|
 | Règles narratives (`00_core/`) | 73 |
 | Protocoles d'audit (`03_audit/`) | 44 |
-| **Total fichiers de référence** | **120** |
+| **Total fichiers de référence** | **117** |
 | Workflows actifs | 3 |
-| Étapes de spécification obligatoires | 9 (+1 sommaire) |
+| Étapes de spécification obligatoires | 10 |
 
 ---
 
 ## 🔄 HISTORIQUE DES CORRECTIONS ET MATURATION
 
 ### 2025-12-25 (Session actuelle)
-- **Naming** : Harmonisation `06_characters.md` et `07_universe.md`
-- **Isolation Git** : `.gitignore` configuré (Framework vs Projet)
-- **Workflows** : `/01-create-spec` et `/02-audit-spec` opérationnels
-- **Neutralisation complaisance IA** : Interdiction auto-validation (Veto Humain obligatoire)
-- **Documentation** :
-  - Création de `10_chapter_outline.md` (template sommaire chapitres)
-  - Enrichissement EXHAUSTIF de `ARBORESCENCE.md` (117 fichiers documentés avec descriptions détaillées)
-  - Réécriture complète de `README.md` pour clarifier l'objectif du boilerplate
-  - Mise à jour de `MEMOIRE.md` pour onboarding agent
+- **Refonte Architecturale des Specs** : Passage à 10 étapes rituelles.
+- **Rigueur Stricte** : Introduction des "Livrables Strictes" (Killer Logline, Scene Cards, Ghost/Wound/Lie).
+- **Naming** : Harmonisation `06_characters.md` et `07_universe.md`.
+- **Isolation Git** : `.gitignore` configuré (Framework vs Projet).
+- **Workflows** : `/01-create-spec` et `/02-audit-spec` opérationnels sur 10 étapes.
+- **Veto Humain** : Interdiction auto-validation gravée dans le marbre.
+- **Documentation** : Mise à jour complète (README, MEMOIRE, ARBORESCENCE) pour le système 10 étapes.
 
 ---
 
 ## 📌 ÉTAT ACTUEL DU FRAMEWORK
 
 ### Framework Narrative Engine
-- **Statut** : Stable et Verrouillé ✅
-- **Workflows** :
-  - `/01-create-spec` : ✅ Opérationnel
-  - `/02-audit-spec` : ✅ Opérationnel (Cycle : Critique → Raffinement IA → Veto Humain)
-  - `/refine-rules` : ✅ Opérationnel
-- **Git** : Dépôt propre. Fichiers projet exclus via `.gitignore`.
-- **Documentation** : ARBORESCENCE.md + README.md + MEMOIRE.md complets et à jour
-
-### Dernier Commit
-```
-feat: documentation EXHAUSTIVE de toutes les règles et audits - 117 fichiers enrichis
-feat: réécriture README pour clarifier objectif du boilerplate
-```
+- **Statut** : Stable et Verrouillé ✅ (V2 Architecturale)
+- **Workflows** : ✅ `/01-create-spec`, `/02-audit-spec`, `/refine-rules`
+- **Documentation** : Synchronisée avec la structure 10 étapes.
 
 ---
 
 ## 🎯 INSTRUCTIONS POUR L'AGENT (TOI)
 
 ### À chaque nouvelle session :
-1. **LIS CE FICHIER D'ABORD** (MEMOIRE.md)
-2. Si besoin de détails sur une règle/audit → Consulte `ARBORESCENCE.md`
-3. Si l'utilisateur lance un workflow (`/XX-xxx`) → Va lire `.agent/workflows/XX-xxx.md`
-4. Si création/audit de spec → Consulte `00_core/spec/00_cross_reference_index.md`
-
-### Quand l'utilisateur demande :
-- **"Créer une spec"** → `/01-create-spec [NN]`
-- **"Auditer une spec"** → `/02-audit-spec [NN]`
-- **"Améliorer les règles"** → `/refine-rules`
-- **"C'est quoi ce projet ?"** → Résume à partir de ce fichier
-- **"Comment ça marche ?"** → Explique le pipeline 3 phases
+1. **LIS CE FICHIER D'ABORD** (MEMOIRE.md).
+2. Si création/audit de spec → **EXIGE** les livrables précis définis dans `00_core/spec/`.
+3. **REJETTE** tout ce qui est flou, cliché ou "vibe coding".
+4. **NE VALIDE RIEN** sans une modification manuelle visible de l'utilisateur.
 
 ### RAPPELS CRITIQUES :
-- ❌ **NE JAMAIS AUTO-VALIDER** (Veto Humain obligatoire)
-- ❌ **NE JAMAIS improviser** (tout suit les workflows)
-- ✅ **TOUJOURS consulter les règles pertinentes** avant de créer/auditer
-- ✅ **TOUJOURS documenter** les changements dans ce fichier
+- ❌ **ZERO COMPLAISANCE** : Tu es un architecte, pas un fan.
+- ❌ **AUCUNE AUTO-VALIDATION**.
+- ✅ **CONSULTE L'INDEX** (`00_cross_reference_index.md`) avant toute spec.
 
 ---
 
@@ -211,16 +190,8 @@ feat: réécriture README pour clarifier objectif du boilerplate
 
 > **"L'IDE comme mémoire persistante pour l'écriture littéraire"**
 
-Ce système applique les principes du développement logiciel à la création littéraire :
-- **Versioning** : Git pour tracer chaque décision narrative
-- **Audit rigoureux** : Protocoles automatisés pour détecter failles et incohérences
-- **Modularité** : Règles séparées par concern (POV, Structure, Style, etc.)
-- **Reproductibilité** : Processus systématique qui fonctionne projet après projet
-
----
-
 *"Le code ne ment jamais. L'histoire non plus — si elle est bien structurée."*
 
 ---
 
-**Note** : Ce fichier est la **mémoire vive du projet**. Ne jamais supprimer les listes de règles.
+**Note** : Ce fichier est la mémoire vive du projet. Ne jamais supprimer les listes de règles.

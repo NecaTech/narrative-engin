@@ -1,265 +1,157 @@
 # Index de Croisement des Règles (Cross-Reference Map)
 
-Ce document mappe chaque étape de spécification avec TOUTES les règles `00_core/` et protocoles `03_audit/` pertinents.
-
-**Objectif** : Garantir qu'aucune règle n'est ignorée lors de la création et l'audit des specs.
-
----
-
-## Étape 1 : INTENTION
-> "Pourquoi j'écris ça ?"
-
-### Règles Core à Consulter
-| Fichier | Pourquoi |
-|---|---|
-| `00_core/theme/controlling_idea.md` | L'intention doit aboutir à une controlling idea |
-| `00_core/theme/thematic_question.md` | L'intention pose une question thématique |
-
-### Audits à Appliquer
-| Fichier | Pourquoi |
-|---|---|
-| `03_audit/spec/01_intention_audit.md` | Audit direct |
+**Statut** : PIVOT DU SYSTÈME (Source de Vérité)
+**Fonction** : Mappe chaque étape de spécification (01-10) avec les règles `00_core` et les audits `03_audit` obligatoires.
 
 ---
 
-## Étape 2 : THÈME
-> "De quoi ça parle vraiment ?"
+## PROTOCOLE D'USAGE POUR L'AGENT
 
-### Règles Core à Consulter
-| Fichier | Pourquoi |
-|---|---|
-| `00_core/theme/controlling_idea.md` | Le thème porte la controlling idea |
-| `00_core/theme/thematic_question.md` | Le thème pose la question centrale |
-| `00_core/theme/motif_recurrence.md` | Les motifs incarnent le thème |
-| `00_core/theme/objective_correlative.md` | Objets qui évoquent le thème |
-| `00_core/theme/symbolic_action.md` | Actions symbolisant le thème |
-
-### Audits à Appliquer
-| Fichier | Pourquoi |
-|---|---|
-| `03_audit/spec/02_theme_audit.md` | Audit direct |
-| `03_audit/theme/symbolic_motif_coherence.md` | Les motifs sont-ils cohérents ? |
-| `03_audit/theme/thematic_thread_tracer.md` | Le fil thématique est-il tracé ? |
+1.  **Identifier l'étape active** (ex: `/06-characters`).
+2.  **Charger TOUTES les règles "Input"** listées ci-dessous pour cette étape.
+3.  **Exécuter la tâche** de spécification.
+4.  **Appliquer TOUS les audits "Output"** avant de soumettre à l'humain.
 
 ---
 
-## Étape 3 : GENRE
-> "Quelles sont les règles du genre ?"
+## Étape 01 : INTENTION (La Source)
+> *"Quelle est l'urgence vitale ?"*
 
-### Règles Core à Consulter
-| Fichier | Pourquoi |
-|---|---|
-| `00_core/structure/save_the_cat.md` | Structure adaptée au genre commercial |
-| `00_core/structure/heros_journey.md` | Structure mythique (Fantasy, Aventure) |
-| `00_core/structure/three_act_structure.md` | Base universelle |
-
-### Audits à Appliquer
-| Fichier | Pourquoi |
-|---|---|
-| `03_audit/spec/03_genre_audit.md` | Audit direct |
-| `03_audit/reader_experience/genre_expectation_audit.md` | Conformité aux attentes |
+| Type | Fichier | Pourquoi c'est critique |
+|---|---|---|
+| **Input (Core)** | `00_core/theme/controlling_idea.md` | Pour formuler la "Thèse Provocatrice". |
+| **Input (Core)** | `00_core/theme/thematic_question.md` | Pour définir l'impact intellectuel. |
+| **Validation** | `03_audit/spec/01_intention_audit.md` | Audit des "6 Épreuves Impitoyables". |
 
 ---
 
-## Étape 4 : PRÉMISSE
-> "En une phrase, c'est quoi ?"
+## Étape 02 : THÈME (Le Système Moral)
+> *"Quel est le combat moral ?"*
 
-### Règles Core à Consulter
-| Fichier | Pourquoi |
-|---|---|
-| `00_core/structure/in_medias_res.md` | Hook d'ouverture |
-| `00_core/tension/promise_delay_deliver.md` | La prémisse est une promesse |
-
-### Audits à Appliquer
-| Fichier | Pourquoi |
-|---|---|
-| `03_audit/spec/04_premise_audit.md` | Audit direct |
-| `03_audit/reader_experience/opening_hook_strength.md` | Force de l'accroche |
+| Type | Fichier | Pourquoi c'est critique |
+|---|---|---|
+| **Input (Core)** | `00_core/theme/controlling_idea.md` | **OBLIGATOIRE** pour la formule Valeur + Cause. |
+| **Input (Core)** | `00_core/theme/motif_recurrence.md` | Pour ancrer le thème dans le physique. |
+| **Input (Core)** | `00_core/theme/objective_correlative.md` | Objets symboliques. |
+| **Validation** | `03_audit/spec/02_theme_audit.md` | Vérification du Contre-Thème. |
+| **Validation** | `03_audit/theme/symbolic_motif_coherence.md` | Cohérence des symboles. |
 
 ---
 
-## Étape 5 : CONFLIT
-> "Quel est le problème ?"
+## Étape 03 : GENRE (Le Contrat)
+> *"Quelles sont les promesses ?"*
 
-### Règles Core à Consulter
-| Fichier | Pourquoi |
-|---|---|
-| `00_core/structure/yes_but_no_and.md` | Conflits créent des complications |
-| `00_core/structure/try_fail_cycles.md` | Échecs avant succès |
-| `00_core/tension/dramatic_irony.md` | Tension par savoir asymétrique |
-| `00_core/tension/ticking_clock.md` | Urgence temporelle |
-| `00_core/tension/micro_tension.md` | Tension à chaque ligne |
-| `00_core/tension/mystery_box.md` | Énigme centrale |
-| `00_core/tension/foreshadowing.md` | Indices de conflit à venir |
-| `00_core/tension/red_herring.md` | Fausses pistes |
-| `00_core/logic/pixar_coincidence_rule.md` | Coïncidences créent problèmes, pas solutions |
-
-### Audits à Appliquer
-| Fichier | Pourquoi |
-|---|---|
-| `03_audit/spec/05_conflict_audit.md` | Audit direct |
-| `03_audit/structure/tension_gradient_analysis.md` | Courbe de tension |
-| `03_audit/narrative/plot_hole_tracker.md` | Pas de trous dans le conflit |
-| `03_audit/reader_experience/suspense_leak_detector.md` | Tension préservée |
+| Type | Fichier | Pourquoi c'est critique |
+|---|---|---|
+| **Input (Core)** | `00_core/structure/save_the_cat.md` | Si genre commercial (Thriller/Romance). |
+| **Input (Core)** | `00_core/structure/heros_journey.md` | Si genre mythique (Fantasy/SF). |
+| **Input (Core)** | `00_core/tension/mystery_box.md` | Si genre à suspense/mystère. |
+| **Validation** | `03_audit/spec/03_genre_audit.md` | Vérification des "Comps". |
+| **Validation** | `03_audit/reader_experience/genre_expectation_audit.md` | Respect des Commandements. |
 
 ---
 
-## Étape 6 : PERSONNAGES
-> "Qui va vivre ce problème ?"
+## Étape 04 : PRÉMISSE (Le Hook)
+> *"Pourquoi payer pour lire ?"*
 
-### Règles Core à Consulter
-| Fichier | Pourquoi |
-|---|---|
-| `00_core/casting/want_vs_need.md` | Moteur psychologique |
-| `00_core/casting/ghost_wound_lie.md` | Backstory émotionnelle |
-| `00_core/casting/antagonist_mirror.md` | Antagoniste comme miroir |
-| `00_core/casting/sympathetic_antagonist.md` | Antagoniste compréhensible |
-| `00_core/casting/foil_character.md` | Personnages contrastants |
-| `00_core/casting/false_protagonist.md` | Subversion possible |
-| `00_core/casting/five_man_band.md` | Archétypes d'équipe |
-| `00_core/casting/the_watson.md` | Exposition naturelle |
-| `00_core/arc/positive_arc.md` | Arc de transformation |
-| `00_core/arc/negative_arc.md` | Arc tragique |
-| `00_core/arc/flat_arc.md` | Protagoniste stable |
-| `00_core/arc/relationship_arc.md` | Évolution des relations |
-| `00_core/style/voice_contrast.md` | Voix distinctes |
-
-### Audits à Appliquer
-| Fichier | Pourquoi |
-|---|---|
-| `03_audit/spec/06_characters_audit.md` | Audit direct |
-| `03_audit/character/character_agency_audit.md` | Protagoniste actif |
-| `03_audit/character/relationship_matrix_tracker.md` | Relations cohérentes |
-| `03_audit/character/mru_sequencing_validation.md` | Réactions crédibles |
-| `03_audit/character/melodrama_detector.md` | Pas d'excès émotionnel |
-| `03_audit/character/subtext_density_test.md` | Profondeur psychologique |
-| `03_audit/structure/character_arc_tracker.md` | Arcs cohérents |
-| `03_audit/voice/voice_fingerprinting.md` | Voix distinctes |
+| Type | Fichier | Pourquoi c'est critique |
+|---|---|---|
+| **Input (Core)** | `00_core/tension/promise_delay_deliver.md` | La prémisse est une Promesse. |
+| **Input (Core)** | `00_core/structure/in_medias_res.md` | Pour l'Incident Déclencheur. |
+| **Validation** | `03_audit/spec/04_premise_audit.md` | Test de l'Ironie et des Enjeux. |
+| **Validation** | `03_audit/reader_experience/opening_hook_strength.md` | Force de l'accroche. |
 
 ---
 
-## Étape 7 : UNIVERS
-> "Où et quand ?"
+## Étape 05 : CONFLIT (Le Moteur)
+> *"Pourquoi ne peut-il pas abandonner ?"*
 
-### Règles Core à Consulter
-| Fichier | Pourquoi |
-|---|---|
-| `00_core/worldbuilding/lived_in_universe.md` | Monde avec histoire |
-| `00_core/logic/sanderson_law_1.md` | Lore compréhensible |
-| `00_core/logic/sanderson_law_2.md` | Limitations intéressantes |
-| `00_core/style/sensory_anchoring.md` | Immersion sensorielle |
-
-### Audits à Appliquer
-| Fichier | Pourquoi |
-|---|---|
-| `03_audit/spec/07_universe_audit.md` | Audit direct |
-| `03_audit/forensic/worldbuilding_clash.md` | Cohérence du lore |
-| `03_audit/forensic/consistency_check.md` | Faits cohérents |
-| `03_audit/immersion/sensory_balance_check.md` | 5 sens présents |
-| `03_audit/immersion/spatial_anchoring_audit.md` | Ancrage spatial |
+| Type | Fichier | Pourquoi c'est critique |
+|---|---|---|
+| **Input (Core)** | `00_core/structure/try_fail_cycles.md` | Mécanique de l'échec nécessaire. |
+| **Input (Core)** | `00_core/tension/ticking_clock.md` | Pour le "Verrouillage" temporel. |
+| **Input (Core)** | `00_core/logic/pixar_coincidence_rule.md` | Coïncidences pour créer des problèmes. |
+| **Input (Core)** | `00_core/casting/antagonist_mirror.md` | Convergence Interne/Externe. |
+| **Validation** | `03_audit/spec/05_conflict_audit.md` | Test du "Gap" et du "Lock-in". |
+| **Validation** | `03_audit/structure/tension_gradient_analysis.md` | Escalade des enjeux. |
 
 ---
 
-## Étape 8 : STRUCTURE
-> "Comment ça se déroule ?"
+## Étape 06 : PERSONNAGES (Les Névroses)
+> *"Qui est assez brisé ?"*
 
-### Règles Core à Consulter
-| Fichier | Pourquoi |
-|---|---|
-| `00_core/structure/three_act_structure.md` | Base structurelle |
-| `00_core/structure/save_the_cat.md` | 15 beats |
-| `00_core/structure/heros_journey.md` | 12 étapes mythiques |
-| `00_core/structure/snowflake_method.md` | Construction fractale |
-| `00_core/structure/scene_sequel_balance.md` | Alternance action/réflexion |
-| `00_core/structure/yes_but_no_and.md` | Progression par complications |
-| `00_core/structure/try_fail_cycles.md` | Échecs successifs |
-| `00_core/structure/in_medias_res.md` | Début in medias res |
-| `00_core/structure/late_in_early_out.md` | Entrée/sortie de scène |
-| `00_core/structure/midpoint_reversal.md` | Retournement central |
-| `00_core/structure/pinch_points.md` | Rappels de menace |
-| `00_core/structure/bookending.md` | Début/fin en écho |
-| `00_core/logic/chekhovs_gun.md` | Setup/Payoff |
-| `00_core/logic/rule_of_three.md` | Triplets satisfaisants |
-| `00_core/tension/promise_delay_deliver.md` | Promesses narratives |
-
-### Audits à Appliquer
-| Fichier | Pourquoi |
-|---|---|
-| `03_audit/spec/08_structure_audit.md` | Audit direct |
-| `03_audit/structure/scene_goal_validator.md` | Chaque scène a un but |
-| `03_audit/structure/beat_structure_audit.md` | Beats présents |
-| `03_audit/structure/subplot_orphan_detector.md` | Subplots résolues |
-| `03_audit/structure/tension_gradient_analysis.md` | Tension croissante |
-| `03_audit/structure/character_arc_tracker.md` | Arcs intégrés |
-| `03_audit/narrative/pacing_anomalies.md` | Rythme équilibré |
-| `03_audit/narrative/foreshadowing_payoff.md` | Setup/Payoff |
-| `03_audit/narrative/plot_hole_tracker.md` | Pas de trous |
+| Type | Fichier | Pourquoi c'est critique |
+|---|---|---|
+| **Input (Core)** | `00_core/casting/ghost_wound_lie.md` | **OBLIGATOIRE** (Le Triptyque). |
+| **Input (Core)** | `00_core/casting/want_vs_need.md` | Moteur psychologique. |
+| **Input (Core)** | `00_core/arc/positive_arc.md` | (Ou Negative/Flat selon le choix). |
+| **Input (Core)** | `00_core/style/voice_contrast.md` | Pour le "Voice Sample". |
+| **Validation** | `03_audit/spec/06_characters_audit.md` | Les 7 Épreuves (Dîner, Voix, etc.). |
+| **Validation** | `03_audit/character/character_agency_audit.md` | Vérifier que le héros est actif. |
 
 ---
 
-## Étape 9 : VOIX
-> "Comment je le raconte ?"
+## Étape 07 : UNIVERS (L'Arène)
+> *"Pourquoi ce monde est hostile ?"*
 
-### Règles Core à Consulter
-| Fichier | Pourquoi |
-|---|---|
-| `00_core/pov/deep_pov.md` | Immersion maximale |
-| `00_core/pov/psychic_distance.md` | Échelle de proximité |
-| `00_core/pov/head_hopping.md` | Anti-pattern à éviter |
-| `00_core/pov/unreliable_narrator.md` | Option narrative |
-| `00_core/pov/free_indirect_discourse.md` | Technique de voix |
-| `00_core/pov/stream_of_consciousness.md` | Flux de pensées |
-| `00_core/pov/information_control.md` | Gestion de l'info |
-| `00_core/style/voice_contrast.md` | Voix distinctes |
-| `00_core/style/motivation_reaction_units.md` | Séquence MRU |
-| `00_core/style/iceberg_theory.md` | Sous-texte |
-| `00_core/style/sensory_anchoring.md` | Ancrage sensoriel |
-| `00_core/style/on_the_nose_dialogue.md` | Éviter l'explicite |
-| `00_core/style/dialogue_beat.md` | Rythme des dialogues |
-| `00_core/style/oblique_responses.md` | Réponses indirectes |
-| `00_core/style/sentence_rhythm.md` | Variation de rythme |
-| `00_core/style/active_voice.md` | Voix active |
-| `00_core/logic/show_dont_tell.md` | Montrer, pas dire |
-| `00_core/logic/rule_2_plus_2.md` | Laisser déduire |
-
-### Audits à Appliquer
-| Fichier | Pourquoi |
-|---|---|
-| `03_audit/spec/09_voice_audit.md` | Audit direct |
-| `03_audit/voice/pov_consistency.md` | POV stable |
-| `03_audit/voice/narrator_voice_stability.md` | Voix cohérente |
-| `03_audit/voice/voice_fingerprinting.md` | Personnages distincts |
-| `03_audit/style/filter_word_ruthless.md` | Deep POV |
-| `03_audit/style/dialogue_health_report.md` | Dialogues sains |
-| `03_audit/style/prose_rhythm_analysis.md` | Rythme musical |
-| `03_audit/style/show_vs_tell_detector.md` | Montrer vs dire |
-| `03_audit/style/echo_word_scanner.md` | Pas de répétitions |
-| `03_audit/style/weak_verb_purge.md` | Verbes forts |
-| `03_audit/style/readability_metrics.md` | Lisibilité adaptée |
-| `03_audit/character/mru_sequencing_validation.md` | Séquences MRU |
+| Type | Fichier | Pourquoi c'est critique |
+|---|---|---|
+| **Input (Core)** | `00_core/worldbuilding/lived_in_universe.md` | Pour la Texture et l'Usure. |
+| **Input (Core)** | `00_core/logic/sanderson_law_2.md` | Pour les Coûts et Limitations. |
+| **Input (Core)** | `00_core/style/sensory_anchoring.md` | Pour la description sensorielle. |
+| **Validation** | `03_audit/spec/07_universe_audit.md` | Test de la Friction. |
+| **Validation** | `03_audit/forensic/worldbuilding_clash.md` | Logique interne. |
 
 ---
 
-## Règles Transversales (À consulter à CHAQUE étape)
+## Étape 08 : STRUCTURE (Le Squelette)
+> *"Le squelette tient-il debout ?"*
 
-Ces règles s'appliquent tout au long du processus :
+| Type | Fichier | Pourquoi c'est critique |
+|---|---|---|
+| **Input (Core)** | `00_core/structure/save_the_cat.md` | Les 15 Beats (Standard). |
+| **Input (Core)** | `00_core/structure/midpoint_reversal.md` | Bascule Réactif → Proactif. |
+| **Input (Core)** | `00_core/logic/chekhovs_gun.md` | Setup / Payoff. |
+| **Input (Core)** | `00_core/structure/yes_but_no_and.md` | Causalité "Therefore/But". |
+| **Validation** | `03_audit/spec/08_structure_audit.md` | Test des Piliers Porteurs. |
+| **Validation** | `03_audit/narrative/plot_hole_tracker.md` | Chasse aux trous. |
+
+---
+
+## Étape 09 : VOIX (La Charte Graphique)
+> *"Quel filtre optique ?"*
+
+| Type | Fichier | Pourquoi c'est critique |
+|---|---|---|
+| **Input (Core)** | `00_core/pov/deep_pov.md` | Standard d'immersion (Zoom). |
+| **Input (Core)** | `00_core/style/filter_word_ruthless.md` | **CRITIQUE** (La Kill List). |
+| **Input (Core)** | `00_core/style/show_dont_tell.md` | Règle d'or. |
+| **Input (Core)** | `00_core/style/active_voice.md` | Énergie de la phrase. |
+| **Validation** | `03_audit/spec/09_voice_audit.md` | Calibrage de la caméra. |
+| **Validation** | `03_audit/style/readability_metrics.md` | Niveau de langage. |
+
+---
+
+## Étape 10 : SOMMAIRE (Le Plan de Bataille)
+> *"Comment chaque scène change l'histoire ?"*
+
+| Type | Fichier | Pourquoi c'est critique |
+|---|---|---|
+| **Input (Core)** | `00_core/structure/scene_sequel_balance.md` | Choix du Type (Scène vs Sequel). |
+| **Input (Core)** | `00_core/structure/value_charge.md` | **OBLIGATOIRE** (Le +/- Shift). |
+| **Input (Core)** | `00_core/style/motivation_reaction_units.md` | Micro-structure. |
+| **Validation** | `03_audit/structure/scene_goal_validator.md` | Vérifier But/Conflit/Changement. |
+| **Validation** | `03_audit/narrative/pacing_anomalies.md` | Vérifier le rythme global. |
+
+---
+
+## Règles Transversales (Toujours Actives)
+
+À vérifier en tâche de fond sur tout livrable :
 
 | Fichier | Application |
 |---|---|
-| `00_core/logic/fair_play_mystery.md` | Tous les indices accessibles |
-| `00_core/logic/macguffin.md` | Objet motivant l'action |
-| `03_audit/forensic/sensitivity_bias_scan.md` | Check de sensibilité |
-| `03_audit/reader_experience/cognitive_overload_check.md` | Pas de surcharge |
-
----
-
-## Utilisation de cet Index
-
-1. **Avant chaque étape** : Consulter la section correspondante
-2. **Lire les règles Core** listées pour cette étape
-3. **Créer le fichier spec** dans `01_spec/`
-4. **Appliquer les audits** listés pour valider
-5. **Corriger** jusqu'à validation
-6. **Passer à l'étape suivante**
-
-Cet index garantit que les **115 fichiers** du système sont exploités de manière systématique.
+| `00_core/logic/fair_play_mystery.md` | Pas d'information cachée injustement. |
+| `00_core/logic/macguffin.md` | Si un objet moteur est utilisé. |
+| `03_audit/forensic/sensitivity_bias_scan.md` | Responsabilité narrative. |
+| `03_audit/reader_experience/cognitive_overload_check.md` | Pas d'Info-Dumps. |

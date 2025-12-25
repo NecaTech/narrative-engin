@@ -1,61 +1,66 @@
-# Règle : Personnages (Étape 6/9)
+# Règle : Personnages (Étape 6/10)
 
 ## Question Fondamentale
-**"Qui va vivre ce problème ?"**
+**"Qui est assez brisé pour vivre cette histoire ?"**
 
 ## Définition
-Les personnages sont les véhicules de votre message. Ils incarnent le thème, portent le conflit, et permettent au lecteur de vivre l'histoire par procuration.
+Un personnage n'est pas une liste d'adjectifs ("Courageux, blond"). C'est une mécanique psychologique complexe faite de contradictions.
+Nous ne construisons pas des CVs. Nous construisons des névroses qui vont entrer en collision avec le Conflit.
 
-## Personnages Essentiels
+## Connexions Systèmes
+- **Dépendance Amont** : `05_conflict.md` (Le héros est conçu pour souffrir spécifiquement de ce conflit)
+- **Dépendance Aval** : `09_voice.md` (La personnalité dicte le style), `00_chapter_outline.md` (Les décisions du héros créent le plot)
+- **Référence Technique** : `00_core/casting/ghost_wound_lie.md` (Le Triptyque), `00_core/casting/want_vs_need.md`
+- **Audit Applicable** : `03_audit/spec/06_characters_audit.md` (Le Test du Dîner)
 
-### Protagoniste
-- **Want** : Ce qu'il désire consciemment (objectif externe)
-- **Need** : Ce dont il a vraiment besoin (croissance interne)
-- **Ghost** : L'événement passé qui le hante
-- **Wound** : La blessure émotionnelle résultante
-- **Lie** : La croyance fausse qu'il doit surmonter
+## Livrables Strictes (Le Dossier Psychiatrique)
 
-### Antagoniste
-- Pas nécessairement "méchant" — juste en opposition avec le protagoniste
-- Idéalement, miroir du protagoniste (mêmes désirs, moyens différents)
-- Motivations compréhensibles (pas de "méchant pour le fun")
+Pour chaque personnage majeur (Protagoniste & Antagoniste), l'agent doit générer :
 
-### Personnages Secondaires
-- Chacun doit avoir une FONCTION narrative (mentor, allié, obstacle)
-- Éviter les personnages "taxi" (qui n'existent que pour transporter l'intrigue)
+### 1. La Mécanique du Trauma (Ghost → Wound → Lie)
+Ne pas lister, **relier**.
+- **The Ghost** : L'événement précis et sensoriel du passé. (Pas juste "Enfance dure", mais "A vu son père pleurer à Noël").
+- **The Wound** : La peur viscérale qui en résulte.
+- **The Lie (Le Bouclier)** : La mauvaise leçon qu'il en a tiré. *"Je ne dois jamais dépendre de personne."*
+- *Note : Le Lie est ce qui protège le personnage de la Wound, mais l'empêche d'être heureux.*
 
-## Arc de Personnage
-Chaque personnage important doit avoir un arc :
-- **Arc Positif** : Le personnage surmonte son Lie
-- **Arc Négatif** : Le personnage s'enfonce dans son Lie
-- **Arc Plat** : Le personnage reste stable mais transforme le monde
+### 2. Le Moteur (Lie → Want vs Need)
+- **Obsessive Want** : Le but externe. Il découle DIRECTEMENT du Lie. (Il veut le pouvoir *pour* ne plus jamais dépendre de personne).
+- **The Need** : La vérité douloureuse qu'il doit accepter pour guérir. (Accepter la vulnérabilité).
+- **Le Conflit Interne** : Le Want et le Need doivent être incompatibles. Il ne peut pas avoir les deux.
 
-## Référence Core
-Voir : `00_core/casting/`, `00_core/arc/`
+### 3. L'Antagoniste (L'Ombre Compétente)
+- **Compétence** : Dans quoi l'antagoniste est-il *meilleur* que le héros ? (Il doit être plus fort au début).
+- **Philosophie** : Pourquoi pense-t-il avoir raison ? (Son point de vue moral tordu mais logique).
+- **Attaque** : Comment appuie-t-il spécifiquement sur la *Wound* du héros ?
 
-## Référence Audit
-Voir : `03_audit/character/character_agency_audit.md`, `03_audit/character/relationship_matrix_tracker.md`
+### 4. La Signature Vocale (Voice Sample)
+L'IA doit écrire 3 lignes de dialogue brut pour ce personnage sur un sujet anodin (ex: commander un café, se plaindre de la météo).
+- *Analyse requise* : Vocabulaire, rythme, niveau de politesse, sous-texte.
+- *Si tous les personnages parlent pareil → REJET.*
 
-## Anti-patterns
-- ❌ Protagoniste passif (choses lui arrivent, il ne fait rien)
-- ❌ Antagoniste unidimensionnel (mal pour le mal)
-- ❌ Trop de personnages (dilution)
-- ❌ Personnages interchangeables (pas de voix unique)
+## Rôles Secondaires (Function-First)
+Pour les autres :
+- **Fonction Narrative** : Mentor, Foil (Contraste), Comic Relief, Catalyseur.
+- **Pourquoi lui ?** : Si on peut le fusionner avec un autre, faites-le.
+
+## Anti-patterns (Motifs de Rejet Immédiat)
+- ❌ **La Mary Sue / Gary Stu** : Personnage parfait, aimé de tous, sans défaut handicapant.
+- ❌ **Le Passif** : Il subit l'intrigue. (Le héros doit prendre les décisions, même les mauvaises).
+- ❌ **Le Cliché Ambulant** : Le mentor qui parle par énigmes, la brute stupide.
+- ❌ **La Motivation Floue** : "Il est méchant parce qu'il est fou."
 
 ## Ordre dans le Processus
-```
-[1] INTENTION
- ↓
-...
- ↓
-[5] CONFLIT
- ↓
-[6] PERSONNAGES ← VOUS ÊTES ICI
- ↓
-[7] UNIVERS
- ↓
-...
-```
+
+> ...
+>  ↓
+> [05] CONFLIT
+>  ↓
+> [06] PERSONNAGES (Les Névroses) ← VOUS ÊTES ICI
+>  ↓
+> [07] UNIVERS (L'Arène)
+>  ↓
+> ...
 
 ## Fichier de Sortie
 `01_spec/06_characters.md`

@@ -1,58 +1,64 @@
-# Règle : Prémisse (Étape 4/9)
+# Règle : Prémisse (Étape 4/10)
 
 ## Question Fondamentale
-**"En une phrase, c'est quoi ?"**
+**"Pourquoi un inconnu payerait-il de l'argent pour lire cette histoire ?"**
 
 ## Définition
-La prémisse (ou logline) est la cristallisation de votre histoire en 1-2 phrases. Si vous ne pouvez pas pitcher votre livre en 30 secondes, vous ne le comprenez pas encore assez.
+La prémisse (Logline) n'est pas un résumé. C'est le **Hook (l'hameçon)**.
+C'est la combinaison unique d'un personnage, d'un conflit et d'un "twist" qui crée une curiosité irrésistible. Une prémisse sans ironie est une prémisse morte.
 
-## Structure d'une Prémisse
+## Connexions Systèmes
+- **Dépendance Amont** : `03_genre.md` (La prémisse doit promettre les plaisirs du genre)
+- **Dépendance Aval** : `05_conflict.md` (La prémisse contient le germe du conflit central)
+- **Référence Technique** : `00_core/tension/promise_delay_deliver.md`
+- **Audit Applicable** : `03_audit/spec/04_premise_audit.md` (Test "Force du Pitch")
 
-### Formule Classique
-> Quand [ÉVÉNEMENT DÉCLENCHEUR], [PERSONNAGE] doit [OBJECTIF] avant que [ENJEU/DEADLINE].
+## La Formule "Killer Logline" (Algorithme Obligatoire)
 
-### Éléments Essentiels
-1. **Qui** : Le protagoniste (avec trait distinctif)
-2. **Quoi** : L'objectif/problème
-3. **Pourquoi** : Les enjeux (ce qui se passe si échec)
-4. **Obstacle** : Ce qui rend la tâche difficile
+L'agent doit construire la phrase en suivant cette syntaxe stricte. Si un élément manque, rejeter.
 
-## Exemples
-- "Un archéologue doit retrouver l'Arche d'Alliance avant les nazis." (Indiana Jones)
-- "Un jeune sorcier découvre qu'il est la cible d'un mage noir qui a tué ses parents." (Harry Potter)
-- "Une avocate doit défendre un homme qu'elle croit coupable pour sauver sa carrière." (Thriller juridique)
+> **[PROTAGONISTE IMPARFAIT]** + **[INCIDENT DÉCLENCHEUR]** + **[OBJECTIF]** + **[ANTAGONISTE/OBSTACLE MAJEUR]** + **[ENJEUX MORTELS]**.
 
-## Test de Qualité
-Une bonne prémisse doit :
-- ✅ Susciter une question ("comment va-t-il y arriver ?")
-- ✅ Être spécifique (pas générique)
-- ✅ Contenir un conflit inhérent
-- ✅ Donner envie de lire
+### Les 5 Variables à Définir :
 
-## Le Hook
-Au-delà de la prémisse, le **hook** est l'élément unique qui rend VOTRE histoire différente :
-- Qu'est-ce qui n'a jamais été fait ?
-- Quel angle original apportez-vous ?
+1.  **L'Ironie du Protagoniste** : Ne dites pas "Un flic". Dites "Un flic agoraphobe". Le héros doit être la *pire* personne possible pour cette mission.
+2.  **L'Objectif Visible** : Une ligne d'arrivée physique (trouver l'arche, tuer le requin). Pas d'objectifs abstraits ("trouver le bonheur").
+3.  **L'Antagoniste** : Qui ou quoi empêche l'objectif ? (Un mage noir, un requin blanc, une administration corrompue).
+4.  **Le "Ticking Clock" (Optionnel mais recommandé)** : Une notion d'urgence temporelle.
+5.  **Les Enjeux (Stakes)** : "Ou sinon..." ?
+    - *Mort physique* (Thriller)
+    - *Mort professionnelle* (Drame)
+    - *Mort psychologique* (Romance/Intime)
 
-## Anti-patterns
-- ❌ Prémisse trop vague ("C'est l'histoire d'un homme qui cherche son destin")
-- ❌ Prémisse trop complexe (plus de 3 phrases)
-- ❌ Absence de conflit dans la prémisse
+## Livrables Strictes (Output attendu)
+
+### 1. La Logline (1 phrase)
+*Exemple : "Un chef de la police qui a la phobie de l'eau (Ironie/Protagoniste) doit traquer un grand requin blanc (Antagoniste) qui dévore les touristes avant la fête du 4 juillet (Urgence), ou la ville fera faillite et des gens mourront (Enjeux)."*
+
+### 2. Le "High Concept" (Le Twist)
+Quelle est la torsion unique ?
+- *"C'est [Genre Classique] MAIS [Twist Unique]."*
+- *Exemple : "C'est un film de maison hantée, MAIS dans l'espace." (Alien)*
+
+## Anti-patterns (Motifs de Rejet Immédiat)
+- ❌ **Le "Et après"** : Une liste d'événements sans causalité.
+- ❌ **L'abstrait** : "Un homme cherche à redonner un sens à sa vie." (Ennuyeux).
+- ❌ **Le manque d'Ironie** : Le héros est parfaitement qualifié pour la tâche. (Pas de conflit interne).
+- ❌ **Enjeux faibles** : "S'il échoue, il sera triste." (Le lecteur s'en fiche).
 
 ## Ordre dans le Processus
-```
-[1] INTENTION
- ↓
-[2] THÈME
- ↓
-[3] GENRE
- ↓
-[4] PRÉMISSE ← VOUS ÊTES ICI
- ↓
-[5] CONFLIT
- ↓
-...
-```
+
+> [01] INTENTION
+>  ↓
+> [02] THÈME
+>  ↓
+> [03] GENRE
+>  ↓
+> [04] PRÉMISSE (Le Hook) ← VOUS ÊTES ICI
+>  ↓
+> [05] CONFLIT (Le Moteur)
+>  ↓
+> ...
 
 ## Fichier de Sortie
 `01_spec/04_premise.md`

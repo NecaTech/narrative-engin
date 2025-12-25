@@ -147,40 +147,40 @@ Représentation du **flux de pensées non structuré** d'un personnage, avec ass
 #### `information_control.md` — La Gestion du Savoir
 Maîtriser **ce que le lecteur sait vs ce que le personnage sait**. Trois situations : (1) Le lecteur et le personnage savent la même chose (suspense partagé), (2) Le lecteur sait plus (ironie dramatique, angoisse), (3) Le personnage sait plus (mystère, découverte progressive). Jouer sur ces asymétries crée toutes les formes de tension narrative. Un outil essentiel pour contrôler le rythme révélations/surprises.
 
-### spec/ (10 règles) — Méthodologie de Spécification
+### spec/ (11 fichiers) — Méthodologie de Spécification
 
 #### `00_cross_reference_index.md` — PIVOT DU SYSTÈME
-Document central qui **mappe chaque étape de spécification avec TOUTES les règles et audits pertinents**. C'est la source de vérité qui garantit qu'aucune règle n'est oubliée. Pour chaque étape (01-09), l'index liste : (1) Les règles `00_core/` à consulter, (2) Les audits `03_audit/` à appliquer, (3) Les références croisées. Ce fichier permet au système de fonctionner de manière systématique : tout est tracé, rien n'est laissé au hasard. Sans cet index, le système serait une collection désordonnée de règles. Avec lui, c'est un processus reproductible.
+**Source de Vérité absolue**. Mappe chaque étape de spécification (01-10) avec les règles `00_core/` et les audits `03_audit/` obligatoires. Pour chaque étape, il définit les **Inputs (Core)** nécessaires à la réflexion et les **Outputs (Audits)** requis pour la validation. C'est le garant de la cohérence systémique : aucune décision narrative n'est prise sans consulter la Bible des règles et passer par le garde-fou des protocoles d'audit.
 
-#### `01_intention.md` — Pourquoi J'écris Ça ?
-Première étape : définir **le message, la morale, l'émotion ou la prise de conscience** que vous voulez provoquer chez le lecteur. L'intention est l'étoile polaire du récit. Tout découle de cette intention. **Points à définir** : (1) Quelle vérité voulez-vous transmettre ? (2) Quelle émotion voulez-vous laisser au lecteur en refermant le livre ? (3) Pourquoi êtes-vous LA bonne personne pour écrire cette histoire ? **Anti-patterns** : "Je veux écrire un thriller" (c'est un genre, pas une intention), "Je veux vendre des livres" (objectif commercial, pas narratif). L'intention doit être personnelle, viscérale, et unique.
+#### `01_intention.md` — L'Urgence Vitale (Étape 1/10)
+Définit la **charge utile** du récit. Loin d'être un simple message, l'intention explore l'obsession viscérale de l'auteur. **Livrables** : (1) La Source (expérience réelle/obsessionnelle), (2) La Cible Émotionnelle (état précis du lecteur à la dernière page), (3) La Thèse Provocatrice (attaque contre une idée reçue), (4) Le Lecteur Idéal (psychographie de celui qui a BESOIN du livre). **Anti-pattern** : Le "Tourisme" (écrire sur un sujet car il est joli/vendeur sans urgence interne).
 
-#### `02_theme.md` — De Quoi Ça Parle Vraiment ?
-Le thème est le **sujet profond** au-delà de l'intrigue de surface. C'est le filtre qui colore tout : chaque scène, dialogue et décision devrait résonner avec vos thèmes. **Points à définir** : (1) Quel concept abstrait explorez-vous ? (amour, pouvoir, identité, liberté), (2) Quelle question morale/philosophique posez-vous ? (sans donner de réponse dog mat ique), (3) Quel ton émotionnel générale ? (sombre, lumineux, mélancolique). Le thème est le **véhicule** de votre intention : si votre intention est "montrer que la vengeance emprisonne", votre thème sera "la vengeance et ses conséquences".
+#### `02_theme.md` — Le Système Moral (Étape 2/10)
+Transforme l'intention en une **proposition argumentative**. Le thème n'est pas un sujet ("L'Amour"), c'est une boussole pour trancher les dilemmes. **Piliers** : (1) Angle (Sujet vs Stance), (2) **Controlling Idea** (Formule : Valeur gagne/perd parce que Cause), (3) Contre-Thème (argument adverse logique et séduisant), (4) Question Thématique. Sert à dicter la fin de l'histoire (Climax) de manière incontestable.
 
-#### `03_genre.md` — Quelles Sont Les Règles du Jeu ?
-Le genre définit les **contraintes formelles et les attentes du lecteur**. C'est un contrat implicite : le lecteur qui achète un thriller s'attend à du suspense, celui qui achète une romance s'attend à une fin heureuse (HEA). **Points à définir** : (1) Genre principal et sous-genre précis, (2) Tropes ATTENDUS que vous respecterez vs tropes que vous SUBVERTIREZ, (3) Format (longueur, structure), (4) Public cible (âge, goûts, ton adapté). Chaque genre a des "must-have" : Thriller (tension, enjeux mortels), Romance (HEA, développement relationnel), Mystery (énigme, indices, résolution). **Anti-pattern** : Genre flou ("un peu de tout") → Le lecteur ne saura pas quoi attendre.
+#### `03_genre.md` — Le Contrat (Étape 3/10)
+Définit les **promesses commerciales et émotionnelles** faites au lecteur. Le genre est un cadre rigoureux, pas une étiquette. **Livrables** : (1) Positionnement atomique (Sous-genre + Comps), (2) Les 5 Commandements (Must-haves obligatoires du genre), (3) Tropes & Subversions (quels clichés embrasser ou tordre), (4) Calibrage technique (Ton, Format, Complexité). **Anti-pattern** : "L'Arrogance" (refaire les règles sans les comprendre).
 
-#### `04_premise.md` — En Une Phrase, C'est Quoi ?
-La prémisse est le **pitch, le hook, la promesse** faite au lecteur. C'est l'accroche qui doit vendre l'histoire en une phrase percutante. **Points à définir** : (1) La situation initiale, (2) L'incident déclencheur, (3) L'enjeu central. **Exemples** : "Un flic doit sauver des otages dans un gratte-ciel" (Die Hard), "Une ado doit survivre à un jeu mortel télévisé" (Hunger Games). La prémisse doit être **claire, intrigante et spécifique**. Si vous ne pouvez pas la formuler en moins de 30 mots, elle est trop complexe ou floue.
+#### `04_premise.md` — Le Hook (Étape 4/10)
+Cristallise l'histoire en une **curiosité irrésistible**. Utilise l'Ironie pour créer un Hook immédiat. **Algorithme Logline** : Protagoniste Imparfait + Incident Déclencheur + Objectif Visible + Antagoniste + Enjeux Mortels. **Livrables** : (1) La "Killer Logline" (1 phrase), (2) Le "High Concept" (C'est [Genre] MAIS [Twist]). Doit promettre les plaisirs du genre tout en proposant une torsion unique.
 
-#### `05_conflict.md` — Quel Est Le Problème ?
-Le conflit est le **moteur de toute narration**. Sans conflit, il n'y a pas d'histoire. **Types de conflits** : (1) Conflit externe (protagoniste vs antagoniste/monde/nature), (2) Conflit interne (Ghost/Wound/Lie du personnage). Les meilleurs récits combinent les deux : le conflit externe force le personnage à affronter son conflit interne. **Points à définir** : (1) Quel est l'obstacle principal ?, (2) Quels sont les enjeux (que perd le protagoniste s'il échoue ?), (3) Pourquoi le protagoniste ne peut-il PAS abandonner ? Le conflit doit être **inévitable, croissant, et personnel**.
+#### `05_conflict.md` — Le Moteur de Pression (Étape 5/10)
+Définit pourquoi le héros **ne peut PAS abandonner**. Le conflit est une machine qui broie le personnage jusqu'au changement. **Engrenages** : (1) Le Verrouillage (Lock-in : pourquoi pas de demi-tour ?), (2) Convergence Interne/Externe (l'enfer personnel du héros), (3) Antagonisme Personnifié (un visage sur l'obstacle), (4) Escalade des Enjeux (Stakes qui augmentent à chaque acte).
 
-#### `06_characters.md` — Qui Va Vivre Ce Problème ?
-Les personnages sont les **véhicules de votre message**. Ils incarnent le thème, portent le conflit, et permettent au lecteur de vivre l'histoire par procuration. **Pour chaque personnage essentiel** : (1) **Protagoniste** : Want, Need, Ghost, Wound, Lie, (2) **Antagoniste** : Motivations compréhensibles, miroir du protagoniste, (3) **Secondaires** : Fonction narrative claire (mentor, allié, obstacle). Chaque personnage important doit avoir un **arc mesurable** : positif (transformation), négatif (chute), ou plat (change le monde). **Anti-pattern** : Protagoniste passif (les choses lui arrivent, il ne fait rien).
+#### `06_characters.md` — Les Névroses (Étape 6/10)
+Construit des **mécaniques psychologiques contradictoires** plutôt que des biographies. Le personnage est l'outil du thème. **Dossier Psychiatrique** : (1) Le Triptyque (Ghost → Wound → Lie), (2) Le Moteur (Want vs Need), (3) L'Antagoniste (Ombre compétente attaquant la Wound), (4) La Signature Vocale (Voice Sample). **Règle** : Le héros doit être la PIRE personne possible pour sa mission.
 
-#### `07_universe.md` — Où Et Quand ?
-Le worldbuilding est l'**univers dans lequel l'histoire se déroule**. Même pour de la littérature contemporaine réaliste, il faut définir les règles du monde. **Points à définir** : (1) Cadre spatial et temporel, (2) Règles du monde (lois physiques, systèmes magiques, structures sociales), (3) Histoire et passé du monde (Lived-in Universe : traces, usure, traditions), (4) Atmosphère sensorielle (comment sent/sonne/sent ce monde ?). Le monde ne doit pas sembler "créé pour l'histoire" mais exister avant le héros et continuer après lui.
+#### `07_universe.md` — L'Arène de Friction (Étape 7/10)
+L'univers est une machine conçue pour générer de la difficulté. **Dimensions** : (1) Friction Physique (Terrain & Météo hostiles), (2) Système & Coût (Lois, Limitations, et Prix à payer), (3) Texture (Lived-In : usure, saleté, passé visible), (4) Règles Sociales (Oppressions et Tabous). Interdiction des mondes "neufs" ou de la magie gratuite.
 
-#### `08_structure.md` — Comment Ça Se Déroule ?
-La structure est le **squelette de votre histoire** : l'ordre des événements, les beats narratifs, la distribution des actes et chapitres. **Modèles disponibles** : (1) Structure en 3 Actes (25%-50%-25%), (2) Save the Cat (15 beats de Blake Snyder), (3) Hero's Journey (12 étapes de Campbell). **Éléments à définir** : (1) Synopsis chapitre par chapitre, (2) Points de bascule (Inciting Incident, Plot Point 1, Midpoint, Plot Point 2, Climax), (3) Subplots et leur résolution. Chaque scène doit avoir un **but, un conflit, et une résolution**.
+#### `08_structure.md` — Le Squelette (Étape 8/10)
+Gère l'énergie du lecteur par la **Causalité**. La structure est un rythme biologique. **Piliers** : (1) Incident Déclencheur (vie d'avant impossible), (2) Plot Point 1 (décision active), (3) Midpoint (pivot réactif/proactif), (4) All is Lost (mort symbolique et révélation du Need), (5) Climax (preuve par le sacrifice). Inclut la **Story B** (fil émotionnel/thématique).
 
-#### `09_voice.md` — Comment Je Le Raconte ?
-La voix est **la façon dont le récit est narré** : POV (point de vue), style, distance narrative. **Points à définir** : (1) POV (1ère personne, 3e limitée, omniscient, etc.), (2) Deep POV ou narration traditionnelle ?, (3) Voix distincte par personnage ?, (4) Ton général (formel, familier, poétique, sec). La voix doit être **cohérente** tout au long du récit, sauf si vous changez délibérément pour un effet narratif (changement de POV signalé).
+#### `09_voice.md` — La Charte Graphique (Étape 9/10)
+Règle le filtre optique et la distance entre le lecteur et le personnage. **Réglages** : (1) Le Dispositif (Personne, Temps, Narrateur), (2) Distance Psychique (**Deep POV** obligatoire), (3) Charte Syntaxique (Complexité, Vocabulaire, Densité métaphorique), (4) **Kill List** (Filter words et clichés interdits). Prévient le "Style IA" lisse et prévisible.
 
-#### `10_chapter_outline.md` — Le Sommaire Détaillé
-Template du **sommaire des chapitres**, pont entre la structure globale et la rédaction concrète. Pour chaque chapitre, définir : (1) Numéro, Titre, Acte, Beat Save the Cat, (2) POV, Lieu, Temps, (3) Objectif du protagoniste, Conflit, Issue, (4) Résumé (2-3 phrases), (5) Arc du personnage, (6) Setup/Payoff (éléments de Chekhov plantés/résolus). **Règle stricte** : Chaque fichier dans `02_draft/` DOIT correspondre à une entrée de ce sommaire. Pas de chapitre écrit sans planification préalable.
+#### `10_chapter_outline.md` — Le Plan de Bataille (Étape 10/10)
+Blueprint d'exécution pour chaque scène. Pont entre la spec et le draft. **Scene Card** : (1) Type (Scène ou Sequel), (2) Ancrage Sensoriel, (3) Désir (Want immédiat), (4) Conflit (Gap), (5) **Value Change** (+/- Shift obligatoire), (6) Résumé Causal (Donc/Mais/Alors). Si une scène ne change pas la polarité de l'histoire, elle est supprimée.
 
 ---
 

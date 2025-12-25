@@ -15,26 +15,27 @@ L'IA oublie les règles narratives, les détails du worldbuilding, et les arcs d
 Sans garde-fous, l'IA (et l'auteur) dérivent vers la facilité : personnages plats, intrigues prévisibles, clichés. Ce boilerplate impose **73 règles narratives** (tirées de McKee, Snyder, Swain, etc.) et **44 protocoles d'audit** qui critiquent impitoyablement chaque élément avant validation.
 
 ### 3. **Le Manque de Structure**
-Écrire "à l'instinct" mène au chaos. Ce système impose un **pipeline en 3 phases** : Spécification (9 étapes obligatoires), Rédaction (chapitre par chapitre audité), Publication. Rien n'est écrit sans avoir été planifié et validé.
+Écrire "à l'instinct" mène au chaos. Ce système impose un **pipeline en 3 phases** : Spécification (10 étapes obligatoires), Rédaction (chapitre par chapitre audité), Publication. Rien n'est écrit sans avoir été planifié et validé.
 
 ---
 
 ## 🏗️ Comment Ça Fonctionne ?
 
 ### Phase 1 : Spécification (Avant d'écrire)
-Vous **ne pouvez PAS commencer à écrire** sans avoir complété les 9 étapes de spécification :
+Vous **ne pouvez PAS commencer à écrire** sans avoir complété les 10 étapes de spécification :
 
-1. **Intention** — Pourquoi j'écris ça ? (le message profond)
-2. **Thème** — De quoi ça parle vraiment ?
-3. **Genre** — Quelles sont les règles du contrat avec le lecteur ?
-4. **Prémisse** — Le pitch en une phrase
-5. **Conflit** — Quel est le problème central ?
-6. **Personnages** — Qui va vivre ce problème ? (Want/Need, Ghost/Wound/Lie)
-7. **Univers** — Où et quand ? (Worldbuilding)
-8. **Structure** — Comment ça se déroule ? (Actes, Beats, Synopsis)
-9. **Voix** — Comment je le raconte ? (POV, Style)
+1. **01_intention.md** — L'urgence vitale (La racine)
+2. **02_theme.md** — Le système moral (Controlling Idea)
+3. **03_genre.md** — Le contrat (Must-haves & Comps)
+4. **04_premise.md** — Le Hook (Killer Logline)
+5. **05_conflict.md** — Le moteur (Le Lock-in & Gap)
+6. **06_characters.md** — Les névroses (Dossier psychiatrique)
+7. **07_universe.md** — L'Arène (Friction & Coût)
+8. **08_structure.md** — Le squelette (5 piliers porteurs)
+9. **09_voice.md** — La charte graphique (Zoom & Kill List)
+10. **00_chapter_outline.md** — Le plan de bataille (Scene Cards)
 
-Chaque étape est **auditée brutalement** par des protocoles qui refusent le vague, le cliché, et la paresse. Vous devez justifier chaque choix.
+Chaque étape est **auditée brutalement** par des protocoles qui n'acceptent que des livrables stricts (pas de vague, pas de cliché).
 
 ### Phase 2 : Rédaction (Guidée)
 Une fois la spec validée, vous créez un **sommaire détaillé des chapitres** (`00_chapter_outline.md`) qui sert de feuille de route. Chaque chapitre est rédigé en consultant :
@@ -78,7 +79,7 @@ narrative-engin/
 │   └── voice/            # POV, narration
 
 ├── .agent/workflows/     # 3 workflows pour piloter le système
-│   ├── 01-create-spec.md # Créer une spec (étapes 01-09)
+│   ├── 01-create-spec.md # Créer une spec (étapes 01-10)
 │   ├── 02-audit-spec.md  # Auditer et valider une spec
 │   └── refine-rules.md   # Améliorer les règles du système
 
@@ -110,8 +111,8 @@ L'IA vous guidera à travers une interview pour créer `01_spec/01_intention.md`
 ```
 L'IA audite brutalement votre intention avec 6 épreuves impitoyables. Si elle est rejetée, l'IA propose des corrections. Vous devez **manuellement** valider ou rejeter.
 
-### 4. Répéter pour les 9 étapes
-Intention → Thème → Genre → Prémisse → Conflit → Personnages → Univers → Structure → Voix.
+### 4. Répéter pour les 10 étapes
+Intention → Thème → Genre → Prémisse → Conflit → Personnages → Univers → Structure → Voix → Sommaire.
 
 ### 5. Créer le sommaire des chapitres
 Basé sur `01_spec/08_structure.md`, créez `01_spec/00_chapter_outline.md` qui liste TOUS vos chapitres avec leurs objectifs, conflits et résumés.
@@ -150,8 +151,8 @@ Pour chaque chapitre, consultez le sommaire + les specs + les règles pertinente
 | Règles narratives (`00_core/`) | 73 |
 | Protocoles d'audit (`03_audit/`) | 44 |
 | Workflows | 3 |
-| **Total fichiers de référence** | **120** |
-| Étapes de spécification obligatoires | 9 (+1 sommaire) |
+| **Total fichiers de référence** | **117** |
+| Étapes de spécification obligatoires | 10 |
 
 ---
 
