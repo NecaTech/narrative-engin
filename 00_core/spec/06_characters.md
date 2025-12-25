@@ -58,4 +58,4 @@ Voir : `03_audit/character/character_agency_audit.md`, `03_audit/character/relat
 ```
 
 ## Fichier de Sortie
-`01_spec/06_cast.md`
+`01_spec/06_characters.md`

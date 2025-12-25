@@ -38,6 +38,7 @@ Voir : `00_core/structure/heros_journey.md`
 ### Synopsis
 - Résumé chapitre par chapitre ou acte par acte
 - Chaque scène a un but, un conflit, une résolution
+- Voir : `00_core/spec/10_chapter_outline.md` pour le template détaillé
 
 ### Points de Bascule
 - **Inciting Incident** : Événement qui lance l'histoire
