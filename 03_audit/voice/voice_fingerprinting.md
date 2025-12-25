@@ -22,4 +22,4 @@ S'assurer que chaque personnage a une syntaxe et un vocabulaire distincts, perme
 Extraire 5 répliques de chaque personnage principal et vérifier s'ils sont distinguables sans contexte.
 
 ## Référence
-Croiser avec : `core/style/voice_contrast.md`
+Croiser avec : `00_core/style/voice_contrast.md`

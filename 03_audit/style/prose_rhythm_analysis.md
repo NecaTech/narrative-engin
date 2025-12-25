@@ -26,4 +26,4 @@ Vérifier la musicalité du texte : détecter la monotonie, les répétitions ex
 - [ ] Les enchaînements sont-ils fluides ?
 
 ## Référence
-Croiser avec : `core/style/sentence_rhythm.md`, `core/style/active_voice.md`
+Croiser avec : `00_core/style/sentence_rhythm.md`, `00_core/style/active_voice.md`

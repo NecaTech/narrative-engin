@@ -22,4 +22,4 @@ Valider la présence des story beats attendus (hook, inciting incident, midpoint
 - [ ] Le rythme monte-t-il progressivement vers le climax ?
 
 ## Référence
-Croiser avec : `core/structure/three_act_structure.md`, `core/structure/save_the_cat.md`, `core/structure/pinch_points.md`
+Croiser avec : `00_core/structure/three_act_structure.md`, `00_core/structure/save_the_cat.md`, `00_core/structure/pinch_points.md`

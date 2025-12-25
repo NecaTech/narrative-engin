@@ -32,4 +32,4 @@ Pour chaque trou détecté :
 4. **Suggestion** : Piste de résolution
 
 ## Référence
-Croiser avec : `core/logic/chekhovs_gun.md`, `core/logic/pixar_coincidence_rule.md`
+Croiser avec : `00_core/logic/chekhovs_gun.md`, `00_core/logic/pixar_coincidence_rule.md`

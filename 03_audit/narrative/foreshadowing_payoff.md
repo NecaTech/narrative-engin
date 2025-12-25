@@ -21,4 +21,4 @@ Vérifier la cohérence entre les indices semés (foreshadowing) et leur résolu
 - [ ] Les indices sont-ils subtils mais détectables à la relecture ?
 
 ## Référence
-Croiser avec : `core/tension/foreshadowing.md`, `core/logic/chekhovs_gun.md`
+Croiser avec : `00_core/tension/foreshadowing.md`, `00_core/logic/chekhovs_gun.md`

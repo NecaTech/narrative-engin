@@ -21,4 +21,4 @@ Vérifier que chaque scène a une utilité structurelle : un but clair pour le p
 - [ ] Si aucun changement : la scène est-elle vraiment nécessaire ?
 
 ## Référence
-Croiser avec : `core/structure/late_in_early_out.md`, `core/structure/scene_sequel_balance.md`
+Croiser avec : `00_core/structure/late_in_early_out.md`, `00_core/structure/scene_sequel_balance.md`

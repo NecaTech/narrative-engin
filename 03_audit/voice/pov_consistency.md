@@ -20,4 +20,4 @@ Vérifier la stabilité du point de vue narratif et détecter les fuites de foca
 - [ ] Les changements de profondeur (deep → distant) sont-ils justifiés ?
 
 ## Référence
-Croiser avec : `core/pov/head_hopping.md`, `core/pov/psychic_distance.md`
+Croiser avec : `00_core/pov/head_hopping.md`, `00_core/pov/psychic_distance.md`

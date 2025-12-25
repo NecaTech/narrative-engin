@@ -34,4 +34,4 @@ Vérifier que le lecteur peut visualiser la géométrie des scènes et que les m
 Pour chaque "White Room" détectée, ajouter des détails d'ancrage sensoriels liés à l'action en cours.
 
 ## Référence
-Croiser avec : `audit/forensic/consistency_check.md`, `audit/immersion/sensory_balance_check.md`
+Croiser avec : `03_audit/forensic/consistency_check.md`, `03_audit/immersion/sensory_balance_check.md`

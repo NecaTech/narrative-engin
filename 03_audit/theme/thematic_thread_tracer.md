@@ -20,4 +20,4 @@ Traquer la cohérence des thèmes promis en début de récit et vérifier qu'ils
 - [ ] Le lecteur a-t-il de quoi réfléchir après la lecture ?
 
 ## Référence
-Croiser avec : `core/theme/controlling_idea.md`, `core/theme/thematic_question.md`
+Croiser avec : `00_core/theme/controlling_idea.md`, `00_core/theme/thematic_question.md`

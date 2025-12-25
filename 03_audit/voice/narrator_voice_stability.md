@@ -20,4 +20,4 @@ Mesurer la cohérence stylistique et le registre du narrateur à travers le text
 - [ ] La voix s'adapte-t-elle au POV sans perte d'identité de l'auteur ?
 
 ## Référence
-Croiser avec : `core/style/voice_contrast.md`, `core/pov/free_indirect_discourse.md`
+Croiser avec : `00_core/style/voice_contrast.md`, `00_core/pov/free_indirect_discourse.md`

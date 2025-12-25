@@ -20,4 +20,4 @@ Vérifier que la narration ne se limite pas à la vue et à l'ouïe, mais exploi
 - [ ] Les sens "oubliés" (goût, odorat, toucher) sont-ils absents sans raison ?
 
 ## Référence
-Croiser avec : `core/style/sensory_anchoring.md`
+Croiser avec : `00_core/style/sensory_anchoring.md`

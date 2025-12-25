@@ -29,4 +29,4 @@ Diagnostiquer la "santé" des dialogues : détecter les symptômes de dialogues 
 - [ ] Y a-t-il une tension entre ce qui est dit et ce qui est pensé ?
 
 ## Référence
-Croiser avec : `core/style/voice_contrast.md`, `core/style/iceberg_theory.md`, `core/style/on_the_nose_dialogue.md`
+Croiser avec : `00_core/style/voice_contrast.md`, `00_core/style/iceberg_theory.md`, `00_core/style/on_the_nose_dialogue.md`

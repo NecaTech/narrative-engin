@@ -20,4 +20,4 @@ Identifier les intrigues secondaires abandonnées ou non résolues qui frustrent
 - [ ] Y a-t-il trop de subplots actives simultanément (>3-4) ?
 
 ## Référence
-Croiser avec : `core/logic/chekhovs_gun.md`, `audit/narrative/plot_hole_tracker.md`
+Croiser avec : `00_core/logic/chekhovs_gun.md`, `03_audit/narrative/plot_hole_tracker.md`

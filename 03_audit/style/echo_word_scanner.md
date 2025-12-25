@@ -27,4 +27,4 @@ Détecter les répétitions lexicales dans des fenêtres de proximité qui affai
 Pour chaque écho détecté, proposer un synonyme ou une reformulation.
 
 ## Référence
-Croiser avec : `audit/style/prose_rhythm_analysis.md`
+Croiser avec : `03_audit/style/prose_rhythm_analysis.md`

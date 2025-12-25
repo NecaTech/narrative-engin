@@ -25,4 +25,4 @@ Détecter les violations des règles établies dans votre univers : physique, ma
 - [ ] Les ressources nécessaires sont-elles disponibles ?
 
 ## Référence
-Croiser avec : `spec/lore/`, `core/logic/sanderson_law_1.md`, `core/logic/sanderson_law_2.md`
+Croiser avec : `spec/lore/`, `00_core/logic/sanderson_law_1.md`, `00_core/logic/sanderson_law_2.md`

@@ -21,4 +21,4 @@ Suivre la progression des arcs individuels des personnages principaux et vérifi
 - [ ] Les arcs secondaires interfèrent-ils avec l'arc principal sans résolution ?
 
 ## Référence
-Croiser avec : `core/arc/positive_arc.md`, `core/arc/negative_arc.md`, `core/casting/ghost_wound_lie.md`
+Croiser avec : `00_core/arc/positive_arc.md`, `00_core/arc/negative_arc.md`, `00_core/casting/ghost_wound_lie.md`

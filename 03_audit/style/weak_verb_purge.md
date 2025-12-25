@@ -31,4 +31,4 @@ Chasser les verbes ternes (être, avoir, faire, aller, mettre) au profit de verb
 - [ ] Les scènes d'action sont-elles suffisamment dynamiques ?
 
 ## Référence
-Croiser avec : `core/style/active_voice.md`
+Croiser avec : `00_core/style/active_voice.md`

@@ -29,4 +29,4 @@ Identifier les réactions émotionnelles disproportionnées par rapport à leur 
 Le mélodrame n'est pas toujours mauvais (certains genres l'exigent). Ce protocole doit être ajusté selon le ton visé dans `spec/`.
 
 ## Référence
-Croiser avec : `core/style/iceberg_theory.md`, `core/casting/want_vs_need.md`
+Croiser avec : `00_core/style/iceberg_theory.md`, `00_core/casting/want_vs_need.md`

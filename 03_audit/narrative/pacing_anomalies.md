@@ -23,4 +23,4 @@ Identifier les "ventres mous" (scènes inutiles) et les précipitations injustif
 - [ ] Le lecteur n'est-il pas épuisé par trop d'action consécutive ?
 
 ## Référence
-Croiser avec : `core/structure/scene_sequel_balance.md`, `core/structure/late_in_early_out.md`
+Croiser avec : `00_core/structure/scene_sequel_balance.md`, `00_core/structure/late_in_early_out.md`

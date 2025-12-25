@@ -24,4 +24,4 @@ Localiser les passages où l'auteur "dit" au lieu de "montrer", et proposer des 
 - Fréquence de verbes d'état/émotion directement nommés
 
 ## Référence
-Croiser avec : `core/logic/show_dont_tell.md`, `core/logic/rule_2_plus_2.md`
+Croiser avec : `00_core/logic/show_dont_tell.md`, `00_core/logic/rule_2_plus_2.md`

@@ -28,4 +28,4 @@ Pour chaque relation clé :
 - **État final** : [nouvel équilibre]
 
 ## Référence
-Croiser avec : `core/arc/relationship_arc.md`, `audit/character/character_arc_tracker.md`
+Croiser avec : `00_core/arc/relationship_arc.md`, `03_audit/character/character_arc_tracker.md`

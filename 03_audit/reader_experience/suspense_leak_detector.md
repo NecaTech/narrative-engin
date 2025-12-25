@@ -21,4 +21,4 @@ Traquer les moments où la tension narrative est sapée par erreur, réduisant l
 - [ ] La réponse au mystère est-elle trop prévisible ?
 
 ## Référence
-Croiser avec : `core/tension/dramatic_irony.md`, `core/tension/promise_delay_deliver.md`
+Croiser avec : `00_core/tension/dramatic_irony.md`, `00_core/tension/promise_delay_deliver.md`

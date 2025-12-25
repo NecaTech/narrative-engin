@@ -33,4 +33,4 @@
 - Le lecteur "travaille" pour comprendre
 
 ## Référence
-Croiser avec : `core/style/iceberg_theory.md`, `core/theme/objective_correlative.md`, `core/theme/symbolic_action.md`
+Croiser avec : `00_core/style/iceberg_theory.md`, `00_core/theme/objective_correlative.md`, `00_core/theme/symbolic_action.md`

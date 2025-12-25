@@ -32,4 +32,4 @@ Détecter et éliminer les verbes de perception qui créent une distance entre l
 3. Si oui : reformuler en supprimant le filtre
 
 ## Référence
-Croiser avec : `core/pov/deep_pov.md`, `core/style/show_dont_tell.md`
+Croiser avec : `00_core/pov/deep_pov.md`, `00_core/style/show_dont_tell.md`

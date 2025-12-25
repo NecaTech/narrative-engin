@@ -32,4 +32,4 @@ Pour chaque scène, attribuer un score de tension (1-10) basé sur :
 - Climax < pic de l'Acte 2
 
 ## Référence
-Croiser avec : `core/tension/ticking_clock.md`, `audit/structure/beat_structure_audit.md`
+Croiser avec : `00_core/tension/ticking_clock.md`, `03_audit/structure/beat_structure_audit.md`

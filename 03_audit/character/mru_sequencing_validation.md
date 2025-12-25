@@ -36,4 +36,4 @@ Dans cet ordre strict :
 → Le bruit aurait dû venir AVANT le dégainement.
 
 ## Référence
-Croiser avec : `core/style/motivation_reaction_units.md`
+Croiser avec : `00_core/style/motivation_reaction_units.md`

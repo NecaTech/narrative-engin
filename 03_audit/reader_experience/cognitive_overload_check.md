@@ -37,4 +37,4 @@ Identifier les passages qui surchargent le lecteur en informations nouvelles, in
 - > 5 termes techniques/noms nouveaux par paragraphe
 
 ## Référence
-Croiser avec : `audit/narrative/pacing_anomalies.md`, `core/logic/show_dont_tell.md`
+Croiser avec : `03_audit/narrative/pacing_anomalies.md`, `00_core/logic/show_dont_tell.md`

@@ -26,4 +26,4 @@ Vérifier que le protagoniste est moteur de l'action et non simple spectateur de
 - Personnage qui "observe" au lieu de "faire"
 
 ## Référence
-Croiser avec : `audit/structure/scene_goal_validator.md`, `core/casting/want_vs_need.md`
+Croiser avec : `03_audit/structure/scene_goal_validator.md`, `00_core/casting/want_vs_need.md`

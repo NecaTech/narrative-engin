@@ -27,4 +27,4 @@ Audit critique des 500 premiers mots pour évaluer leur capacité à capturer l'
 - [ ] Trop de noms propres d'emblée ?
 
 ## Référence
-Croiser avec : `core/structure/in_medias_res.md`
+Croiser avec : `00_core/structure/in_medias_res.md`

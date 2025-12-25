@@ -36,4 +36,4 @@ Mesurer objectivement la lisibilité du texte pour vérifier son adéquation ave
 | Hard SF | 40-55 | 20-30 mots |
 
 ## Référence
-Croiser avec : `audit/style/prose_rhythm_analysis.md`, `audit/reader_experience/cognitive_overload_check.md`
+Croiser avec : `03_audit/style/prose_rhythm_analysis.md`, `03_audit/reader_experience/cognitive_overload_check.md`

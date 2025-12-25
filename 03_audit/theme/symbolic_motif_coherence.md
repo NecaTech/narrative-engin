@@ -20,4 +20,4 @@ Vérifier que les symboles et motifs récurrents évoluent de manière cohérent
 - [ ] Le lecteur peut-il connecter le symbole au thème ?
 
 ## Référence
-Croiser avec : `core/theme/motif_recurrence.md`, `core/theme/symbolic_action.md`
+Croiser avec : `00_core/theme/motif_recurrence.md`, `00_core/theme/symbolic_action.md`
