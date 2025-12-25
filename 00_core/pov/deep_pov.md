@@ -1,22 +1,54 @@
-# Règle : Deep POV (Point de Vue Profond)
+# Règle : Deep POV (L'Immersion Totale)
 
 ## Définition
-Technique d'écriture immersive qui supprime les médiateurs (verbes de perception) pour placer le lecteur directement dans la peau du personnage.
+Technique d'écriture qui **supprime les médiateurs** (verbes de perception) pour placer le lecteur directement dans la peau du personnage. Le lecteur ne doit pas sentir qu'on lui raconte — il doit VIVRE.
 
-## Principe
-Éliminer la "caméra" narrative. Le lecteur ne doit pas sentir qu'on lui raconte l'histoire, mais qu'il la vit.
+## Connexions Systèmes
+- **Dépendance Amont** : `psychic_distance.md` (Deep POV = Distance Psychique niveau 5-6)
+- **Dépendance Aval** : `00_core/spec/09_voice.md` (Le Deep POV est une arme de la Voix)
+- **Audit Applicable** : `03_audit/spec/09_voice_audit.md`, `03_audit/style/readability_metrics.md`
 
-## Technique : Suppression des Filter Words
-Les "filter words" (verbes de perception) créent une distance. Ils doivent être éliminés dans le Deep POV.
+## Algorithme Fondamental
 
-| Avec filtre | Sans filtre (Deep POV) |
+```
+PERCEPTION DU PERSONNAGE → DIRECT AU LECTEUR (sans filtre)
+```
+
+Éliminer la "caméra" narrative. Pas de "il vit", "elle entendit", "il pensa".
+
+## Livrables Strictes (Output attendu)
+
+### Kill List : Verbes de Perception (Filter Words)
+
+| ❌ AVEC FILTRE | ✅ SANS FILTRE (Deep POV) |
 |---|---|
 | "Elle vit le couteau." | "Le couteau. Sur la table." |
 | "Il entendit un bruit." | "Un craquement. Derrière lui." |
 | "Elle sentit la peur monter." | "Son cœur s'emballa." |
 | "Il pensa qu'il devait fuir." | "Fuir. Maintenant." |
+| "Elle remarqua qu'il souriait." | "Ce sourire. Celui qu'il avait avant de frapper." |
+| "Il se demanda si..." | "Et si...?" |
 
-## Application pour l'Audit
-- **Détection des filtres** : Y a-t-il des "vit", "entendit", "sentit", "pensa" évitables ?
-- **Immersion** : Le lecteur est-il dans la tête du personnage ou en observateur ?
-- **Cohérence** : Le Deep POV est-il maintenu tout au long des scènes intimes ?
+### Les 3 Principes du Deep POV
+
+1. **Pas de Caméra** : Le personnage ne "voit" pas — il RÉAGIT.
+2. **Pas de Médiateur** : Les pensées sont directes, pas rapportées.
+3. **Subjectivité Totale** : Le monde EST ce que le personnage perçoit.
+
+## Anti-patterns (Motifs de Rejet Immédiat)
+
+- ❌ **Filter Words** : "vit", "entendit", "sentit", "pensa", "remarqua", "réalisa"
+- ❌ **Auto-Description** : "Ses cheveux blonds encadraient son visage." (Il ne se décrit pas lui-même.)
+- ❌ **Omniscience Accidentelle** : Le personnage sait des choses qu'il ne devrait pas savoir.
+- ❌ **Distance Variable** : Sauts entre Deep POV et narration externe dans la même scène.
+- ❌ **Pensées Rapportées** : "Il pensa que..." au lieu de montrer la pensée directement.
+
+## Application pour l'Audit (Tests)
+
+1. **Test du Ctrl+F** : Chercher "vit", "entendit", "sentit", "pensa" — chaque occurrence doit être justifiée.
+2. **Test de l'Immersion** : Lire à voix haute — le lecteur est-il DANS la tête ?
+3. **Test de la Cohérence** : Le personnage sait-il uniquement ce qu'il PEUT savoir ?
+4. **Test de la Subjectivité** : Les descriptions reflètent-elles le BIAIS du personnage ?
+
+## Référence Théorique
+- Marcy Kennedy, *Deep Point of View*

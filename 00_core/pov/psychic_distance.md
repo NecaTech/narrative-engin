@@ -1,20 +1,56 @@
-# Règle : Psychic Distance (Distance Psychique)
+# Règle : Psychic Distance (L'Échelle de Proximité)
 
 ## Définition
-Échelle de proximité entre le narrateur et la conscience du personnage, allant de la vue d'ensemble objective à l'immersion totale dans les pensées.
+Échelle de proximité entre le narrateur et la conscience du personnage, allant de la vue d'ensemble objective à l'immersion totale. La distance doit rester **cohérente dans une scène**.
 
-## Les Niveaux (du plus distant au plus proche)
-1. **Omniscient distant** : "C'était l'hiver, la ville dormait."
-2. **Narrateur externe** : "Jean marchait dans la rue froide."
-3. **Narrateur proche** : "Jean frissonna. Il détestait l'hiver."
-4. **Pensées filtrées** : "Il pensa qu'il devrait rentrer."
-5. **Pensées directes** : "Bon sang, quel froid."
-6. **Flux de conscience** : "Froid. Trop froid. Pourquoi suis-je sorti ?"
+## Connexions Systèmes
+- **Dépendance Amont** : Aucune (Concept fondamental de narration)
+- **Dépendance Aval** : `deep_pov.md` (Deep POV = niveaux 5-6)
+- **Audit Applicable** : `03_audit/spec/09_voice_audit.md`
 
-## Principe
-La distance doit rester cohérente dans une scène. Les sauts brusques désorientent le lecteur.
+## Algorithme Fondamental
 
-## Application pour l'Audit
-- **Cohérence** : La distance psychique reste-t-elle stable dans chaque scène ?
-- **Intentionnalité** : Les changements de distance sont-ils délibérés et signifiants ?
-- **Adéquation** : La distance choisie correspond-elle au ton et à l'émotion recherchés ?
+```
+DISTANCE CHOISIE + COHÉRENCE = IMMERSION STABLE
+```
+
+Les sauts brusques de distance désorientent le lecteur.
+
+## Livrables Strictes (Output attendu)
+
+### Les 6 Niveaux de Distance Psychique
+
+| Niveau | Nom | Exemple | Usage |
+|---|---|---|---|
+| **1** | Omniscient Distant | "C'était l'hiver. La ville dormait." | Ouvertures, transitions |
+| **2** | Narrateur Externe | "Jean marchait dans la rue froide." | Descriptions objectives |
+| **3** | Narrateur Proche | "Jean frissonna. Il détestait l'hiver." | Narration standard |
+| **4** | Pensées Filtrées | "Il pensa qu'il devrait rentrer." | Transition vers l'intime |
+| **5** | Pensées Directes | "Bon sang, quel froid." | Moments émotionnels |
+| **6** | Flux de Conscience | "Froid. Trop froid. Pourquoi suis-je sorti ?" | Immersion maximale |
+
+### Règles de Gestion
+
+| Situation | Bonne Pratique |
+|---|---|
+| **Ouverture de chapitre** | Niveaux 1-2 pour situer |
+| **Scène intime** | Niveaux 5-6 maintenus |
+| **Transition** | Glissement progressif (pas de saut 1→6) |
+| **Action intense** | Niveau 6 pour l'urgence |
+
+## Anti-patterns (Motifs de Rejet Immédiat)
+
+- ❌ **Saut Brusque** : Passer de niveau 1 à niveau 6 sans transition.
+- ❌ **Distance Incohérente** : Alterner aléatoirement dans une même scène.
+- ❌ **Mauvais Match** : Distance distante pour une scène censée être émotionnelle.
+- ❌ **Confusion avec Head-Hopping** : Changer de personnage ET de distance.
+
+## Application pour l'Audit (Tests)
+
+1. **Test du Niveau** : À quel niveau chaque scène est-elle écrite ?
+2. **Test de la Cohérence** : Le niveau reste-t-il stable dans la scène ?
+3. **Test de l'Adéquation** : La distance correspond-elle à l'émotion recherchée ?
+4. **Test des Transitions** : Les changements de distance sont-ils progressifs ?
+
+## Référence Théorique
+- John Gardner, *The Art of Fiction*
