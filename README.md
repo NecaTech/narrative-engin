@@ -1,134 +1,145 @@
-# 📚 Narrative Engine — Literature-as-Code
+# 📚 Narrative Engine — Boilerplate Littéraire
 
-Un système de création littéraire rigoureux, modulaire et piloté par des workflows.
-
----
-
-## 🎯 Vision
-
-Codifier l'art de l'écriture en règles vérifiables, auditer chaque élément narratif avant l'écriture, et garantir la qualité par un processus systématique de **Raffinement Actif**.
+**Un système complet pour écrire des romans avec la rigueur du développement logiciel**
 
 ---
 
-## 🏗️ Architecture
+## 🎯 À Quoi Sert Ce Boilerplate ?
+
+Ce boilerplate transforme l'écriture de roman en un **processus systématique, auditable et reproductible**. Il résout trois problèmes majeurs de la création littéraire assistée par IA :
+
+### 1. **L'Amnésie de l'IA**
+L'IA oublie les règles narratives, les détails du worldbuilding, et les arcs de personnages au fil des conversations. Ce système stocke **tout** dans des fichiers Markdown versionés : chaque décision, chaque règle, chaque élément narratif est tracé et consultable à tout moment.
+
+### 2. **La Dérive Créative**
+Sans garde-fous, l'IA (et l'auteur) dérivent vers la facilité : personnages plats, intrigues prévisibles, clichés. Ce boilerplate impose **73 règles narratives** (tirées de McKee, Snyder, Swain, etc.) et **44 protocoles d'audit** qui critiquent impitoyablement chaque élément avant validation.
+
+### 3. **Le Manque de Structure**
+Écrire "à l'instinct" mène au chaos. Ce système impose un **pipeline en 3 phases** : Spécification (9 étapes obligatoires), Rédaction (chapitre par chapitre audité), Publication. Rien n'est écrit sans avoir été planifié et validé.
+
+---
+
+## 🏗️ Comment Ça Fonctionne ?
+
+### Phase 1 : Spécification (Avant d'écrire)
+Vous **ne pouvez PAS commencer à écrire** sans avoir complété les 9 étapes de spécification :
+
+1. **Intention** — Pourquoi j'écris ça ? (le message profond)
+2. **Thème** — De quoi ça parle vraiment ?
+3. **Genre** — Quelles sont les règles du contrat avec le lecteur ?
+4. **Prémisse** — Le pitch en une phrase
+5. **Conflit** — Quel est le problème central ?
+6. **Personnages** — Qui va vivre ce problème ? (Want/Need, Ghost/Wound/Lie)
+7. **Univers** — Où et quand ? (Worldbuilding)
+8. **Structure** — Comment ça se déroule ? (Actes, Beats, Synopsis)
+9. **Voix** — Comment je le raconte ? (POV, Style)
+
+Chaque étape est **auditée brutalement** par des protocoles qui refusent le vague, le cliché, et la paresse. Vous devez justifier chaque choix.
+
+### Phase 2 : Rédaction (Guidée)
+Une fois la spec validée, vous créez un **sommaire détaillé des chapitres** (`00_chapter_outline.md`) qui sert de feuille de route. Chaque chapitre est rédigé en consultant :
+- Les spécifications validées (`01_spec/`)
+- Les règles narratives pertinentes (`00_core/`)
+- Le sommaire des chapitres
+
+Puis chaque chapitre est audité sur **35 critères** (agency du protagoniste, cohérence POV, rythme, etc.) avant validation.
+
+### Phase 3 : Publication
+Assemblage final, relecture globale, export vers formats de publication.
+
+---
+
+## 📁 Structure du Boilerplate
 
 ```
 narrative-engin/
-├── .agent/workflows/     # Protocoles d'exécution (le "Comment")
-├── 00_core/              # Règles et bonnes pratiques (la "Constitution")
-├── 01_spec/              # Spécifications du projet (Local seulement)
-├── 02_draft/             # Chapitres en cours de rédaction (Local seulement)
-├── 03_audit/             # Protocoles de test et Rapports d'audit
-├── 04_publish/           # Versions finalisées (Local seulement)
-└── doc/                  # Recherche et références
-```
+├── 00_core/              # 73 règles narratives (le cerveau)
+│   ├── arc/              # Arcs de transformation
+│   ├── casting/          # Psychologie des personnages
+│   ├── logic/            # Cohérence narrative
+│   ├── pov/              # Point de vue
+│   ├── spec/             # Méthodologie de spécification
+│   ├── structure/        # Architecture narrative
+│   ├── style/            # Prose et écriture
+│   ├── tension/          # Suspense et engagement
+│   ├── theme/            # Thématique
+│   └── worldbuilding/    # Univers
 
-> [!IMPORTANT]
-> **Isolation Projet/Framework** : Les dossiers `01_spec/`, `02_draft/`, `04_publish/` et `03_audit/report/` sont ignorés par Git. Le dépôt contient uniquement le **moteur** (règles et workflows).
+├── 03_audit/             # 44 protocoles d'audit (le garde-fou)
+│   ├── character/        # Audits personnages
+│   ├── forensic/         # Cohérence factuelle
+│   ├── immersion/        # Ancrage sensoriel
+│   ├── narrative/        # Plot holes, rythme, clichés
+│   ├── reader_experience/# Surcharge cognitive, hooks
+│   ├── spec/             # Audits de spécification
+│   ├── structure/        # Scènes, arcs, beats
+│   ├── style/            # Dialogues, prose, filter words
+│   ├── theme/            # Motifs symboliques
+│   └── voice/            # POV, narration
 
----
+├── .agent/workflows/     # 3 workflows pour piloter le système
+│   ├── 01-create-spec.md # Créer une spec (étapes 01-09)
+│   ├── 02-audit-spec.md  # Auditer et valider une spec
+│   └── refine-rules.md   # Améliorer les règles du système
 
-## 📊 Pipeline de Création Littéraire
-
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                           PHASE 0 : FONDATION                                │
-│                                                                              │
-│   ┌──────────────┐         ┌──────────────┐                                 │
-│   │  00_core/    │ ◄─────► │  03_audit/   │                                 │
-│   │  (72 règles) │         │ (44 audits)  │                                 │
-│   └──────────────┘         └──────────────┘                                 │
-│          │                        │                                          │
-│          └───────────┬────────────┘                                          │
-│                      ▼                                                       │
-│        ┌─────────────────────────┐                                          │
-│        │ 00_cross_reference_index │                                          │
-│        │    (Index de liaison)    │                                          │
-│        └─────────────────────────┘                                          │
-└─────────────────────────────────────────────────────────────────────────────┘
-                                   │
-                                   ▼
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                        PHASE 1 : SPÉCIFICATION                               │
-│                                                                              │
-│   Pour chaque étape (1→9) :                                                  │
-│                                                                              │
-│   ┌────────────┐      ┌────────────┐      ┌────────────┐      ┌──────────┐ │
-│   │  CREER     │ ───► │  AUDITER   │ ───► │ RAFFINER   │ ───► │ VALIDER  │ │
-│   │ /create-spec │    │ /audit-spec │    │ (Auto-correction) │  (Humain) │ │
-│   └────────────┘      └────────────┘      └────────────┘      └──────────┘ │
-│                                                                      │       │
-│                                                                      ▼       │
-│   ┌──────────────────────────────────────────────────────────────────────┐  │
-│   │  1.INTENTION → 2.THEME → 3.GENRE → 4.PREMISSE → 5.CONFLIT            │  │
-│   │       → 6.PERSONNAGES → 7.UNIVERS → 8.STRUCTURE → 9.VOIX           │  │
-│   └──────────────────────────────────────────────────────────────────────┘  │
-│                                                                              │
-│                              ▼ GATE : Spec complète ?                        │
-└─────────────────────────────────────────────────────────────────────────────┘
-                                   │
-                                   ▼
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                         PHASE 2 : RÉDACTION                                  │
-│                                                                              │
-│   Pour chaque chapitre :                                                     │
-│                                                                              │
-│   ┌────────────┐      ┌────────────┐      ┌────────────┐      ┌──────────┐ │
-│   │ Consulter  │ ───► │  Écrire    │ ───► │  Auditer   │ ───► │ Valider  │ │
-│   │ 01_spec/   │      │ 02_draft/  │      │ 03_audit/  │      │ ou       │ │
-│   │ + 00_core/ │      │ chXX.md    │      │ (35 tests) │      │ Réécrire │ │
-│   └────────────┘      └────────────┘      └────────────┘      └──────────┘ │
-│                                                                              │
-│                              ▼ GATE : Chapitre validé ?                      │
-└─────────────────────────────────────────────────────────────────────────────┘
-                                   │
-                                   ▼
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                        PHASE 3 : PUBLICATION                                 │
-│                                                                              │
-│   ┌────────────┐      ┌────────────┐      ┌────────────┐                    │
-│   │ Assembler  │ ───► │  Relecture │ ───► │  Publier   │                    │
-│   │ 02_draft/* │      │  finale    │      │ 04_publish │                    │
-│   └────────────┘      └────────────┘      └────────────┘                    │
-│                                                                              │
-└─────────────────────────────────────────────────────────────────────────────┘
+├── 01_spec/              # Votre projet (gitignored)
+├── 02_draft/             # Vos chapitres (gitignored)
+├── 04_publish/           # Version finale (gitignored)
+└── ARBORESCENCE.md       # Documentation exhaustive (LISEZ-MOI!)
 ```
 
 ---
 
-## 📁 Contenu du Système
+## 🚀 Démarrage Rapide
 
-### 00_core/ — La Constitution (72 règles)
-| Sous-dossier | Nb | Description |
-|---|---|---|
-| `logic/` | 9 | Cohérence (Chekhov, Sanderson, Show don't Tell) |
-| `structure/` | 12 | Architecture (3 actes, Save the Cat, Hero's Journey) |
-| `casting/` | 8 | Personnages (Want/Need, Ghost/Wound/Lie) |
-| `style/` | 9 | Écriture (MRU, Dialogue, Voix) |
-| `pov/` | 7 | Point de vue (Deep POV, Narrateur) |
-| `tension/` | 7 | Suspense (Ironie dramatique, Foreshadowing, PDD) |
-| `theme/` | 5 | Thématique (Controlling Idea, Motifs) |
-| `arc/` | 4 | Arcs (Positif, Négatif, Plat) |
-| `worldbuilding/` | 1 | Univers (Lived-in Universe) |
-| `spec/` | 10 | Méthodologie de spécification + Index |
+### 1. Cloner et initialiser
+```bash
+git clone https://github.com/NecaTech/narrative-engin.git
+cd narrative-engin
+```
 
-### 03_audit/ — Les Tests (44 protocoles)
-Contient des protocoles d'audit "cruels et impitoyables" conçus pour briser la complaisance de l'auteur et de l'IA.
+### 2. Lancer la création de spec
+```
+/01-create-spec 01
+```
+L'IA vous guidera à travers une interview pour créer `01_spec/01_intention.md`.
+
+### 3. Auditer la spec
+```
+/02-audit-spec 01
+```
+L'IA audite brutalement votre intention avec 6 épreuves impitoyables. Si elle est rejetée, l'IA propose des corrections. Vous devez **manuellement** valider ou rejeter.
+
+### 4. Répéter pour les 9 étapes
+Intention → Thème → Genre → Prémisse → Conflit → Personnages → Univers → Structure → Voix.
+
+### 5. Créer le sommaire des chapitres
+Basé sur `01_spec/08_structure.md`, créez `01_spec/00_chapter_outline.md` qui liste TOUS vos chapitres avec leurs objectifs, conflits et résumés.
+
+### 6. Rédiger les chapitres
+Pour chaque chapitre, consultez le sommaire + les specs + les règles pertinentes, rédigez dans `02_draft/ch01.md`, puis auditez.
 
 ---
 
-## 🚀 Workflows (Slash Commands)
+## 📖 Documentation
 
-### `/01-create-spec [NN]`
-Lance une interview guidée basée sur le mapping strict de l'Index de Croisement. Charge uniquement les règles concernées pour l'étape `NN`.
+- **`ARBORESCENCE.md`** : Documentation EXHAUSTIVE de toutes les 73 règles et 44 audits (descriptions détaillées pour comprendre le système)
+- **`MEMOIRE.md`** : Mémoire vive du projet (principes, historique, état actuel)
+- **`00_core/spec/00_cross_reference_index.md`** : Index qui mappe chaque étape de spec avec ses règles et audits
 
-### `/02-audit-spec [NN]`
-1. **Audit** : Critique brutale (Rapport dans `03_audit/report/`).
-2. **Raffinement** : Si rejeté, l'IA réécrit la spec pour intégrer les corrections.
-3. **Validation** : Nécessite une interaction humaine abrasive avant validation finale.
+---
 
-### `/refine-rules`
-Analyse les rapports d'échec pour faire évoluer le `00_core/`. C'est le moteur de maturité du système.
+## 🎓 Pourquoi Utiliser Ce Boilerplate ?
+
+### ✅ Pour qui ?
+- Auteurs qui veulent une **structure rigoureuse** sans improviser
+- Écrivains utilisant l'IA qui veulent **éviter les dérives** (personnages plats, incohérences, clichés)
+- Créateurs de longue forme (romans, séries) qui ont besoin de **cohérence sur 300+ pages**
+
+### ❌ Pas pour qui ?
+- Auteurs "pantsers" qui écrivent à l'instinct sans plan
+- Ceux qui cherchent des outils de génération automatique (ce système **guide**, il ne génère pas à votre place)
+- Projets courts (nouvelles de <10k mots) où la structure rigide est excessive
 
 ---
 
@@ -136,11 +147,29 @@ Analyse les rapports d'échec pour faire évoluer le `00_core/`. C'est le moteur
 
 | Métrique | Valeur |
 |---|---|
-| Règles Core | 72 |
-| Protocoles Audit | 44 |
-| **Total fichiers de référence** | **116** |
-| Workflows stables | 3 |
-| **Zéro Complaisance** | ✅ |
+| Règles narratives (`00_core/`) | 73 |
+| Protocoles d'audit (`03_audit/`) | 44 |
+| Workflows | 3 |
+| **Total fichiers de référence** | **120** |
+| Étapes de spécification obligatoires | 9 (+1 sommaire) |
+
+---
+
+## 📜 Philosophie
+
+> **"L'IDE comme mémoire persistante pour l'écriture littéraire"**
+
+Ce système applique les principes du développement logiciel à la création littéraire :
+- **Versioning** : Git pour tracer chaque décision narrative
+- **Audit rigoureux** : Protocoles automatisés pour détecter failles et incohérences
+- **Modularité** : Règles séparées par concern (POV, Structure, Style, etc.)
+- **Reproductibilité** : Processus systématique qui fonctionne projet après projet
+
+---
+
+## 🤝 Contribution
+
+Projet personnel en constante évolution. Les règles et audits sont affinés au fil des projets réels.
 
 ---
 
@@ -150,4 +179,4 @@ Projet personnel — NecaTech 2024-2025
 
 ---
 
-*"Le moteur est froid, l'audit est cruel, l'œuvre sera juste."*
+*"Le code ne ment jamais. L'histoire non plus — si elle est bien structurée."*
