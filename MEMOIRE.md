@@ -100,5 +100,21 @@ Audits spécifiques de l'étape 01 à 09.
     - Workflows : `01-create-spec` (mapping strict) et `02-audit-spec` (Raffinement Actif + Veto Humain) opérationnels.
     - Neutralisation de la complaisance IA par l'interdiction de l'auto-validation.
 
+## État du Projet (Session du 2025-12-25)
+
+### Framework Narrative Engine
+- **Statut** : Stable et Verrouillé ✅
+- **Workflows** : 
+    - `/01-create-spec` : Opérationnel. Source de vérité = `00_core/spec/00_cross_reference_index.md`.
+    - `/02-audit-spec` : Opérationnel. Cycle [Critique Brutale] -> [Raffinement IA] -> [Veto Humain].
+    - `/refine-rules` : Opérationnel pour analyse de patterns.
+- **Git** : Dépôt propre. Fichiers projet exclus via `.gitignore`.
+
+### Projet en cours : "Code d'Honneur"
+- **Étape 01 : Intention**
+    - **Fichier** : `01_spec/01_intention.md`
+    - **Statut** : `REJETÉ ❌ (Manque de friction humaine)`
+    - **Action requise** : L'auteur doit modifier le texte raffiné par l'IA pour y injecter sa propre volonté avant de relancer l'audit.
+
 ---
 *Note : Ce fichier est la mémoire vive du projet. Ne jamais supprimer les listes de règles.*
