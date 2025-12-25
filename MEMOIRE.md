@@ -1,16 +1,16 @@
-# MÉMOIRE DU PROJET : Literature-as-Code (New Start)
+# MÉMOIRE DU PROJET : Literature-as-Code
 
 ## Vision
-Développer un système de création littéraire rigoureux, modulaire et piloté par des workflows, sans dépendance à des frameworks externes complexes. Le système repose sur Antigravity comme agent unique et polymorphe.
+Développer un système de création littéraire rigoureux, modulaire et piloté par des workflows. Le système repose sur Antigravity comme agent unique et polymorphe.
 
-## Architecture du Workspace (Convention de Nommage Ordonnée)
-- **.agent/workflows/** : Scripts d'exécution et protocoles (le "Comment"). Activer via les slash commands.
-- **00_core/** : Bibliothèque de règles, conventions d'écriture et bonnes pratiques (la "Constitution").
-- **01_spec/** : Spécifications narratives (intrigue, casting, lore, storyline, sommaire/backdrop).
-- **02_draft/** : Espace de rédaction itératif par chapitre.
-- **03_audit/** : Règles d'audit et historique des critiques sévères.
-- **04_publish/** : Versions finalisées et prêtes à la diffusion.
-- **doc/** : Recherche, archives et matière pour l'immersion.
+## Architecture du Workspace
+- **.agent/workflows/** : scripts d'exécution et protocoles (le "Comment"). Activer via les slash commands.
+- **00_core/** : bibliothèque de règles, conventions d'écriture et bonnes pratiques (la "Constitution").
+- **01_spec/** : spécifications narratives (intrigue, casting, lore, storyline, sommaire/backdrop).
+- **02_draft/** : espace de rédaction itératif par chapitre.
+- **03_audit/** : règles d'audit et historique des critiques sévères.
+- **04_publish/** : versions finalisées et prêtes à la diffusion.
+- **doc/** : recherche, archives et matière pour l'immersion.
 
 ## Principes de Travail
 1. **Pas de Vibe Coding** : Chaque action doit être comprise et expliquée.
@@ -18,225 +18,87 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 3. **Approche Lean** : Ne créer que le nécessaire, éviter la multiplication inutile des fichiers.
 4. **Agent Unique** : Antigravity est l'unique agent, navigant entre les modules selon les workflows.
 5. **Un workflow à la fois** : Créer, tester, valider avant de passer au suivant.
+6. **Séparation Framework/Produit** : Le dépôt Git contient uniquement le moteur. Le contenu littéraire reste local.
+7. **Audit Actif** : L'audit déclenche le Raffinement Actif (réécriture).
+8. **Veto Humain** : L'IA ne s'auto-valide jamais. Validation seulement par friction humaine.
 
 ---
 
-## Structure de `00_core/` (62 règles intégrées)
+## 00_core/ — Bibliothèque de Règles (72 règles)
 
-### `00_core/logic/` (9 règles)
-| Fichier | Résumé |
-|---|---|
-| `chekhovs_gun.md` | Tout élément introduit doit être utilisé. |
-| `show_dont_tell.md` | Montrer par l'action, pas par l'exposition. |
-| `rule_2_plus_2.md` | Donner les indices, pas la conclusion. |
-| `sanderson_law_1.md` | Le lore ne résout que ce que le lecteur comprend. |
-| `sanderson_law_2.md` | Les limites sont plus intéressantes que les pouvoirs. |
-| `pixar_coincidence_rule.md` | Coïncidences pour créer des problèmes, jamais pour les résoudre. |
-| `macguffin.md` | Objet motivant l'action dont la nature importe peu. |
-| `rule_of_three.md` | Les triplets sont plus satisfaisants et mémorables. |
-| `fair_play_mystery.md` | Tous les indices doivent être accessibles au lecteur. |
+### logic/ (9 règles)
+`chekhovs_gun.md`, `show_dont_tell.md`, `rule_2_plus_2.md`, `sanderson_law_1.md`, `sanderson_law_2.md`, `pixar_coincidence_rule.md`, `macguffin.md`, `rule_of_three.md`, `fair_play_mystery.md`.
 
-### `00_core/structure/` (12 règles)
-| Fichier | Résumé |
-|---|---|
-| `save_the_cat.md` | Beat Sheet pour le rythme narratif. |
-| `yes_but_no_and.md` | Chaque action crée une complication. |
-| `snowflake_method.md` | Construction fractale de l'intrigue. |
-| `scene_sequel_balance.md` | Alternance action/introspection. |
-| `three_act_structure.md` | Acte I (setup), Acte II (confrontation), Acte III (résolution). |
-| `heros_journey.md` | Monomythe en 12 étapes (Campbell). |
-| `in_medias_res.md` | Commencer au milieu de l'action. |
-| `late_in_early_out.md` | Entrer tard dans la scène, sortir tôt. |
-| `midpoint_reversal.md` | Événement central qui change la dynamique. |
-| `try_fail_cycles.md` | Échecs successifs avant la réussite. |
-| `pinch_points.md` | Rappels de la menace aux jalons 3/8 et 5/8. |
-| `bookending.md` | Début et fin qui se font écho. |
+### structure/ (12 règles)
+`save_the_cat.md`, `yes_but_no_and.md`, `snowflake_method.md`, `scene_sequel_balance.md`, `three_act_structure.md`, `heros_journey.md`, `in_medias_res.md`, `late_in_early_out.md`, `midpoint_reversal.md`, `try_fail_cycles.md`, `pinch_points.md`, `bookending.md`.
 
-### `00_core/casting/` (8 règles)
-| Fichier | Résumé |
-|---|---|
-| `five_man_band.md` | Archétype d'équilibre des personnages. |
-| `the_watson.md` | Personnage qui pose les questions du lecteur. |
-| `want_vs_need.md` | Moteur psychologique (Désir vs Besoin). |
-| `ghost_wound_lie.md` | Traumatisme → Blessure → Croyance limitante. |
-| `antagonist_mirror.md` | L'antagoniste reflète le protagoniste. |
-| `sympathetic_antagonist.md` | Antagoniste aux motivations compréhensibles. |
-| `foil_character.md` | Personnage contrastant pour révéler le héros. |
-| `false_protagonist.md` | Héros apparent écarté (subversion). |
+### casting/ (8 règles)
+`five_man_band.md`, `the_watson.md`, `want_vs_need.md`, `ghost_wound_lie.md`, `antagonist_mirror.md`, `sympathetic_antagonist.md`, `foil_character.md`, `false_protagonist.md`.
 
-### `00_core/style/` (9 règles)
-| Fichier | Résumé |
-|---|---|
-| `voice_contrast.md` | Chaque personnage identifiable par sa voix. |
-| `motivation_reaction_units.md` | Séquence Motivation → Réaction. |
-| `iceberg_theory.md` | Sous-texte dans les dialogues (Hemingway). |
-| `sensory_anchoring.md` | Ancrage par les 5 sens. |
-| `on_the_nose_dialogue.md` | Anti-pattern : éviter les dialogues explicites. |
-| `dialogue_beat.md` | Actions intercalées dans le dialogue. |
-| `oblique_responses.md` | Réponses indirectes pour réalisme. |
-| `sentence_rhythm.md` | Alterner phrases courtes et longues. |
-| `active_voice.md` | Privilégier la voix active. |
+### style/ (9 règles)
+`voice_contrast.md`, `motivation_reaction_units.md`, `iceberg_theory.md`, `sensory_anchoring.md`, `on_the_nose_dialogue.md`, `dialogue_beat.md`, `oblique_responses.md`, `sentence_rhythm.md`, `active_voice.md`.
 
-### `00_core/worldbuilding/` (1 règle)
-| Fichier | Résumé |
-|---|---|
-| `lived_in_universe.md` | Le monde porte des traces de passé. |
+### worldbuilding/ (1 règle)
+`lived_in_universe.md`.
 
-### `00_core/tension/` (7 règles) — NOUVEAU
-| Fichier | Résumé |
-|---|---|
-| `dramatic_irony.md` | Le lecteur sait ce que le personnage ignore. |
-| `ticking_clock.md` | Limite temporelle pour forcer l'urgence. |
-| `foreshadowing.md` | Indices préparant les développements futurs. |
-| `red_herring.md` | Fausse piste délibérée. |
-| `promise_delay_deliver.md` | Annoncer, retarder, délivrer. |
-| `micro_tension.md` | Petits conflits dans chaque ligne. |
-| `mystery_box.md` | Énigme centrale (J.J. Abrams). |
+### tension/ (7 règles)
+`dramatic_irony.md`, `ticking_clock.md`, `foreshadowing.md`, `red_herring.md`, `promise_delay_deliver.md`, `micro_tension.md`, `mystery_box.md`.
 
-### `00_core/pov/` (7 règles) — NOUVEAU
-| Fichier | Résumé |
-|---|---|
-| `psychic_distance.md` | Échelle proximité narrateur/personnage. |
-| `unreliable_narrator.md` | Narrateur biaisé à décoder. |
-| `deep_pov.md` | Immersion sans verbes de perception. |
-| `head_hopping.md` | Anti-pattern : pas de changement POV non signalé. |
-| `free_indirect_discourse.md` | 3e personne avec voix du personnage. |
-| `stream_of_consciousness.md` | Flux associatif des pensées. |
-| `information_control.md` | Stratégie de révélation/rétention. |
+### pov/ (7 règles)
+`psychic_distance.md`, `unreliable_narrator.md`, `deep_pov.md`, `head_hopping.md`, `free_indirect_discourse.md`, `stream_of_consciousness.md`, `information_control.md`.
 
-### `00_core/theme/` (5 règles) — NOUVEAU
-| Fichier | Résumé |
-|---|---|
-| `controlling_idea.md` | Thèse centrale prouvée par le climax (McKee). |
-| `thematic_question.md` | Question morale explorée sans réponse imposée. |
-| `motif_recurrence.md` | Répétition d'éléments pour renforcer le thème. |
-| `objective_correlative.md` | Objet/situation évoquant une émotion (T.S. Eliot). |
-| `symbolic_action.md` | Action représentant un changement intérieur. |
+### theme/ (5 règles)
+`controlling_idea.md`, `thematic_question.md`, `motif_recurrence.md`, `objective_correlative.md`, `symbolic_action.md`.
 
-### `00_core/arc/` (4 règles) — NOUVEAU
-| Fichier | Résumé |
-|---|---|
-| `positive_arc.md` | Le personnage surmonte son Lie. |
-| `flat_arc.md` | Le protagoniste transforme le monde. |
-| `negative_arc.md` | Le personnage s'enfonce (tragédie). |
-| `relationship_arc.md` | Évolution structurée d'une relation. |
+### arc/ (4 règles)
+`positive_arc.md`, `flat_arc.md`, `negative_arc.md`, `relationship_arc.md`.
+
+### spec/ (10 règles)
+`01_intention.md` à `09_voice.md` + `00_cross_reference_index.md`.
 
 ---
 
-## Structure de `03_audit/` (35 protocoles de test) — Version Finale
+## 03_audit/ — Protocoles de Test (44 protocoles)
 
-### `03_audit/forensic/` (3 protocoles)
-| Fichier | Résumé |
-|---|---|
-| `consistency_check.md` | Vérification des noms, lieux, âges, chronologie. |
-| `worldbuilding_clash.md` | Détection des violations du lore établi. |
-| `sensitivity_bias_scan.md` | Scan de sensibilité, biais et représentations. |
+### forensic/ (3 protocoles)
+`consistency_check.md`, `worldbuilding_clash.md`, `sensitivity_bias_scan.md`.
 
-### `03_audit/narrative/` (4 protocoles)
-| Fichier | Résumé |
-|---|---|
-| `cliche_blacklist.md` | Liste noire des métaphores usées et situations prévisibles. |
-| `pacing_anomalies.md` | Détection des ventres mous et précipitations. |
-| `plot_hole_tracker.md` | Traçage des trous d'intrigue et Fusils non tirés. |
-| `foreshadowing_payoff.md` | Balance entre présages et résolutions. |
+### narrative/ (4 protocoles)
+`cliche_blacklist.md`, `pacing_anomalies.md`, `plot_hole_tracker.md`, `foreshadowing_payoff.md`.
 
-### `03_audit/style/` (7 protocoles)
-| Fichier | Résumé |
-|---|---|
-| `filter_word_ruthless.md` | Traque des verbes de perception (Deep POV). |
-| `dialogue_health_report.md` | Diagnostic de santé des dialogues. |
-| `prose_rhythm_analysis.md` | Analyse de la musicalité du texte. |
-| `show_vs_tell_detector.md` | Localisation des passages "telling". |
-| `echo_word_scanner.md` | Détection des répétitions lexicales proches. |
-| `weak_verb_purge.md` | Chasse aux verbes ternes (être, avoir, faire). |
-| `readability_metrics.md` | Métriques de lisibilité (Flesch, longueur phrases). |
+### style/ (7 protocoles)
+`filter_word_ruthless.md`, `dialogue_health_report.md`, `prose_rhythm_analysis.md`, `show_vs_tell_detector.md`, `echo_word_scanner.md`, `weak_verb_purge.md`, `readability_metrics.md`.
 
-### `03_audit/character/` (5 protocoles)
-| Fichier | Résumé |
-|---|---|
-| `mru_sequencing_validation.md` | Validation des séquences Motivation-Réaction. |
-| `melodrama_detector.md` | Détection des réactions disproportionnées. |
-| `subtext_density_test.md` | Test de densité du sous-texte. |
-| `character_agency_audit.md` | Agence du protagoniste (moteur vs passif). |
-| `relationship_matrix_tracker.md` | Évolution des relations entre personnages. |
+### character/ (5 protocoles)
+`mru_sequencing_validation.md`, `melodrama_detector.md`, `subtext_density_test.md`, `character_agency_audit.md`, `relationship_matrix_tracker.md`.
 
-### `03_audit/immersion/` (2 protocoles) — Fusionné
-| Fichier | Résumé |
-|---|---|
-| `sensory_balance_check.md` | Équilibre des 5 sens dans les scènes. |
-| `spatial_anchoring_audit.md` | Ancrage spatial + détection White Room. |
+### immersion/ (2 protocoles)
+`sensory_balance_check.md`, `spatial_anchoring_audit.md`.
 
-### `03_audit/structure/` (5 protocoles)
-| Fichier | Résumé |
-|---|---|
-| `scene_goal_validator.md` | Vérifie que chaque scène a un objectif. |
-| `character_arc_tracker.md` | Suivi de progression des arcs de personnages. |
-| `beat_structure_audit.md` | Validation des story beats attendus. |
-| `subplot_orphan_detector.md` | Détection des sous-intrigues abandonnées. |
-| `tension_gradient_analysis.md` | Courbe de tension dramatique globale. |
+### structure/ (5 protocoles)
+`scene_goal_validator.md`, `character_arc_tracker.md`, `beat_structure_audit.md`, `subplot_orphan_detector.md`, `tension_gradient_analysis.md`.
 
-### `03_audit/voice/` (3 protocoles)
-| Fichier | Résumé |
-|---|---|
-| `pov_consistency.md` | Stabilité du POV et fuites de focalisation. |
-| `narrator_voice_stability.md` | Cohérence du registre et ton narratif. |
-| `voice_fingerprinting.md` | Unicité vocale de chaque personnage. |
+### voice/ (3 protocoles)
+`pov_consistency.md`, `narrator_voice_stability.md`, `voice_fingerprinting.md`.
 
-### `03_audit/theme/` (2 protocoles)
-| Fichier | Résumé |
-|---|---|
-| `symbolic_motif_coherence.md` | Cohérence des motifs symboliques. |
-| `thematic_thread_tracer.md` | Traçage du fil thématique. |
+### theme/ (2 protocoles)
+`symbolic_motif_coherence.md`, `thematic_thread_tracer.md`.
 
-### `03_audit/reader_experience/` (4 protocoles) — Fusionné
-| Fichier | Résumé |
-|---|---|
-| `cognitive_overload_check.md` | Surcharge cognitive + détection Info-Dumps. |
-| `genre_expectation_audit.md` | Conformité aux attentes de genre. |
-| `suspense_leak_detector.md` | Fuites de tension narrative. |
-| `opening_hook_strength.md` | Force du hook d'ouverture. |
+### reader_experience/ (4 protocoles)
+`cognitive_overload_check.md`, `genre_expectation_audit.md`, `suspense_leak_detector.md`, `opening_hook_strength.md`.
+
+### spec/ (9 protocoles)
+Audits spécifiques de l'étape 01 à 09.
 
 ---
 
-### `00_core/spec/` (10 règles) — NOUVEAU
-| Fichier | Résumé |
-|---|---|
-| `00_cross_reference_index.md` | Index central de croisement de toutes les règles. |
-| `01_intention.md` | "Pourquoi j'écris ça ?" |
-| `02_theme.md` | "De quoi ça parle vraiment ?" |
-| `03_genre.md` | "Quelles sont les règles du genre ?" |
-| `04_premise.md` | "En une phrase, c'est quoi ?" |
-| `05_conflict.md` | "Quel est le problème ?" |
-| `06_characters.md` | "Qui va vivre ce problème ?" |
-| `07_universe.md` | "Où et quand ?" |
-| `08_structure.md` | "Comment ça se déroule ?" |
-| `09_voice.md` | "Comment je le raconte ?" |
+## Historique des Corrections et Maturation
+
+- **2025-12-25** :
+    - Naming : `characters.md` et `universe.md` stabilisés.
+    - Isolation Git : `.gitignore` configurés pour séparer Framework et Projet.
+    - Workflows : `01-create-spec` (mapping strict) et `02-audit-spec` (Raffinement Actif + Veto Humain) opérationnels.
+    - Neutralisation de la complaisance IA par l'interdiction de l'auto-validation.
 
 ---
-
-### `03_audit/spec/` (9 protocoles) — NOUVEAU
-| Fichier | Résumé |
-|---|---|
-| `01_intention_audit.md` | Valide l'intention. |
-| `02_theme_audit.md` | Valide le thème. |
-| `03_genre_audit.md` | Valide le genre. |
-| `04_premise_audit.md` | Valide la prémisse. |
-| `05_conflict_audit.md` | Valide le conflit. |
-| `06_characters_audit.md` | Valide les personnages. |
-| `07_universe_audit.md` | Valide l'univers. |
-| `08_structure_audit.md` | Valide la structure. |
-| `09_voice_audit.md` | Valide la voix (gate final). |
-
----
-
-## État Actuel (2025-12-25 - Version Complète)
-- **Architecture complète** : 10 sous-dossiers dans `00_core/`, 10 sous-dossiers dans `03_audit/`.
-- **72 règles** dans `00_core/` (62 narratives + 10 spec methodology).
-- **44 protocoles de test** dans `03_audit/` (35 narratifs + 9 spec audits).
-- **Index de croisement** : `00_core/spec/00_cross_reference_index.md` lie toutes les règles par étape.
-- **README** : Diagramme du pipeline de création littéraire.
-- **Aucun workflow créé** : Prochaine étape.
-- **Prochaine étape** : Créer les workflows dans `.agent/workflows/`.
-
----
-*Note : Ce fichier sert d'ancre pour les sessions futures afin de maintenir la cohérence et d'éviter la dérive du projet.*
+*Note : Ce fichier est la mémoire vive du projet. Ne jamais supprimer les listes de règles.*
