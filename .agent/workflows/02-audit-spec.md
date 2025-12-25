@@ -1,17 +1,10 @@
 ---
-description: Auditer un brouillon de spécification pour une étape donnée (01-09)
+description: Auditer et raffiner une spécification pour une étape donnée (01-09)
 ---
 
-# Workflow : Auditer une Spec
+# Workflow : Auditer et Raffiner (02)
 
-Ce workflow applique les **protocoles d'audit impitoyables** sur un brouillon.
-Il produit un rapport externe et s'assure que le fichier brouillon a la **structure requise** pour les corrections.
-
----
-
-## Prérequis
-- Le fichier de spec brouillon existe dans `01_spec/[XX]_[nom].md`
-- Le brouillon a été créé via `/create-spec [numéro]`
+Ce workflow est le moteur de qualité du framework. Il transforme un brouillon brut en une spécification de haute qualité par un cycle Critique -> Raffinement.
 
 ---
 
@@ -21,67 +14,36 @@ Il produit un rapport externe et s'assure que le fichier brouillon a la **struct
 /audit-spec [numéro_étape]
 ```
 
-**Exemples :**
-- `/audit-spec 01` → Audite `01_spec/01_intention.md`
-
 ---
 
 ## Étapes du Workflow
 
-### 1. Chargement des Protocoles
-L'agent charge :
-1. Le protocole direct : `03_audit/spec/[XX]_[nom]_audit.md` (Impitoyable)
-2. L'index de croisement : `00_core/spec/00_cross_reference_index.md`
-3. Les audits transversaux liés.
+### 1. Analyse et Rapport
+L'agent charge le brouillon `01_spec/[XX]_[nom].md` et le protocole `03_audit/spec/[XX]_[nom]_audit.md`.
+- Il exécute les épreuves impitoyables.
+- Il génère un rapport complet dans `03_audit/report/[DATE]_[ETAPE]_audit.md`.
 
-### 2. Exécution de l'Audit (Interrogatoire)
-L'agent passe le brouillon au crible des épreuves (unicité, endurance, inversion...).
-Statut par épreuve : ✅ Passé | ⚠️ Faible | ❌ Échec (avec raison précise)
+### 2. Décision de Raffinement
+- **Si VALIDÉ** : Le workflow s'arrête, l'utilisateur passe à l'étape suivante.
+- **Si REJETÉ ou À AMÉLIORER** : L'agent enclenche AUTOMATIQUEMENT la Phase 3.
 
-### 3. Génération du Rapport
-Sauvegarde dans `03_audit/report/[DATE]_[ETAPE]_audit.md`.
+### 3. LE RAFFINEMENT (Réécriture du Produit)
+L'agent utilise les critiques formulées dans le rapport pour **RÉÉCRIRE intégralement** le fichier `01_spec/[XX]_[nom].md`.
 
-### 4. MISE À NIVEAU STRUCTURELLE (Silencieuse)
+**Règles de Réécriture :**
+- **Zéro Placeholders** : Ne jamais laisser de champs vides ou de (À remplir).
+- **Injection de Matière** : L'agent puise dans les échanges précédents et son moteur créatif pour proposer du contenu solide là où il manquait (ex: suggérer des œuvres pour l'unicité, imaginer un souvenir sensoriel basé sur le thème).
+- **Alignement Core** : Appliquer strictement les règles satellites (ex: reformuler la Controlling Idea si elle est trop longue).
+- **Pureté** : Aucun commentaire d'audit dans le fichier final. Juste la spec, raffinée.
 
-SI le verdict est **REJETÉ** ou **À AMÉLIORER**, l'agent vérifie la STRUCTURE du fichier `01_spec/[XX]_[nom].md`.
-
-Si et seulement si des sections OBLIGATOIRES manquent (ex: "Unicité", "Inversion"), l'agent **ajoute les titres manquants** à la fin du fichier, sans aucun commentaire ni alerte.
-
-**Exemple :**
-```markdown
-### Inversion Diabolique
-(À remplir)
-
-### Endurance : 5 Variations
-(À remplir)
-```
-
-**Objectif :** Préparer le fichier pour que l'auteur puisse répondre aux exigences, sans jamais polluer le document avec le rapport d'audit.
-
-### 5. Notification Utilisateur
-L'agent informe :
-- Du verdict et du lien vers le rapport d'audit.
-- Que les **sections manquantes ont été ajoutées** (si applicable).
-
----
-
-## Règles de Comportement
-
-1.  **Ne jamais valider par complaisance**.
-2.  **Respect absolu du fichier produit** : Interdiction d'ajouter des alertes, smileys, ou scores dans le fichier `.md`.
-3.  **Le Rapport est séparé** : Toutes les critiques vont dans `03_audit/report/`.
+### 4. Notification
+L'agent informe l'utilisateur que le fichier a été raffiné à la lumière de l'audit et l'invite à lire le rapport pour comprendre les changements effectués.
 
 ---
 
 ## Après ce Workflow
 
-| Verdict | Action |
+| État du Fichier | Action |
 |---|---|
-| **VALIDÉ** | Passer à `/create-spec [N+1]` |
-| **REJETÉ** | Lire le rapport, remplir les sections vides dans le fichier, puis `/audit-spec [N]` |
-
----
-
-## Référence
-- Protocoles : `03_audit/spec/`
-- Rapports : `03_audit/report/`
+| Raffiné | L'utilisateur vérifie, ajuste si besoin, puis relance `/audit-spec` pour validation finale |
+| Validé | Passage à `/create-spec [N+1]` |
