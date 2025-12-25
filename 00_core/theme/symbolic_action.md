@@ -1,22 +1,62 @@
-# Règle : Symbolic Action (Action Symbolique)
+# Règle : Symbolic Action (Le Geste qui Prouve)
 
 ## Définition
-Une action concrète posée par un personnage qui représente un changement intérieur ou thématique, sans que ce symbolisme soit explicité.
+Action concrète posée par un personnage qui **représente un changement intérieur** ou thématique, sans que ce symbolisme soit explicité. Le personnage ne dit pas qu'il a changé — il fait quelque chose qui le PROUVE.
 
-## Principe
-Le personnage ne dit pas qu'il a changé. Il fait quelque chose qui le prouve.
+## Connexions Systèmes
+- **Dépendance Amont** : `00_core/arc/positive_arc.md` (L'action symbolique CLÔT l'arc)
+- **Dépendance Aval** : `objective_correlative.md` (L'action est un correlative actif)
+- **Audit Applicable** : `03_audit/spec/06_characters_audit.md`
 
-## Exemples
-- **Changement** : Jeter son alliance dans la mer (fin du mariage émotionnel).
-- **Transformation** : Se couper les cheveux (rupture avec le passé).
-- **Choix thématique** : Donner son arme à l'ennemi (choix de la confiance sur la violence).
+## Algorithme Fondamental
 
-## Fonction
-- Rend le changement visible et mémorable.
-- Évite les discours explicatifs sur l'évolution du personnage.
-- Crée des moments iconiques.
+```
+CHANGEMENT INTERNE (invisible) → ACTION SYMBOLIQUE (visible) → LECTEUR COMPREND
+```
 
-## Application pour l'Audit
-- **Moments clés** : Les transformations majeures sont-elles incarnées par une action ?
-- **Symbolisme** : L'action a-t-elle une résonance au-delà de sa fonction pratique ?
-- **Subtilité** : Le symbole est-il suggéré ou souligné lourdement ?
+L'action rend le changement **visible et mémorable**.
+
+## Livrables Strictes (Output attendu)
+
+### Exemples d'Actions Symboliques
+
+| Changement | Action Symbolique | Ce que ça Prouve |
+|---|---|---|
+| Fin d'un mariage émotionnel | Jeter son alliance dans la mer | Le lien est rompu |
+| Rupture avec le passé | Se couper les cheveux | Nouveau départ |
+| Choix de la confiance | Donner son arme à l'ennemi | Fin de la violence |
+| Acceptation de soi | Porter enfin la robe de sa mère | Réconciliation avec l'héritage |
+| Sacrifice pour autrui | Donner le dernier gilet de sauvetage | Amour > survie |
+
+### Template d'Action Symbolique
+
+| Composante | Question | Exemple |
+|---|---|---|
+| **ARC** | Quel changement le personnage a-t-il vécu ? | Acceptation de la mort |
+| **ACTION** | Quel geste concret ? | Il desserre les poings et lâche le rebord |
+| **OBJET** | Quel objet est impliqué ? | Rebord du toit (lieu de sa tentative) |
+| **RÉSONNANCE** | Quel écho avec le début ? | Au début, il s'accrochait désespérément |
+
+### Moments Clés pour Action Symbolique
+
+1. **Climax** — L'action finale qui prouve le thème
+2. **All is Lost** — L'action de capitulation ou de résistance
+3. **Final Image** — Le geste qui boucle l'arc
+
+## Anti-patterns (Motifs de Rejet Immédiat)
+
+- ❌ **Discours au lieu d'Action** : Le personnage EXPLIQUE son changement. (Show, don't tell.)
+- ❌ **Symbolisme Lourd** : L'action est tellement évidente qu'elle devient ridicule.
+- ❌ **Sans Préparation** : L'objet utilisé n'a pas été établi avant. (Setup manquant.)
+- ❌ **Action Banale** : Le geste n'a pas de résonance particulière.
+- ❌ **Changement Non Prouvé** : L'arc se termine sans action visible.
+
+## Application pour l'Audit (Tests)
+
+1. **Test du Climax** : Le changement du héros est-il incarné par un GESTE ?
+2. **Test du Setup** : L'objet/lieu de l'action a-t-il été établi plus tôt ?
+3. **Test de la Subtilité** : Le symbole est-il suggéré ou souligné lourdement ?
+4. **Test de l'Écho** : L'action répond-elle à une action du début ?
+
+## Référence Théorique
+- Robert McKee, *Story*
