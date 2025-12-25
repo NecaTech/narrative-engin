@@ -3,14 +3,14 @@
 ## Vision
 Développer un système de création littéraire rigoureux, modulaire et piloté par des workflows, sans dépendance à des frameworks externes complexes. Le système repose sur Antigravity comme agent unique et polymorphe.
 
-## Architecture du Workspace
+## Architecture du Workspace (Convention de Nommage Ordonnée)
 - **.agent/workflows/** : Scripts d'exécution et protocoles (le "Comment"). Activer via les slash commands.
-- **core/** : Bibliothèque de règles, conventions d'écriture et bonnes pratiques (la "Constitution"). Non flexible une fois finalisé, personnalisé au style de l'auteur.
-- **spec/** : Spécifications narratives (intrigue, casting, lore, storyline, sommaire/backdrop).
+- **00_core/** : Bibliothèque de règles, conventions d'écriture et bonnes pratiques (la "Constitution").
+- **01_spec/** : Spécifications narratives (intrigue, casting, lore, storyline, sommaire/backdrop).
+- **02_draft/** : Espace de rédaction itératif par chapitre.
+- **03_audit/** : Règles d'audit et historique des critiques sévères.
+- **04_publish/** : Versions finalisées et prêtes à la diffusion.
 - **doc/** : Recherche, archives et matière pour l'immersion.
-- **draft/** : Espace de rédaction itératif par chapitre.
-- **audit/** : Règles d'audit et historique des critiques sévères.
-- **publish/** : Versions finalisées et prêtes à la diffusion.
 
 ## Principes de Travail
 1. **Pas de Vibe Coding** : Chaque action doit être comprise et expliquée.
@@ -21,9 +21,9 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 
 ---
 
-## Structure de `core/` (62 règles intégrées)
+## Structure de `00_core/` (62 règles intégrées)
 
-### `core/logic/` (9 règles)
+### `00_core/logic/` (9 règles)
 | Fichier | Résumé |
 |---|---|
 | `chekhovs_gun.md` | Tout élément introduit doit être utilisé. |
@@ -36,7 +36,7 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 | `rule_of_three.md` | Les triplets sont plus satisfaisants et mémorables. |
 | `fair_play_mystery.md` | Tous les indices doivent être accessibles au lecteur. |
 
-### `core/structure/` (12 règles)
+### `00_core/structure/` (12 règles)
 | Fichier | Résumé |
 |---|---|
 | `save_the_cat.md` | Beat Sheet pour le rythme narratif. |
@@ -52,7 +52,7 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 | `pinch_points.md` | Rappels de la menace aux jalons 3/8 et 5/8. |
 | `bookending.md` | Début et fin qui se font écho. |
 
-### `core/casting/` (8 règles)
+### `00_core/casting/` (8 règles)
 | Fichier | Résumé |
 |---|---|
 | `five_man_band.md` | Archétype d'équilibre des personnages. |
@@ -64,7 +64,7 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 | `foil_character.md` | Personnage contrastant pour révéler le héros. |
 | `false_protagonist.md` | Héros apparent écarté (subversion). |
 
-### `core/style/` (9 règles)
+### `00_core/style/` (9 règles)
 | Fichier | Résumé |
 |---|---|
 | `voice_contrast.md` | Chaque personnage identifiable par sa voix. |
@@ -77,12 +77,12 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 | `sentence_rhythm.md` | Alterner phrases courtes et longues. |
 | `active_voice.md` | Privilégier la voix active. |
 
-### `core/worldbuilding/` (1 règle)
+### `00_core/worldbuilding/` (1 règle)
 | Fichier | Résumé |
 |---|---|
 | `lived_in_universe.md` | Le monde porte des traces de passé. |
 
-### `core/tension/` (7 règles) — NOUVEAU
+### `00_core/tension/` (7 règles) — NOUVEAU
 | Fichier | Résumé |
 |---|---|
 | `dramatic_irony.md` | Le lecteur sait ce que le personnage ignore. |
@@ -93,7 +93,7 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 | `micro_tension.md` | Petits conflits dans chaque ligne. |
 | `mystery_box.md` | Énigme centrale (J.J. Abrams). |
 
-### `core/pov/` (7 règles) — NOUVEAU
+### `00_core/pov/` (7 règles) — NOUVEAU
 | Fichier | Résumé |
 |---|---|
 | `psychic_distance.md` | Échelle proximité narrateur/personnage. |
@@ -104,7 +104,7 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 | `stream_of_consciousness.md` | Flux associatif des pensées. |
 | `information_control.md` | Stratégie de révélation/rétention. |
 
-### `core/theme/` (5 règles) — NOUVEAU
+### `00_core/theme/` (5 règles) — NOUVEAU
 | Fichier | Résumé |
 |---|---|
 | `controlling_idea.md` | Thèse centrale prouvée par le climax (McKee). |
@@ -113,7 +113,7 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 | `objective_correlative.md` | Objet/situation évoquant une émotion (T.S. Eliot). |
 | `symbolic_action.md` | Action représentant un changement intérieur. |
 
-### `core/arc/` (4 règles) — NOUVEAU
+### `00_core/arc/` (4 règles) — NOUVEAU
 | Fichier | Résumé |
 |---|---|
 | `positive_arc.md` | Le personnage surmonte son Lie. |
@@ -123,16 +123,16 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 
 ---
 
-## Structure de `audit/` (35 protocoles de test) — Version Finale
+## Structure de `03_audit/` (35 protocoles de test) — Version Finale
 
-### `audit/forensic/` (3 protocoles)
+### `03_audit/forensic/` (3 protocoles)
 | Fichier | Résumé |
 |---|---|
 | `consistency_check.md` | Vérification des noms, lieux, âges, chronologie. |
 | `worldbuilding_clash.md` | Détection des violations du lore établi. |
 | `sensitivity_bias_scan.md` | Scan de sensibilité, biais et représentations. |
 
-### `audit/narrative/` (4 protocoles)
+### `03_audit/narrative/` (4 protocoles)
 | Fichier | Résumé |
 |---|---|
 | `cliche_blacklist.md` | Liste noire des métaphores usées et situations prévisibles. |
@@ -140,7 +140,7 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 | `plot_hole_tracker.md` | Traçage des trous d'intrigue et Fusils non tirés. |
 | `foreshadowing_payoff.md` | Balance entre présages et résolutions. |
 
-### `audit/style/` (7 protocoles)
+### `03_audit/style/` (7 protocoles)
 | Fichier | Résumé |
 |---|---|
 | `filter_word_ruthless.md` | Traque des verbes de perception (Deep POV). |
@@ -151,7 +151,7 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 | `weak_verb_purge.md` | Chasse aux verbes ternes (être, avoir, faire). |
 | `readability_metrics.md` | Métriques de lisibilité (Flesch, longueur phrases). |
 
-### `audit/character/` (5 protocoles)
+### `03_audit/character/` (5 protocoles)
 | Fichier | Résumé |
 |---|---|
 | `mru_sequencing_validation.md` | Validation des séquences Motivation-Réaction. |
@@ -160,13 +160,13 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 | `character_agency_audit.md` | Agence du protagoniste (moteur vs passif). |
 | `relationship_matrix_tracker.md` | Évolution des relations entre personnages. |
 
-### `audit/immersion/` (2 protocoles) — Fusionné
+### `03_audit/immersion/` (2 protocoles) — Fusionné
 | Fichier | Résumé |
 |---|---|
 | `sensory_balance_check.md` | Équilibre des 5 sens dans les scènes. |
 | `spatial_anchoring_audit.md` | Ancrage spatial + détection White Room. |
 
-### `audit/structure/` (5 protocoles)
+### `03_audit/structure/` (5 protocoles)
 | Fichier | Résumé |
 |---|---|
 | `scene_goal_validator.md` | Vérifie que chaque scène a un objectif. |
@@ -175,20 +175,20 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 | `subplot_orphan_detector.md` | Détection des sous-intrigues abandonnées. |
 | `tension_gradient_analysis.md` | Courbe de tension dramatique globale. |
 
-### `audit/voice/` (3 protocoles)
+### `03_audit/voice/` (3 protocoles)
 | Fichier | Résumé |
 |---|---|
 | `pov_consistency.md` | Stabilité du POV et fuites de focalisation. |
 | `narrator_voice_stability.md` | Cohérence du registre et ton narratif. |
 | `voice_fingerprinting.md` | Unicité vocale de chaque personnage. |
 
-### `audit/theme/` (2 protocoles)
+### `03_audit/theme/` (2 protocoles)
 | Fichier | Résumé |
 |---|---|
 | `symbolic_motif_coherence.md` | Cohérence des motifs symboliques. |
 | `thematic_thread_tracer.md` | Traçage du fil thématique. |
 
-### `audit/reader_experience/` (4 protocoles) — Fusionné
+### `03_audit/reader_experience/` (4 protocoles) — Fusionné
 | Fichier | Résumé |
 |---|---|
 | `cognitive_overload_check.md` | Surcharge cognitive + détection Info-Dumps. |
@@ -199,9 +199,9 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 ---
 
 ## État Actuel (2025-12-25 - Version Consolidée)
-- **Architecture complète** : 9 sous-dossiers dans `core/`, 9 sous-dossiers dans `audit/`.
-- **62 règles narratives** dans `core/`.
-- **35 protocoles de test** dans `audit/` (après fusions et enrichissement via 5 LLMs).
+- **Architecture complète** : 9 sous-dossiers dans `00_core/`, 9 sous-dossiers dans `03_audit/`.
+- **62 règles narratives** dans `00_core/`.
+- **35 protocoles de test** dans `03_audit/` (après fusions et enrichissement via 5 LLMs).
 - **Aucun workflow créé** : Prochaine étape.
 - **Prochaine étape** : Créer le premier workflow pour tester l'utilisation des règles.
 
