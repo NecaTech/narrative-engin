@@ -198,12 +198,45 @@ Développer un système de création littéraire rigoureux, modulaire et piloté
 
 ---
 
-## État Actuel (2025-12-25 - Version Consolidée)
-- **Architecture complète** : 9 sous-dossiers dans `00_core/`, 9 sous-dossiers dans `03_audit/`.
-- **62 règles narratives** dans `00_core/`.
-- **35 protocoles de test** dans `03_audit/` (après fusions et enrichissement via 5 LLMs).
+### `00_core/spec/` (10 règles) — NOUVEAU
+| Fichier | Résumé |
+|---|---|
+| `00_cross_reference_index.md` | Index central de croisement de toutes les règles. |
+| `01_intention.md` | "Pourquoi j'écris ça ?" |
+| `02_theme.md` | "De quoi ça parle vraiment ?" |
+| `03_genre.md` | "Quelles sont les règles du genre ?" |
+| `04_premise.md` | "En une phrase, c'est quoi ?" |
+| `05_conflict.md` | "Quel est le problème ?" |
+| `06_characters.md` | "Qui va vivre ce problème ?" |
+| `07_universe.md` | "Où et quand ?" |
+| `08_structure.md` | "Comment ça se déroule ?" |
+| `09_voice.md` | "Comment je le raconte ?" |
+
+---
+
+### `03_audit/spec/` (9 protocoles) — NOUVEAU
+| Fichier | Résumé |
+|---|---|
+| `01_intention_audit.md` | Valide l'intention. |
+| `02_theme_audit.md` | Valide le thème. |
+| `03_genre_audit.md` | Valide le genre. |
+| `04_premise_audit.md` | Valide la prémisse. |
+| `05_conflict_audit.md` | Valide le conflit. |
+| `06_characters_audit.md` | Valide les personnages. |
+| `07_universe_audit.md` | Valide l'univers. |
+| `08_structure_audit.md` | Valide la structure. |
+| `09_voice_audit.md` | Valide la voix (gate final). |
+
+---
+
+## État Actuel (2025-12-25 - Version Complète)
+- **Architecture complète** : 10 sous-dossiers dans `00_core/`, 10 sous-dossiers dans `03_audit/`.
+- **72 règles** dans `00_core/` (62 narratives + 10 spec methodology).
+- **44 protocoles de test** dans `03_audit/` (35 narratifs + 9 spec audits).
+- **Index de croisement** : `00_core/spec/00_cross_reference_index.md` lie toutes les règles par étape.
+- **README** : Diagramme du pipeline de création littéraire.
 - **Aucun workflow créé** : Prochaine étape.
-- **Prochaine étape** : Créer le premier workflow pour tester l'utilisation des règles.
+- **Prochaine étape** : Créer les workflows dans `.agent/workflows/`.
 
 ---
 *Note : Ce fichier sert d'ancre pour les sessions futures afin de maintenir la cohérence et d'éviter la dérive du projet.*
