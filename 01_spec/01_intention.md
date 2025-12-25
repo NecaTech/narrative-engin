@@ -57,5 +57,5 @@ Je ne prêche pas une réponse simple. J'explore les deux côtés : pourquoi on 
 
 ## Notes de Session
 - **Date** : 2025-12-25
-- **Statut** : BROUILLON (non audité)
+- **Statut** : BROUILLON
 - **Créé via** : Workflow `/01-create-spec 01`
