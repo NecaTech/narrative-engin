@@ -1,7 +1,28 @@
-# Protocole : Sensitivity Bias Scan (Scan de Sensibilité et Biais)
+# Protocole : Sensitivity Bias Scan (Le Scanner de Représentation)
+
+## Connexions Systèmes
+- **Règles Liées** : À croiser avec les `spec/` du projet
+- **Audit Parent** : Audit transversal qualité
+- **Usage** : Vérification pré-publication
 
 ## Objectif
-Détecter les représentations problématiques, stéréotypes, biais inconscients et contenus potentiellement offensants avant publication.
+Détecter les **représentations problématiques**, stéréotypes, biais inconscients et contenus potentiellement offensants avant publication.
+
+> ⚠️ Ce protocole ne vise pas à censurer, mais à identifier les points qui méritent **attention consciente** de l'auteur.
+
+---
+
+## Grille de Scoring (/10)
+
+| Critère | Score | Description |
+|---|---|---|
+| **Personnages Complets** | /2 | Pas définis par leur appartenance seule |
+| **Zéro Trope Toxique** | /2 | Pas de Magical Negro, MPDG, etc. |
+| **Diversité Organique** | /2 | Pas de tokenisation |
+| **Langage Respectueux** | /2 | Pas de termes datés/offensants |
+| **Cultures Recherchées** | /2 | Représentation informée |
+
+---
 
 ## Points de Contrôle
 
@@ -24,8 +45,24 @@ Détecter les représentations problématiques, stéréotypes, biais inconscient
 - [ ] Le contenu pourrait-il générer une controverse évitable ?
 - [ ] Une sensitivity reading externe est-elle recommandée ?
 
-## Note Importante
-Ce protocole ne vise pas à censurer, mais à identifier les points qui méritent attention consciente de l'auteur.
+---
 
-## Référence
-À croiser avec les spec/ du projet pour vérifier les intentions vs le résultat.
+## Tropes Problématiques (Watch List)
+
+| Trope | Description | Pourquoi Problématique |
+|---|---|---|
+| **Magical Negro** | Personnage noir dont le seul but est d'aider le héros blanc | Réductif |
+| **MPDG** | Femme sans vie propre qui "sauve" l'homme déprimé | Sans agence |
+| **Bury Your Gays** | Personnages LGBTQ+ systématiquement tués | Pattern toxique |
+| **Token** | Un seul représentant d'un groupe | Réductif |
+| **Exotisation** | Description fétichisante de l'altérité | Déshumanisant |
+
+---
+
+## Verdict
+
+| Score | Verdict | Action |
+|---|---|---|
+| **8-10** | ✅ Représentation Soignée | Aucune correction |
+| **5-7** | ⚠️ Points d'Attention | Réviser les passages identifiés |
+| **0-4** | ❌ Problèmes Majeurs | Sensitivity reading externe recommandé |

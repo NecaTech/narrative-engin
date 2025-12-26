@@ -1,7 +1,26 @@
-# Protocole : POV Consistency (Cohérence du Point de Vue)
+# Protocole : POV Consistency (Le Gardien de la Focalisation)
+
+## Connexions Systèmes
+- **Règles Liées** : `00_core/pov/head_hopping.md`, `00_core/pov/psychic_distance.md`, `00_core/pov/deep_pov.md`
+- **Audit Parent** : `03_audit/spec/09_voice_audit.md`
+- **Usage** : Vérification post-écriture, révision scène par scène
 
 ## Objectif
-Vérifier la stabilité du point de vue narratif et détecter les fuites de focalisation (head-hopping, omniscience accidentelle).
+Vérifier la **stabilité du point de vue** narratif et détecter les fuites de focalisation (head-hopping, omniscience accidentelle).
+
+---
+
+## Grille de Scoring (/10)
+
+| Critère | Score | Description |
+|---|---|---|
+| **Stabilité POV** | /2 | POV constant dans chaque scène |
+| **Transitions Claires** | /2 | Changements signalés |
+| **Zéro Head-Hopping** | /2 | Pas de sauts non balisés |
+| **Accès Info Cohérent** | /2 | Personnage POV ne sait que ce qu'il peut savoir |
+| **Distance Stable** | /2 | Profondeur psychique constante |
+
+---
 
 ## Points de Contrôle
 
@@ -19,5 +38,24 @@ Vérifier la stabilité du point de vue narratif et détecter les fuites de foca
 - [ ] La distance psychique reste-t-elle stable dans chaque scène ?
 - [ ] Les changements de profondeur (deep → distant) sont-ils justifiés ?
 
-## Référence
-Croiser avec : `00_core/pov/head_hopping.md`, `00_core/pov/psychic_distance.md`
+---
+
+## Anti-patterns (Fuites Typiques)
+
+| Anti-pattern | Description | Sévérité |
+|---|---|---|
+| **Head-Hopping** | Saut de POV sans transition | ❌ Bloquant |
+| **Omniscience Accidentelle** | Narrateur sait ce que POV ne peut pas savoir | ⚠️ Majeur |
+| **Télépathie** | POV "devine" les pensées des autres | ⚠️ Majeur |
+| **Description Impossible** | POV décrit son propre visage sans miroir | ⚠️ Mineur |
+| **Distance Variable** | Deep POV puis soudain externe | ⚠️ Majeur |
+
+---
+
+## Verdict
+
+| Score | Verdict | Action |
+|---|---|---|
+| **8-10** | ✅ POV Stable | Aucune correction |
+| **5-7** | ⚠️ Fuites Ponctuelles | Colmater les passages problématiques |
+| **0-4** | ❌ POV Chaotique | Révision structurelle du point de vue |

@@ -1,7 +1,26 @@
-# Protocole : Spatial Anchoring Audit (Audit d'Ancrage Spatial)
+# Protocole : Spatial Anchoring Audit (Le Détecteur de Pièces Blanches)
+
+## Connexions Systèmes
+- **Règles Liées** : `03_audit/forensic/consistency_check.md`, `03_audit/immersion/sensory_balance_check.md`
+- **Audit Parent** : `03_audit/spec/09_voice_audit.md`
+- **Usage** : Vérification post-écriture
 
 ## Objectif
-Vérifier que le lecteur peut visualiser la géométrie des scènes et que les mouvements des personnages sont logiques dans l'espace. Inclut la détection du "Syndrome de la Pièce Blanche" (White Room).
+Vérifier que le lecteur peut **visualiser la géométrie des scènes** et que les mouvements des personnages sont logiques dans l'espace. Inclut la détection du "Syndrome de la Pièce Blanche" (White Room).
+
+---
+
+## Grille de Scoring (/10)
+
+| Critère | Score | Description |
+|---|---|---|
+| **Décor Posé Tôt** | /2 | 3 premières lignes de la scène |
+| **Pas de White Room** | /2 | Environnement rappelé régulièrement |
+| **Positions Claires** | /2 | On sait où sont les personnages |
+| **Mouvements Logiques** | /2 | Pas de téléportation |
+| **Ancrage Temporel** | /2 | Moment de la journée perceptible |
+
+---
 
 ## Points de Contrôle
 
@@ -30,8 +49,21 @@ Vérifier que le lecteur peut visualiser la géométrie des scènes et que les m
 - [ ] Les changements de lieu sont-ils clairement signalés ?
 - [ ] Le lecteur comprend-il comment le personnage est arrivé là ?
 
-## Action
-Pour chaque "White Room" détectée, ajouter des détails d'ancrage sensoriels liés à l'action en cours.
+---
 
-## Référence
-Croiser avec : `03_audit/forensic/consistency_check.md`, `03_audit/immersion/sensory_balance_check.md`
+## Correction White Room
+
+Pour chaque "White Room" détectée, ajouter des détails d'ancrage :
+- Un objet physique avec lequel le personnage interagit
+- Une sensation sensorielle liée à l'action
+- Un rappel de la lumière/météo/température
+
+---
+
+## Verdict
+
+| Score | Verdict | Action |
+|---|---|---|
+| **8-10** | ✅ Espace Clair | Aucune correction |
+| **5-7** | ⚠️ Flou Partiel | Ajouter des ancrages |
+| **0-4** | ❌ White Rooms | Réécriture avec ancrage sensoriel |

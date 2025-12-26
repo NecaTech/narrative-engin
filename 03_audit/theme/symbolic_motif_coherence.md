@@ -1,7 +1,26 @@
-# Protocole : Symbolic Motif Coherence (Cohérence des Motifs Symboliques)
+# Protocole : Symbolic Motif Coherence (Le Tisserand de Symboles)
+
+## Connexions Systèmes
+- **Règles Liées** : `00_core/theme/motif_recurrence.md`, `00_core/theme/symbolic_action.md`, `00_core/theme/objective_correlative.md`
+- **Audit Parent** : `03_audit/spec/02_theme_audit.md`
+- **Usage** : Vérification post-écriture, révision
 
 ## Objectif
-Vérifier que les symboles et motifs récurrents évoluent de manière cohérente et servent le thème central.
+Vérifier que les **symboles et motifs récurrents** évoluent de manière cohérente et servent le thème central.
+
+---
+
+## Grille de Scoring (/10)
+
+| Critère | Score | Description |
+|---|---|---|
+| **Évolution Cohérente** | /2 | Les symboles changent avec l'arc |
+| **Introduction Naturelle** | /2 | Intégrés à l'action, pas plaqués |
+| **Lien Thématique** | /2 | Renforcent la Controlling Idea |
+| **Pas d'Abandon** | /2 | Tous les motifs ont un payoff |
+| **Clarté Suffisante** | /2 | Perceptibles sans être explicites |
+
+---
 
 ## Points de Contrôle
 
@@ -19,5 +38,20 @@ Vérifier que les symboles et motifs récurrents évoluent de manière cohérent
 - [ ] Les symboles sont-ils suffisamment clairs pour être perçus (sans être trop explicites) ?
 - [ ] Le lecteur peut-il connecter le symbole au thème ?
 
-## Référence
-Croiser avec : `00_core/theme/motif_recurrence.md`, `00_core/theme/symbolic_action.md`
+---
+
+## Template de Suivi
+
+| Motif | 1ère Occurrence | Évolution | Payoff | Lien Thème |
+|---|---|---|---|---|
+| [Symbole] | Ch.X | [Description] | Ch.Y / ❌ | [Controlling Idea] |
+
+---
+
+## Verdict
+
+| Score | Verdict | Action |
+|---|---|---|
+| **8-10** | ✅ Tissage Cohérent | Aucune correction |
+| **5-7** | ⚠️ Motifs Flottants | Renforcer liens ou payoffs |
+| **0-4** | ❌ Symboles Incohérents | Restructurer le système symbolique |
