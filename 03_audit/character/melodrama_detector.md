@@ -1,9 +1,28 @@
-# Protocole : Melodrama Detector (Détecteur de Mélodrame)
+# Protocole : Melodrama Detector (Le Calibreur Émotionnel)
+
+## Connexions Systèmes
+- **Règles Liées** : `00_core/style/iceberg_theory.md`, `00_core/style/show_dont_tell.md`, `00_core/casting/want_vs_need.md`
+- **Audit Parent** : `03_audit/spec/06_characters_audit.md`
+- **Usage** : Vérification post-écriture ou révision
 
 ## Objectif
-Identifier les réactions émotionnelles disproportionnées par rapport à leur cause, signe d'un manque de réalisme psychologique.
+Identifier les **réactions émotionnelles disproportionnées** par rapport à leur cause. Signe d'un manque de réalisme psychologique ou de construction émotionnelle insuffisante.
 
-## Signaux d'Alerte
+---
+
+## Grille de Scoring (/10)
+
+| Critère | Score | Description |
+|---|---|---|
+| **Proportionnalité** | /2 | Réactions proportionnelles aux événements |
+| **Construction** | /2 | Émotions construites progressivement |
+| **Naturalité Dialogue** | /2 | Dialogues crédibles, pas théâtraux |
+| **Gestuelle Mesurée** | /2 | Gestes physiques dosés |
+| **Investissement Lecteur** | /2 | Le lecteur a eu le temps de s'investir |
+
+---
+
+## Points de Contrôle
 
 ### Réactions Excessives
 - [ ] Le personnage pleure-t-il pour une raison mineure ?
@@ -25,8 +44,38 @@ Identifier les réactions émotionnelles disproportionnées par rapport à leur 
 - [ ] Les larmes coulent-elles trop souvent ?
 - [ ] Les tremblements sont-ils systématiques ?
 
-## Calibration
-Le mélodrame n'est pas toujours mauvais (certains genres l'exigent). Ce protocole doit être ajusté selon le ton visé dans `spec/`.
+---
 
-## Référence
-Croiser avec : `00_core/style/iceberg_theory.md`, `00_core/casting/want_vs_need.md`
+## Anti-patterns (Signaux d'Alerte)
+
+| Anti-pattern | Description | Sévérité |
+|---|---|---|
+| **Les Larmes Faciles** | Pleurs pour des raisons mineures | ⚠️ Majeur |
+| **L'Amour Instantané** | Déclarations après 2 scènes | ⚠️ Majeur |
+| **La Tirade Shakespearienne** | Monologue trop articulé pour le contexte | ⚠️ Majeur |
+| **Le Tremblement Permanent** | Corps qui réagit à tout | ⚠️ Mineur |
+| **Les Poings Systématiques** | Geste répétitif de colère | ⚠️ Mineur |
+
+---
+
+## Calibration par Genre
+
+| Genre | Niveau de Mélodrame Acceptable |
+|---|---|
+| **Romance** | Modéré à élevé |
+| **Thriller** | Bas |
+| **Horreur** | Modéré (pour les victimes) |
+| **Littérature Générale** | Bas |
+| **YA** | Modéré |
+
+> ⚠️ Le mélodrame n'est pas toujours mauvais — certains genres l'exigent. Ajuster selon le ton visé dans `01_spec/03_genre.md`.
+
+---
+
+## Verdict
+
+| Score | Verdict | Action |
+|---|---|---|
+| **8-10** | ✅ Émotions Calibrées | Aucune correction |
+| **5-7** | ⚠️ Mélodrame Partiel | Atténuer les pics non justifiés |
+| **0-4** | ❌ Soap Opera | Révision majeure du registre émotionnel |

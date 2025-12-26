@@ -1,35 +1,76 @@
-# Protocole : Filter Word Ruthless (Traque Impitoyable des Mots Filtres)
+# Protocole : Filter Word Ruthless (L'Exterminateur de Filtres)
+
+## Connexions Systèmes
+- **Règles Liées** : `00_core/pov/deep_pov.md`, `00_core/logic/show_dont_tell.md`
+- **Audit Parent** : `03_audit/spec/09_voice_audit.md`
+- **Usage** : Vérification post-écriture, révision ligne à ligne
 
 ## Objectif
-Détecter et éliminer les verbes de perception qui créent une distance entre le lecteur et le personnage, empêchant l'immersion totale (Deep POV).
+Détecter et éliminer les **verbes de perception** qui créent une distance entre le lecteur et le personnage, empêchant l'immersion totale (Deep POV).
 
-## Mots Filtres à Traquer
+---
+
+## Grille de Scoring (/10)
+
+| Critère | Score | Description |
+|---|---|---|
+| **Zéro Filtre Visuel** | /2 | Pas de "il vit", "il regarda" |
+| **Zéro Filtre Auditif** | /2 | Pas de "il entendit" |
+| **Zéro Filtre Sensoriel** | /2 | Pas de "il sentit" |
+| **Zéro Filtre Cognitif** | /2 | Pas de "il pensa", "il réalisa" |
+| **Descriptions Directes** | /2 | Perception sans médiation |
+
+---
+
+## Kill List des Mots Filtres
 
 ### Perception Visuelle
-- vit, voyait, regardait, observait, remarqua, aperçut
-- "Il vit le couteau" → "Le couteau."
+| ❌ FILTRE | ✅ DIRECT |
+|---|---|
+| "Il vit le couteau" | "Le couteau." |
+| "Elle regardait la porte" | "La porte, entrouverte." |
+| "Il remarqua qu'elle tremblait" | "Ses mains tremblaient." |
 
 ### Perception Auditive
-- entendit, écoutait, perçut (un son)
-- "Elle entendit un cri" → "Un cri. Derrière elle."
+| ❌ FILTRE | ✅ DIRECT |
+|---|---|
+| "Elle entendit un cri" | "Un cri. Derrière elle." |
+| "Il perçut un bruit" | "Un craquement. Quelque part." |
 
 ### Perception Tactile/Sensorielle
-- sentit, ressentit, éprouva
-- "Il sentit la peur monter" → "Son estomac se noua."
+| ❌ FILTRE | ✅ DIRECT |
+|---|---|
+| "Il sentit la peur monter" | "Son estomac se noua." |
+| "Elle ressentit de la douleur" | "La douleur, aiguë, dans sa jambe." |
 
 ### Perception Cognitive
-- pensa, se dit, réalisa, comprit, savait, se demanda
-- "Elle pensa qu'il mentait" → "Il mentait. Évidemment."
+| ❌ FILTRE | ✅ DIRECT |
+|---|---|
+| "Il pensa qu'il mentait" | "Il mentait. Évidemment." |
+| "Elle réalisa la vérité" | "La vérité. Enfin." |
+| "Il se demanda si..." | "Si seulement..." |
 
 ### Expressions à Reformuler
-- "Il pouvait voir que..." → Description directe
-- "Elle semblait..." → Montrer les indices visuels
-- "Il eut l'impression que..." → Reformuler en perception directe
+| ❌ EXPRESSION | ✅ REFORMULATION |
+|---|---|
+| "Il pouvait voir que..." | Description directe |
+| "Elle semblait triste" | Indices visuels de tristesse |
+| "Il eut l'impression que..." | Perception directe |
+
+---
 
 ## Méthode de Test
-1. Rechercher ces mots dans le texte (Ctrl+F ou grep)
-2. Pour chaque occurrence, se demander : "Puis-je montrer directement ?"
-3. Si oui : reformuler en supprimant le filtre
 
-## Référence
-Croiser avec : `00_core/pov/deep_pov.md`, `00_core/style/show_dont_tell.md`
+1. **Rechercher** ces mots dans le texte (Ctrl+F)
+2. Pour chaque occurrence : "Puis-je montrer directement ?"
+3. Si OUI : reformuler en supprimant le filtre
+
+---
+
+## Verdict
+
+| Score | Verdict | Action |
+|---|---|---|
+| **8-10** | ✅ Deep POV Pur | Aucune correction |
+| **5-7** | ⚠️ Filtres Résiduels | Supprimer les occurrences |
+| **0-4** | ❌ POV Filtré | Réécriture systématique |
