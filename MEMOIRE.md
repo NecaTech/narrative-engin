@@ -44,9 +44,10 @@ narrative-engin/
 │   ├── theme/            # Motifs symboliques (2)
 │   └── voice/            # POV, narration (3)
 
-├── .agent/workflows/     # 3 WORKFLOWS POUR PILOTER LE SYSTÈME
+├── .agent/workflows/     # 4 WORKFLOWS POUR PILOTER LE SYSTÈME
 │   ├── 01-create-spec.md # Créer une spec (étapes 01-10)
-│   ├── 02-audit-spec.md  # Auditer et valider une spec
+│   ├── 02-audit-spec.md  # Auditer (5 juges, scoring %)
+│   ├── generate-index.md # Régénérer l'index automatiquement
 │   └── refine-rules.md   # Améliorer les règles du système
 
 ├── 01_spec/              # PROJET LITTÉRAIRE (gitignored)
@@ -124,16 +125,26 @@ L'audit déclenche le **Raffinement Actif**. N'accepte QUE des livrables stricts
 ## 📚 FICHIERS CRITIQUES À CONNAÎTRE
 
 ### `00_core/spec/00_cross_reference_index.md`
-**LE PIVOT DU SYSTÈME**. Mappe chaque étape de spec (01-10) avec TOUTES les règles et audits pertinents. C'est la source de vérité pour les workflows.
+**LE PIVOT DU SYSTÈME**. Mappe chaque étape de spec (01-10) avec TOUTES les règles et audits pertinents. Peut être régénéré automatiquement via `/generate-index`.
+
+### Système d'IDs (YAML Frontmatter)
+Chaque fichier Core/Audit possède un header YAML avec un ID unique :
+```yaml
+id: CORE-POV-01      # ID global unique
+phase: [09]          # Phase(s) concernée(s)
+links_to: [AUDIT-X]  # Liaisons vers autres fichiers
+```
+L'agent peut scanner dynamiquement les fichiers par `phase: [NN]` au lieu de mappings statiques.
 
 ### `ARBORESCENCE.md`
 Documentation EXHAUSTIVE. Chaque fichier a 2-3 paragraphes expliquant quoi, pourquoi, comment. **LISEZ-MOI pour comprendre le système en profondeur**.
 
 ### `.agent/workflows/`
-Les 3 workflows qui pilotent tout :
+Les 4 workflows qui pilotent tout :
 - `/01-create-spec [01-10]` : Créer une spec
-- `/02-audit-spec [01-10]` : Auditer et raffiner
-- `/refine-rules` : Améliorer les règles du système
+- `/02-audit-spec [01-10]` : Audit impitoyable (5 juges, %, itératif)
+- `/generate-index` : Régénérer l'index depuis les frontmatters
+- `/refine-rules` : Analyser les rapports et améliorer les règles
 
 ---
 
@@ -151,7 +162,14 @@ Les 3 workflows qui pilotent tout :
 
 ## 🔄 HISTORIQUE DES CORRECTIONS ET MATURATION
 
-### 2025-12-25 (Session actuelle)
+### 2025-12-26 — Système d'IDs et Auto-Évolution
+- **YAML Frontmatter** : 118 fichiers (73 Core + 45 Audit) équipés d'IDs uniques (`CORE-POV-01`, `AUDIT-SPEC-06`, etc.)
+- **Liaisons automatiques** : Champ `phase: [NN]` permet le chargement dynamique par étape
+- **Script d'index** : `scripts/Generate-Index.ps1` régénère automatiquement l'index de croisement
+- **Audit Impitoyable** : Score en % (pas /10), 5 juges multi-perspectives, itérations jusqu'à ~100%
+- **Auto-évolution** : `/refine-rules` analyse les rapports pour améliorer le framework
+
+### 2025-12-25 (Session précédente)
 - **Refonte Architecturale des Specs** : Passage à 10 étapes rituelles.
 - **Rigueur Stricte** : Introduction des "Livrables Strictes" (Killer Logline, Scene Cards, Ghost/Wound/Lie).
 - **Naming** : Harmonisation `06_characters.md` et `07_universe.md`.

@@ -35,7 +35,7 @@ Vous **ne pouvez PAS commencer à écrire** sans avoir complété les 10 étapes
 9. **09_voice.md** — La charte graphique (Zoom & Kill List)
 10. **00_chapter_outline.md** — Le plan de bataille (Scene Cards)
 
-Chaque étape est **auditée brutalement** par des protocoles qui n'acceptent que des livrables stricts (pas de vague, pas de cliché).
+Chaque étape est **auditée brutalement** par 5 juges (Critique Littéraire, Éditeur, Lecteur Beta, Auteur Publié, Psychologue) avec scoring en %. Un premier jet réaliste score 5-15%. Itérations jusqu'à ~100%.
 
 ### Phase 2 : Rédaction (Guidée)
 Une fois la spec validée, vous créez un **sommaire détaillé des chapitres** (`00_chapter_outline.md`) qui sert de feuille de route. Chaque chapitre est rédigé en consultant :
@@ -78,10 +78,11 @@ narrative-engin/
 │   ├── theme/            # Motifs symboliques
 │   └── voice/            # POV, narration
 
-├── .agent/workflows/     # 3 workflows pour piloter le système
+├── .agent/workflows/     # 4 workflows pour piloter le système
 │   ├── 01-create-spec.md # Créer une spec (étapes 01-10)
-│   ├── 02-audit-spec.md  # Auditer et valider une spec
-│   └── refine-rules.md   # Améliorer les règles du système
+│   ├── 02-audit-spec.md  # Audit impitoyable (5 juges, %)
+│   ├── generate-index.md # Régénérer l'index automatique
+│   └── refine-rules.md   # Auto-évolution du framework
 
 ├── 01_spec/              # Votre projet (gitignored)
 ├── 02_draft/             # Vos chapitres (gitignored)
