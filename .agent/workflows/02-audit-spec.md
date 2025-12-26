@@ -4,7 +4,7 @@ description: Auditer, corriger et valider une spécification pour une étape don
 
 # Workflow : Auditer et Corriger (Cycle de Validation)
 
-Ce workflow est un cycle **Audit → Correction → Validation**. L'agent agit comme un "Boucher" impitoyable (Phase Audit), puis comme un "Chirurgien" (Phase Correction), sous le veto strict de l'Auteur.
+Ce workflow est un cycle **Audit → Correction Automatique → Validation**. L'agent agit comme un "Boucher" impitoyable (Phase Audit), puis comme un "Chirurgien" (Phase Correction automatique). La validation reste bloquée par le veto humain.
 
 ---
 
@@ -20,25 +20,40 @@ Ce workflow est un cycle **Audit → Correction → Validation**. L'agent agit c
 
 ---
 
+## Flux d'Exécution
+
+```
+Phase 0 : Traçabilité (noter l'Origine)
+    ↓
+Phase 1 : Chargement EXHAUSTIF
+    ↓
+Phase 2 : Audit Impitoyable → Score /10
+    ↓
+Phase 3 : Correction Automatique (TOUJOURS si Score < 8)
+    ↓
+Phase 4 : Génération du Rapport
+    ↓
+Phase 5 : Veto Humain
+    ↓ (SI approuvé ET Origine ≠ AGENT)
+Phase 6 : Verrouillage Final
+```
+
+---
+
 ## Protocole d'Exécution
 
-### Phase 0 : Vérification de Traçabilité (BLOQUANTE)
+### Phase 0 : Vérification de Traçabilité
 
 // turbo
 1. **Charger la Spec** (`01_spec/[NN]_[nom].md`)
-2. **Vérifier le champ `Origine du Contenu`** :
-   - Si `AGENT` → Score MAX = 5/10, blocage automatique
-   - Si `MIXTE` → Appliquer malus -1 sur critère "Profondeur"
-   - Si `AUTEUR` → Audit normal
-   - Si ABSENT → Considérer comme `AGENT` (pire cas)
+2. **Noter le champ `Origine du Contenu`** :
+   - `AGENT` → Plafonnement à la validation (pas de blocage immédiat)
+   - `MIXTE` → Malus -1 sur critère "Profondeur"
+   - `AUTEUR` → Audit normal
+   - ABSENT → Considérer comme `AGENT`
 
-> ⚠️ **RÈGLE DE PLAFONNEMENT ABSOLUE** :
-> ```
-> SI Origine = AGENT:
->    Score_Max = 5
->    Verdict = "🔒 BLOQUÉ - Enrichissement auteur requis"
->    STOP (pas de passage à VALIDÉ possible)
-> ```
+> ⚠️ **IMPORTANT** : L'Origine ne bloque PAS l'audit ni les corrections.
+> Elle bloque uniquement la VALIDATION finale (Phase 6).
 
 ### Phase 1 : Chargement EXHAUSTIF
 
@@ -55,6 +70,7 @@ Ce workflow est un cycle **Audit → Correction → Validation**. L'agent agit c
 
 ### Phase 2 : Audit Impitoyable (Le Boucher)
 
+// turbo-all
 **OBLIGATION : L'agent DOIT appliquer CHAQUE point de contrôle du protocole d'audit.**
 
 Pour CHAQUE critère du protocole d'audit chargé :
@@ -72,50 +88,39 @@ Pour CHAQUE critère du protocole d'audit chargé :
 | **Cohérence Amont** | Compatible avec les specs précédentes ? | /2 |
 | **Profondeur** | La spec a-t-elle de la "matière humaine" ? | /2 |
 
-**Score Total : /10**
+**Score Total : /10** (Malus -1 si Origine = MIXTE)
 
 > ⚠️ **RÈGLE DE CITATION OBLIGATOIRE** :
 > Pour cocher un anti-pattern comme "Absent", l'agent DOIT citer le passage de la spec qui PROUVE l'absence.
-> Exemple :
-> ```markdown
-> - [x] **Tourisme** : ❌ Absent.
->   > Preuve : "Le moment fondateur : 2019. Un écran d'ordinateur dans un open space gris..." (Section 1.1)
-> ```
 > Si l'agent ne peut pas citer → l'anti-pattern est considéré PRÉSENT.
 
 | Score | Verdict |
 |---|---|
-| **8-10** | ✅ VALIDÉ — UNIQUEMENT si `Origine ≠ AGENT` |
+| **8-10** | ✅ PRÊT POUR VALIDATION |
 | **5-7** | ⚠️ À CORRIGER (Passage à Phase 3) |
 | **0-4** | ❌ REJETÉ (Retour à `/create-spec`) |
-| **N/A** | 🔒 BLOQUÉ — Si `Origine = AGENT` ET Score >= 5 |
 
 ### Phase 3 : Correction Automatique (Le Chirurgien)
 
-Si le score est < 8, l'agent **CORRIGE AUTOMATIQUEMENT** la spec :
+**DÉCLENCHEMENT AUTOMATIQUE si Score < 8**
 
-// turbo
-1. **Identifier les faiblesses** : Lister les points précis à corriger.
+// turbo-all
+1. **Identifier toutes les faiblesses** : Lister les points précis à corriger.
 2. **Réécrire les sections faibles** : Appliquer les règles du 00_core pour renforcer.
-3. **Vérifier les Anti-patterns** : Éliminer toute trace de cliché ou de générique.
-4. **Ajouter le champ Origine** : Si absent, ajouter `Origine du Contenu: AGENT` explicitement.
-5. **Insérer les Placeholders** : Ajouter `[À ENRICHIR PAR L'AUTEUR]` dans les sections touchées.
+3. **Éliminer les Anti-patterns** : Supprimer toute trace de cliché ou de générique.
+4. **Ajouter les éléments manquants** : Compléter les Scene Cards, liens causaux, beats absents.
+5. **Mettre à jour le champ Origine** : Si corrections substantielles → `Origine: AGENT`
 6. **Mettre à jour le fichier** : Écraser `01_spec/[NN]_[nom].md` avec la version corrigée.
-7. **Marquer le statut** : `CORRIGÉ PAR L'AGENT - EN ATTENTE DE VETO`
+7. **Mettre à jour le statut** : `CORRIGÉ PAR L'AGENT - EN ATTENTE DE VETO`
 
-> ⚠️ **CAS SPÉCIAL : Origine = AGENT**
-> 
-> La correction inclut OBLIGATOIREMENT :
-> - Ajout du champ `Origine du Contenu: AGENT`
-> - Insertion de placeholders `[À ENRICHIR PAR L'AUTEUR]` dans les sections critiques
-> - Le statut devient : `CORRIGÉ PAR L'AGENT - ENRICHISSEMENT AUTEUR REQUIS`
->
-> L'auteur DOIT remplacer les placeholders par son propre contenu avant que l'audit puisse passer à VALIDÉ.
+> **L'agent NE DEMANDE PAS la permission pour corriger.**
+> Les corrections sont appliquées immédiatement.
+> Le veto humain intervient APRÈS les corrections (Phase 5).
 
 ### Phase 4 : Génération du Rapport d'Audit
 
 // turbo
-L'agent génère un rapport dans `03_audit/report/` avec ce format :
+L'agent génère un rapport dans `03_audit/report/` :
 
 **Fichier** : `03_audit/report/[YYYY-MM-DD]_[NN]_[nom]_audit.md`
 
@@ -125,8 +130,10 @@ L'agent génère un rapport dans `03_audit/report/` avec ce format :
 **Date** : [YYYY-MM-DD]
 **Spec Auditée** : `01_spec/[NN]_[nom].md`
 **Origine du Contenu** : [AUTEUR / MIXTE / AGENT]
-**Score** : [X/10]
-**Verdict** : [VALIDÉ / CORRIGÉ / REJETÉ / BLOQUÉ]
+**Score Avant Correction** : [X/10]
+**Score Après Correction** : [Y/10]
+**Verdict** : [PRÊT / CORRIGÉ / REJETÉ]
+**Blocage Validation** : [OUI si Origine = AGENT / NON]
 
 ---
 
@@ -134,52 +141,21 @@ L'agent génère un rapport dans `03_audit/report/` avec ce format :
 
 | Critère | Résultat |
 |---|---|
-| Champ Origine présent | ✅/❌ |
-| Origine = AGENT | ⚠️ Oui / ❌ Non |
-| Plafonnement appliqué | ✅/❌ |
-
----
-
-## Règles Chargées
-
-### Protocole Principal
-- `[Lister le fichier chargé]`
-
-### Règles Créatrices (00_core/)
-- `[Lister tous les fichiers chargés]`
-
-### Audits Satellites
-- `[Lister tous les fichiers chargés]`
+| Origine | [AUTEUR / MIXTE / AGENT] |
+| Correction Automatique | ✅ Appliquée / ❌ Non requise |
+| Validation Possible | ✅ Oui / 🔒 Bloquée (enrichissement requis) |
 
 ---
 
 ## Grille d'Évaluation
 
-| Critère | Score | Commentaire + Citation |
-|---|---|---|
-| Livrables Complets | /2 | [Détail] |
-| Spécificité | /2 | [Détail] |
-| Anti-patterns | /2 | [Détail + CITATIONS] |
-| Cohérence Amont | /2 | [Détail] |
-| Profondeur | /2 | [Détail] |
-
----
-
-## Points de Contrôle du Protocole
-
-[Pour CHAQUE point de contrôle du protocole d'audit :]
-
-| # | Point de Contrôle | Conforme ? | Citation/Raison |
+| Critère | Score Avant | Score Après | Commentaire |
 |---|---|---|---|
-| 1 | [Question du protocole] | ✅/❌ | [Citation ou explication] |
-| 2 | ... | ... | ... |
-
----
-
-## Problèmes Identifiés
-
-1. **[Problème 1]** : [Description + Section concernée]
-2. **[Problème 2]** : [Description + Section concernée]
+| Livrables Complets | /2 | /2 | [Détail] |
+| Spécificité | /2 | /2 | [Détail] |
+| Anti-patterns | /2 | /2 | [Détail + CITATIONS] |
+| Cohérence Amont | /2 | /2 | [Détail] |
+| Profondeur | /2 | /2 | [Détail] |
 
 ---
 
@@ -187,39 +163,50 @@ L'agent génère un rapport dans `03_audit/report/` avec ce format :
 
 1. **[Correction 1]** : [Ce qui a été modifié]
 2. **[Correction 2]** : [Ce qui a été modifié]
+...
 
 ---
 
-## Actions Requises de l'Auteur
+## Prochain État
 
-- [ ] Relire les corrections appliquées
-- [ ] Remplacer les placeholders `[À ENRICHIR PAR L'AUTEUR]`
-- [ ] Valider OU modifier les sections corrigées
-- [ ] Répondre avec `/audit-spec [NN]` pour relancer l'audit final
+| Origine | Validation Possible ? | Action Requise |
+|---|---|---|
+| AUTEUR | ✅ Oui | Utilisateur valide ou modifie |
+| MIXTE | ⚠️ Avec réserve | Utilisateur enrichit les sections AGENT |
+| AGENT | 🔒 Non | Utilisateur DOIT modifier puis changer Origine |
 ```
 
 ### Phase 5 : Veto Humain (POINT DE BLOCAGE)
 
 **L'agent n'a pas le droit de s'auto-valider.**
 
-L'audit ne peut passer de CORRIGÉ à VALIDÉ que si l'utilisateur a :
-1. ✅ Lu le rapport d'audit
-2. ✅ Modifié OU validé explicitement la version corrigée
-3. ✅ Confirmé que la "matière humaine" a survécu
-4. ✅ Remplacé TOUS les placeholders `[À ENRICHIR PAR L'AUTEUR]`
+L'agent DOIT demander à l'utilisateur :
+> "J'ai audité et corrigé la spec. Score après correction : [X/10]. Voulez-vous valider ?"
 
-**L'agent DOIT demander à l'utilisateur :**
-> "J'ai corrigé la spec et généré un rapport. Voulez-vous relire les corrections avant validation ?"
+**Options de l'utilisateur :**
+- `oui` ou `valide` → Passage à Phase 6 (si Origine ≠ AGENT)
+- `non` ou `modifie` → L'utilisateur fait ses propres modifications
+- `relance` → Relancer `/audit-spec [NN]` après modifications
 
 ### Phase 6 : Verrouillage Final
 
+// turbo
+**CONDITION PRÉALABLE** : Origine ≠ AGENT
+
 Si l'utilisateur valide :
 
-// turbo
-1. **Vérifier l'absence de placeholders** : Si `[À ENRICHIR]` présent → REFUSER
-2. **Mettre à jour le statut** : `VERROUILLÉ`
-3. **Ajouter la date de validation** au fichier spec
-4. **Confirmer le passage** à l'étape N+1
+1. **Vérifier l'Origine** :
+   - Si `AGENT` → **REFUSER** avec message :
+     > "🔒 Validation impossible. Origine = AGENT. Modifiez le contenu et changez l'Origine en AUTEUR."
+   - Sinon → Continuer
+
+2. **Vérifier les placeholders** : Si `[À ENRICHIR]` présent → **REFUSER**
+
+3. **Mettre à jour le statut** : `VERROUILLÉ`
+
+4. **Ajouter la date de validation** au fichier spec
+
+5. **Confirmer le passage** à l'étape N+1
 
 ---
 
@@ -327,22 +314,23 @@ Si l'utilisateur valide :
 
 ## Règles de Sécurité
 
-1. **IA Juge ≠ IA Artisan** : L'agent qui corrige n'est pas celui qui valide.
-2. **Suspicion de Facilité** : Si le texte semble "trop bien écrit", suspecter du remplissage IA.
-3. **Zéro Complaisance** : Chercher activement la faille, le cliché, la paresse intellectuelle.
-4. **Veto Inviolable** : Aucune validation sans intervention humaine explicite.
-5. **Suspicion Automatique** : Si Score >= 8 ET Origine ≠ AUTEUR, forcer le statut BLOQUÉ et alerter :
-   > "Score élevé sur contenu non-auteur = audit suspect. Enrichissement auteur requis."
-6. **Citation Obligatoire** : Chaque anti-pattern "Absent" DOIT être prouvé par une citation.
-7. **Chargement Exhaustif** : L'agent DOIT charger TOUTES les règles listées dans le mapping.
+1. **Correction Automatique** : L'agent corrige SANS demander. Le veto vient APRÈS.
+2. **IA Juge ≠ IA Artisan** : L'agent qui corrige n'est pas celui qui valide.
+3. **Suspicion de Facilité** : Si le texte semble "trop bien écrit", suspecter du remplissage IA.
+4. **Zéro Complaisance** : Chercher activement la faille, le cliché, la paresse intellectuelle.
+5. **Veto Inviolable** : Aucune validation sans intervention humaine explicite.
+6. **Blocage Origine AGENT** : Validation impossible si Origine = AGENT, même après correction.
+7. **Citation Obligatoire** : Chaque anti-pattern "Absent" DOIT être prouvé par une citation.
+8. **Chargement Exhaustif** : L'agent DOIT charger TOUTES les règles listées dans le mapping.
 
 ---
 
 ## Après ce Workflow
 
-| État | Action Suivante |
-|---|---|
-| **REJETÉ** | Retour à `/create-spec [NN]` avec les points à corriger |
-| **CORRIGÉ** | Attente du veto humain puis relance `/audit-spec [NN]` |
-| **BLOQUÉ** | Enrichissement auteur OBLIGATOIRE, puis relance `/audit-spec [NN]` |
-| **VALIDÉ** | Statut VERROUILLÉ, passage à `/create-spec [NN+1]` |
+| État | Origine | Action Suivante |
+|---|---|---|
+| **REJETÉ** | Any | Retour à `/create-spec [NN]` |
+| **CORRIGÉ** | AUTEUR | Utilisateur valide → VERROUILLÉ |
+| **CORRIGÉ** | MIXTE | Utilisateur enrichit sections AGENT → relance audit |
+| **CORRIGÉ** | AGENT | Utilisateur modifie + change Origine → relance audit |
+| **VALIDÉ** | AUTEUR | Statut VERROUILLÉ, passage à `/create-spec [NN+1]` |
