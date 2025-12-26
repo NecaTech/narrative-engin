@@ -1,3 +1,12 @@
+---
+id: AUDIT-STYLE-03
+type: audit
+domain: style
+phase: [09]
+links_to:
+  - CORE-POV-01
+aliases: [filter_word_ruthless, exterminateur_filtres]
+---
 # Protocole : Filter Word Ruthless (L'Exterminateur de Filtres)
 
 ## Connexions Systèmes

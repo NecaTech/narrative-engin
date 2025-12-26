@@ -1,3 +1,15 @@
+---
+id: CORE-ARC-03
+type: rule
+domain: arc
+phase: [06]
+links_to:
+  - AUDIT-SPEC-06
+requires:
+  - CORE-CAST-05
+  - CORE-CAST-08
+aliases: [positive_arc, transformation_redemptrice]
+---
 # Règle : Positive Arc (La Transformation Rédemptrice)
 
 ## Définition

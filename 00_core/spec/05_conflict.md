@@ -1,3 +1,16 @@
+---
+id: CORE-SPEC-05
+type: spec
+domain: spec
+phase: [05]
+links_to:
+  - AUDIT-SPEC-05
+  - CORE-STRUC-11
+  - CORE-TENS-07
+requires:
+  - CORE-SPEC-04
+aliases: [conflict, moteur, lock_in]
+---
 # Règle : Conflit (Étape 5/10)
 
 ## Question Fondamentale

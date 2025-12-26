@@ -1,3 +1,15 @@
+---
+id: CORE-POV-02
+type: rule
+domain: pov
+phase: [09]
+links_to:
+  - AUDIT-SPEC-09
+  - AUDIT-VOICE-01
+requires:
+  - CORE-POV-05
+aliases: [free_indirect_discourse, voix_empruntee]
+---
 # Règle : Free Indirect Discourse (La Voix Empruntée)
 
 ## Définition

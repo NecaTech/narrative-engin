@@ -1,3 +1,13 @@
+---
+id: CORE-THEME-03
+type: rule
+domain: theme
+phase: [02]
+links_to:
+  - AUDIT-SPEC-02
+  - AUDIT-THEME-01
+aliases: [objective_correlative, formule_emotionnelle]
+---
 # Règle : Objective Correlative (La Formule Émotionnelle)
 
 ## Définition

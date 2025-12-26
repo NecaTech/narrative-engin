@@ -1,3 +1,11 @@
+---
+id: CORE-SPEC-00
+type: index
+domain: spec
+phase: []
+links_to: []
+aliases: [cross_reference_index, kernel]
+---
 # Index de Croisement des Règles (Kernel)
 
 **Statut** : NOYAU D'EXÉCUTION (Read-Only)

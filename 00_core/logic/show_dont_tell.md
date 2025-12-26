@@ -1,3 +1,13 @@
+---
+id: CORE-LOGIC-09
+type: rule
+domain: logic
+phase: [09]
+links_to:
+  - AUDIT-STYLE-06
+  - AUDIT-SPEC-09
+aliases: [show_dont_tell, evidence_action]
+---
 # Règle : Show, Don't Tell (L'Évidence par l'Action)
 
 ## Définition

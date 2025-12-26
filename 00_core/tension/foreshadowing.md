@@ -1,3 +1,13 @@
+---
+id: CORE-TENS-02
+type: rule
+domain: tension
+phase: [08, 10]
+links_to:
+  - AUDIT-NARR-02
+  - CORE-LOGIC-01
+aliases: [foreshadowing, art_presage]
+---
 # Règle : Foreshadowing (L'Art du Présage)
 
 ## Définition

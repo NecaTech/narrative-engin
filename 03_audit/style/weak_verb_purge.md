@@ -1,3 +1,12 @@
+---
+id: AUDIT-STYLE-07
+type: audit
+domain: style
+phase: [09]
+links_to:
+  - CORE-STYLE-01
+aliases: [weak_verb_purge, eradication_verbes_mous]
+---
 # Protocole : Weak Verb Purge (L'Éradication des Verbes Mous)
 
 ## Connexions Systèmes

@@ -1,3 +1,13 @@
+---
+id: AUDIT-VOICE-01
+type: audit
+domain: voice
+phase: [09]
+links_to:
+  - CORE-POV-02
+  - CORE-POV-07
+aliases: [narrator_voice_stability, stabilisateur_registre]
+---
 # Protocole : Narrator Voice Stability (Le Stabilisateur de Registre)
 
 ## Connexions Systèmes

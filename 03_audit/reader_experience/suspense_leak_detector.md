@@ -1,3 +1,13 @@
+---
+id: AUDIT-READER-04
+type: audit
+domain: reader_experience
+phase: [05, 10]
+links_to:
+  - CORE-POV-04
+  - CORE-TENS-01
+aliases: [suspense_leak_detector, colmateur_fuites]
+---
 # Protocole : Suspense Leak Detector (Le Colmateur de Fuites)
 
 ## Connexions Systèmes

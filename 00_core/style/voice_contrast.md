@@ -1,3 +1,13 @@
+---
+id: CORE-STYLE-09
+type: rule
+domain: style
+phase: [09]
+links_to:
+  - AUDIT-SPEC-09
+  - AUDIT-VOICE-03
+aliases: [voice_contrast, empreinte_vocale]
+---
 # Règle : Voice Contrast (L'Empreinte Vocale)
 
 ## Définition

@@ -1,3 +1,18 @@
+---
+id: CORE-SPEC-06
+type: spec
+domain: spec
+phase: [06]
+links_to:
+  - AUDIT-SPEC-06
+  - CORE-CAST-05
+  - CORE-CAST-08
+  - CORE-CAST-01
+requires:
+  - CORE-SPEC-02
+  - CORE-SPEC-05
+aliases: [characters, nevroses, dossier_psychiatrique]
+---
 # Règle : Personnages (Étape 6/10)
 
 ## Question Fondamentale

@@ -1,3 +1,12 @@
+---
+id: CORE-CAST-07
+type: rule
+domain: casting
+phase: [06]
+links_to:
+  - AUDIT-STYLE-06
+aliases: [the_watson, relais_lecteur]
+---
 # Règle : The Watson (Le Relais du Lecteur)
 
 ## Définition

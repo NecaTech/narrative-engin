@@ -1,3 +1,11 @@
+---
+id: AUDIT-NARR-01
+type: audit
+domain: narrative
+phase: []
+links_to: []
+aliases: [cliche_blacklist, purgatoire_formules]
+---
 # Protocole : Cliche Blacklist (Le Purgatoire des Formules Mortes)
 
 ## Connexions Systèmes

@@ -1,3 +1,12 @@
+---
+id: AUDIT-CHAR-04
+type: audit
+domain: character
+phase: [06]
+links_to:
+  - CORE-ARC-04
+aliases: [relationship_matrix_tracker, cartographe_liens]
+---
 # Protocole : Relationship Matrix Tracker (Le Cartographe des Liens)
 
 ## Connexions Systèmes

@@ -1,3 +1,13 @@
+---
+id: CORE-STYLE-02
+type: rule
+domain: style
+phase: [09]
+links_to:
+  - AUDIT-SPEC-09
+  - AUDIT-STYLE-01
+aliases: [dialogue_beat, geste_revelateur]
+---
 # Règle : Dialogue Beat (Le Geste Révélateur)
 
 ## Définition

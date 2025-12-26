@@ -1,3 +1,13 @@
+---
+id: CORE-TENS-04
+type: rule
+domain: tension
+phase: [04, 05]
+links_to:
+  - AUDIT-SPEC-04
+  - AUDIT-SPEC-05
+aliases: [mystery_box, machine_curiosite]
+---
 # Règle : Mystery Box (La Machine à Curiosité)
 
 ## Définition

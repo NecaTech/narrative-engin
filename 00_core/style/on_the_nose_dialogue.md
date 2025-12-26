@@ -1,3 +1,13 @@
+---
+id: CORE-STYLE-06
+type: rule
+domain: style
+phase: [09]
+links_to:
+  - AUDIT-SPEC-09
+  - AUDIT-STYLE-01
+aliases: [on_the_nose_dialogue, anti_pattern_dire]
+---
 # Règle : On-the-Nose Dialogue (L'Anti-Pattern du Dire)
 
 ## Définition

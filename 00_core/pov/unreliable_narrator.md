@@ -1,3 +1,14 @@
+---
+id: CORE-POV-07
+type: rule
+domain: pov
+phase: [09]
+links_to:
+  - AUDIT-NARR-04
+  - CORE-POV-01
+  - CORE-TENS-02
+aliases: [unreliable_narrator, menteur_narratif]
+---
 # Règle : Unreliable Narrator (Le Menteur Narratif)
 
 ## Définition

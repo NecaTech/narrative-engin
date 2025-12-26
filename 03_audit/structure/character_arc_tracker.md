@@ -1,3 +1,13 @@
+---
+id: AUDIT-STRUC-02
+type: audit
+domain: structure
+phase: [06, 08]
+links_to:
+  - CORE-ARC-03
+  - CORE-CAST-05
+aliases: [character_arc_tracker, suivi_transformation]
+---
 # Protocole : Character Arc Tracker (Le Suivi de Transformation)
 
 ## Connexions Systèmes

@@ -1,3 +1,13 @@
+---
+id: AUDIT-SPEC-03
+type: audit
+domain: spec
+phase: [03]
+links_to:
+  - CORE-SPEC-03
+  - CORE-STRUC-02
+aliases: [genre_audit]
+---
 # Protocole : Genre Audit (Audit IMPITOYABLE — Étape 03/10)
 
 ## Connexions Systèmes

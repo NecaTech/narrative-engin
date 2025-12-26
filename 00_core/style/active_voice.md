@@ -1,3 +1,13 @@
+---
+id: CORE-STYLE-01
+type: rule
+domain: style
+phase: [09]
+links_to:
+  - AUDIT-SPEC-09
+  - AUDIT-STYLE-07
+aliases: [active_voice, voix_action]
+---
 # Règle : Active Voice (La Voix de l'Action)
 
 ## Définition

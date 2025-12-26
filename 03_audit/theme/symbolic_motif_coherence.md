@@ -1,3 +1,14 @@
+---
+id: AUDIT-THEME-01
+type: audit
+domain: theme
+phase: [02, 10]
+links_to:
+  - CORE-THEME-02
+  - CORE-THEME-03
+  - CORE-THEME-04
+aliases: [symbolic_motif_coherence, tisserand_symboles]
+---
 # Protocole : Symbolic Motif Coherence (Le Tisserand de Symboles)
 
 ## Connexions Systèmes

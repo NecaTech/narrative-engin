@@ -1,3 +1,13 @@
+---
+id: CORE-THEME-05
+type: rule
+domain: theme
+phase: [01, 02]
+links_to:
+  - AUDIT-SPEC-01
+  - AUDIT-SPEC-02
+aliases: [thematic_question, interrogation_morale]
+---
 # Règle : Thematic Question (L'Interrogation Morale)
 
 ## Définition

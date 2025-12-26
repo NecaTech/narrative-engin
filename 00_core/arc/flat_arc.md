@@ -1,3 +1,14 @@
+---
+id: CORE-ARC-01
+type: rule
+domain: arc
+phase: [06]
+links_to:
+  - AUDIT-SPEC-06
+requires:
+  - CORE-CAST-05
+aliases: [flat_arc, catalyseur_immuable]
+---
 # Règle : Flat Arc (Le Catalyseur Immuable)
 
 ## Définition

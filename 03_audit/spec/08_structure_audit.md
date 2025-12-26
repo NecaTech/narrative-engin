@@ -1,3 +1,16 @@
+---
+id: AUDIT-SPEC-08
+type: audit
+domain: spec
+phase: [08]
+links_to:
+  - CORE-SPEC-08
+  - CORE-STRUC-10
+  - CORE-STRUC-05
+  - CORE-LOGIC-01
+  - CORE-LOGIC-04
+aliases: [structure_audit]
+---
 # Protocole : Structure Audit (Audit IMPITOYABLE — Étape 08/10)
 
 ## Connexions Systèmes

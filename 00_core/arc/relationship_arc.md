@@ -1,3 +1,15 @@
+---
+id: CORE-ARC-04
+type: rule
+domain: arc
+phase: [06]
+links_to:
+  - AUDIT-SPEC-06
+  - CORE-STRUC-07
+requires:
+  - CORE-CAST-05
+aliases: [relationship_arc, evolution_lien]
+---
 # Règle : Relationship Arc (L'Évolution du Lien)
 
 ## Définition

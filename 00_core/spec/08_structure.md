@@ -1,3 +1,16 @@
+---
+id: CORE-SPEC-08
+type: spec
+domain: spec
+phase: [08]
+links_to:
+  - AUDIT-SPEC-08
+  - CORE-STRUC-10
+  - CORE-STRUC-05
+requires:
+  - CORE-SPEC-06
+aliases: [structure, squelette, piliers_porteurs]
+---
 # Règle : Structure (Étape 8/10)
 
 ## Question Fondamentale

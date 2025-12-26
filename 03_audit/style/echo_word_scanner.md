@@ -1,3 +1,11 @@
+---
+id: AUDIT-STYLE-02
+type: audit
+domain: style
+phase: [09]
+links_to: []
+aliases: [echo_word_scanner, chasseur_repetitions]
+---
 # Protocole : Echo Word Scanner (Le Chasseur de Répétitions)
 
 ## Connexions Systèmes

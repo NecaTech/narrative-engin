@@ -1,3 +1,13 @@
+---
+id: AUDIT-READER-02
+type: audit
+domain: reader_experience
+phase: [03]
+links_to:
+  - CORE-LOGIC-02
+  - CORE-SPEC-03
+aliases: [genre_expectation_audit, gardien_contrat]
+---
 # Protocole : Genre Expectation Audit (Le Gardien du Contrat)
 
 ## Connexions Systèmes

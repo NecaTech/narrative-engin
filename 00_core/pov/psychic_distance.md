@@ -1,3 +1,13 @@
+---
+id: CORE-POV-05
+type: rule
+domain: pov
+phase: [09]
+links_to:
+  - AUDIT-SPEC-09
+  - CORE-POV-01
+aliases: [psychic_distance, echelle_proximite]
+---
 # Règle : Psychic Distance (L'Échelle de Proximité)
 
 ## Définition

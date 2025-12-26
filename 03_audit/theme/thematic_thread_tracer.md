@@ -1,3 +1,13 @@
+---
+id: AUDIT-THEME-02
+type: audit
+domain: theme
+phase: [02, 08, 10]
+links_to:
+  - CORE-THEME-02
+  - CORE-STRUC-01
+aliases: [thematic_thread_tracer, fil_ariane_thematique]
+---
 # Protocole : Thematic Thread Tracer (Le Fil d'Ariane Thématique)
 
 ## Connexions Systèmes

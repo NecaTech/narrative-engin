@@ -1,3 +1,12 @@
+---
+id: AUDIT-IMMER-01
+type: audit
+domain: immersion
+phase: [09]
+links_to:
+  - CORE-STYLE-07
+aliases: [sensory_balance_check, accordeur_sens]
+---
 # Protocole : Sensory Balance Check (L'Accordeur des Sens)
 
 ## Connexions Systèmes

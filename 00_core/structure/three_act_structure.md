@@ -1,3 +1,13 @@
+---
+id: CORE-STRUC-10
+type: rule
+domain: structure
+phase: [08]
+links_to:
+  - AUDIT-SPEC-08
+  - CORE-STRUC-05
+aliases: [three_act_structure, squelette_universel]
+---
 # Règle : Three-Act Structure (Le Squelette Universel)
 
 ## Définition

@@ -1,3 +1,12 @@
+---
+id: AUDIT-SPEC-04
+type: audit
+domain: spec
+phase: [04]
+links_to:
+  - CORE-SPEC-04
+aliases: [premise_audit]
+---
 # Protocole : Prémisse Audit (Audit IMPITOYABLE — Étape 04/10)
 
 ## Connexions Systèmes

@@ -1,3 +1,13 @@
+---
+id: AUDIT-STYLE-04
+type: audit
+domain: style
+phase: [09, 10]
+links_to:
+  - CORE-STYLE-08
+  - CORE-STYLE-04
+aliases: [prose_rhythm_analysis, stethoscope_rythmique]
+---
 # Protocole : Prose Rhythm Analysis (Le Stéthoscope Rythmique)
 
 ## Connexions Systèmes

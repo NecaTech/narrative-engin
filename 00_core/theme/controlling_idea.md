@@ -1,3 +1,12 @@
+---
+id: CORE-THEME-01
+type: rule
+domain: theme
+phase: [02]
+links_to:
+  - AUDIT-SPEC-02
+aliases: [controlling_idea, these_recit]
+---
 # Règle : Controlling Idea (La Thèse du Récit)
 
 ## Définition

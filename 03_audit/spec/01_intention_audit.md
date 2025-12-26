@@ -1,3 +1,12 @@
+---
+id: AUDIT-SPEC-01
+type: audit
+domain: spec
+phase: [01]
+links_to:
+  - CORE-SPEC-01
+aliases: [intention_audit]
+---
 # Protocole : Intention Audit (Audit IMPITOYABLE — Étape 01/10)
 
 ## Connexions Systèmes
@@ -20,6 +29,22 @@ Cet audit n'est pas une validation. C'est un **interrogatoire**. L'auteur doit p
 | **Vécu Incarné** | /2 | Ancrage dans l'expérience personnelle |
 | **Universalité** | /2 | Connexion avec l'expérience du lecteur |
 | **Endurance** | /2 | Peut tenir sur 80 000 mots |
+| **Origine Auteur** | /2 | Contenu extrait d'interview, pas généré par l'agent |
+
+---
+
+## Épreuve 0 : La Traçabilité (BLOQUANTE)
+
+### Question Préalable
+> *"D'où vient ce contenu ? Interview auteur ou génération agent ?"*
+
+### Critères de Blocage
+- ❌ **Si Origine = AGENT** → Score MAX = 5/10, passage impossible à VALIDÉ
+- ⚠️ **Si Origine = MIXTE** → -1 point sur chaque critère généré par agent
+- ✅ **Si Origine = AUTEUR** → Audit normal
+
+### Ce qu'on Attend
+Un champ `Origine:` explicite dans la spec. Si absent, considérer AGENT par défaut.
 
 ---
 
@@ -123,5 +148,15 @@ Une phrase tranchante comme un scalpel. Exemple : *"La vérité libère, même q
 
 ---
 
-## Rappel Cruel
+## Rappel Cruel (ALGORITHMIQUE)
+
 > *"Si tu passes cet audit facilement, c'est que l'audit a échoué, pas que ton intention est bonne."*
+
+**Condition obligatoire** :
+```
+SI Score >= 8:
+   SI Origine = AGENT:
+      Score = 5
+      Verdict = BLOQUÉ
+      Alerte = "Suspicion de complaisance - enrichissement auteur requis"
+```

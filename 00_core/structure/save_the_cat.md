@@ -1,3 +1,14 @@
+---
+id: CORE-STRUC-07
+type: rule
+domain: structure
+phase: [03, 08]
+links_to:
+  - AUDIT-SPEC-03
+  - AUDIT-SPEC-08
+  - AUDIT-STRUC-01
+aliases: [save_the_cat, beat_sheet_commercial]
+---
 # Règle : Save the Cat (Le Beat Sheet Commercial)
 
 ## Définition

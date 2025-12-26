@@ -1,3 +1,12 @@
+---
+id: AUDIT-STRUC-04
+type: audit
+domain: structure
+phase: [08]
+links_to:
+  - CORE-ARC-04
+aliases: [subplot_orphan_detector, chasseur_fils_perdus]
+---
 # Protocole : Subplot Orphan Detector (Le Chasseur de Fils Perdus)
 
 ## Connexions Systèmes

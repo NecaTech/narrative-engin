@@ -1,3 +1,17 @@
+---
+id: AUDIT-SPEC-09
+type: audit
+domain: spec
+phase: [09]
+links_to:
+  - CORE-SPEC-09
+  - CORE-POV-01
+  - CORE-POV-02
+  - CORE-POV-03
+  - CORE-POV-05
+  - CORE-LOGIC-09
+aliases: [voice_audit]
+---
 # Protocole : Voix Audit (Audit IMPITOYABLE — Étape 09/10 — GATE FINAL)
 
 ## Connexions Systèmes

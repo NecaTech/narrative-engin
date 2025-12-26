@@ -1,3 +1,13 @@
+---
+id: AUDIT-SPEC-02
+type: audit
+domain: spec
+phase: [02]
+links_to:
+  - CORE-SPEC-02
+  - CORE-THEME-01
+aliases: [theme_audit]
+---
 # Protocole : Thème Audit (Audit IMPITOYABLE — Étape 02/10)
 
 ## Connexions Systèmes

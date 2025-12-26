@@ -1,3 +1,13 @@
+---
+id: CORE-STRUC-05
+type: rule
+domain: structure
+phase: [08]
+links_to:
+  - AUDIT-SPEC-08
+  - CORE-STRUC-10
+aliases: [midpoint_reversal, pivot_central]
+---
 # Règle : Midpoint Reversal (Le Pivot Central)
 
 ## Définition

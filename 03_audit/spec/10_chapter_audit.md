@@ -1,3 +1,14 @@
+---
+id: AUDIT-SPEC-10
+type: audit
+domain: spec
+phase: [10]
+links_to:
+  - CORE-SPEC-10
+  - CORE-STRUC-04
+  - CORE-STRUC-08
+aliases: [chapter_audit]
+---
 # Protocole : Sommaire des Chapitres Audit (Audit IMPITOYABLE — Étape 10/10)
 
 ## Connexions Systèmes

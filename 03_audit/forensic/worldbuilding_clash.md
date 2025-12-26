@@ -1,3 +1,13 @@
+---
+id: AUDIT-FOREN-03
+type: audit
+domain: forensic
+phase: [07]
+links_to:
+  - CORE-WORLD-01
+  - CORE-LOGIC-07
+aliases: [worldbuilding_clash, gardien_regles]
+---
 # Protocole : Worldbuilding Clash (Le Gardien des Règles)
 
 ## Connexions Systèmes

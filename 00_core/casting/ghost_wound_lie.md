@@ -1,3 +1,15 @@
+---
+id: CORE-CAST-05
+type: rule
+domain: casting
+phase: [06]
+links_to:
+  - AUDIT-SPEC-06
+  - AUDIT-CHAR-01
+  - CORE-CAST-08
+  - CORE-CAST-01
+aliases: [ghost_wound_lie, triptyque_trauma]
+---
 # Règle : Ghost/Wound/Lie (Le Triptyque du Trauma)
 
 ## Définition

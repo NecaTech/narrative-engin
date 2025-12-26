@@ -1,3 +1,17 @@
+---
+id: CORE-SPEC-03
+type: spec
+domain: spec
+phase: [03]
+links_to:
+  - AUDIT-SPEC-03
+  - CORE-STRUC-02
+  - CORE-STRUC-07
+requires:
+  - CORE-SPEC-01
+  - CORE-SPEC-02
+aliases: [genre, contrat]
+---
 # Règle : Genre (Étape 3/10)
 
 ## Question Fondamentale

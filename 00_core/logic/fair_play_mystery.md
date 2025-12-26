@@ -1,3 +1,13 @@
+---
+id: CORE-LOGIC-02
+type: rule
+domain: logic
+phase: [03, 08]
+links_to:
+  - AUDIT-NARR-04
+  - AUDIT-READER-02
+aliases: [fair_play_mystery, contrat_mystere]
+---
 # Règle : Fair Play Mystery (Le Contrat du Mystère)
 
 ## Définition

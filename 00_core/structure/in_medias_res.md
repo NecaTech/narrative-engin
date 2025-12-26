@@ -1,3 +1,13 @@
+---
+id: CORE-STRUC-03
+type: rule
+domain: structure
+phase: [04, 10]
+links_to:
+  - AUDIT-SPEC-04
+  - AUDIT-READER-03
+aliases: [in_medias_res, ouverture_choc]
+---
 # Règle : In Medias Res (L'Ouverture Choc)
 
 ## Définition

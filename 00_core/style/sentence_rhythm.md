@@ -1,3 +1,13 @@
+---
+id: CORE-STYLE-08
+type: rule
+domain: style
+phase: [09]
+links_to:
+  - AUDIT-SPEC-09
+  - AUDIT-STYLE-04
+aliases: [sentence_rhythm, tempo_prose]
+---
 # Règle : Sentence Rhythm (Le Tempo de la Prose)
 
 ## Définition

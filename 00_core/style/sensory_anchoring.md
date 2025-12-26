@@ -1,3 +1,13 @@
+---
+id: CORE-STYLE-07
+type: rule
+domain: style
+phase: [09]
+links_to:
+  - AUDIT-IMMER-01
+  - AUDIT-IMMER-02
+aliases: [sensory_anchoring, immersion_sens]
+---
 # Règle : Sensory Anchoring (L'Immersion par les Sens)
 
 ## Définition

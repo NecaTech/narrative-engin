@@ -1,3 +1,13 @@
+---
+id: AUDIT-STYLE-05
+type: audit
+domain: style
+phase: [09]
+links_to:
+  - CORE-POV-01
+  - CORE-POV-06
+aliases: [readability_metrics, tableau_bord_lisibilite]
+---
 # Protocole : Readability Metrics (Le Tableau de Bord de Lisibilité)
 
 ## Connexions Systèmes

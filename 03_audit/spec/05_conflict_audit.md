@@ -1,3 +1,13 @@
+---
+id: AUDIT-SPEC-05
+type: audit
+domain: spec
+phase: [05]
+links_to:
+  - CORE-SPEC-05
+  - CORE-LOGIC-03
+aliases: [conflict_audit]
+---
 # Protocole : Conflit Audit (Audit IMPITOYABLE — Étape 05/10)
 
 ## Connexions Systèmes

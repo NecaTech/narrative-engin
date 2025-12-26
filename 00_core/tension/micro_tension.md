@@ -1,3 +1,13 @@
+---
+id: CORE-TENS-03
+type: rule
+domain: tension
+phase: [09, 10]
+links_to:
+  - AUDIT-READER-03
+  - AUDIT-NARR-03
+aliases: [micro_tension, engagement_ligne]
+---
 # Règle : Micro-Tension (L'Engagement Ligne à Ligne)
 
 ## Définition

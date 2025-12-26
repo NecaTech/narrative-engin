@@ -1,3 +1,15 @@
+---
+id: CORE-POV-04
+type: rule
+domain: pov
+phase: [09]
+links_to:
+  - AUDIT-SPEC-09
+  - AUDIT-NARR-04
+  - CORE-TENS-02
+  - CORE-TENS-05
+aliases: [information_control, strategie_revelation]
+---
 # Règle : Information Control (La Stratégie de Révélation)
 
 ## Définition

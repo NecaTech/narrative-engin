@@ -1,3 +1,14 @@
+---
+id: AUDIT-STYLE-01
+type: audit
+domain: style
+phase: [09]
+links_to:
+  - CORE-STYLE-02
+  - CORE-STYLE-05
+  - CORE-STYLE-06
+aliases: [dialogue_health_report, diagnostic_conversationnel]
+---
 # Protocole : Dialogue Health Report (Le Diagnostic Conversationnel)
 
 ## Connexions Systèmes

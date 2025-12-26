@@ -1,3 +1,14 @@
+---
+id: AUDIT-SPEC-07
+type: audit
+domain: spec
+phase: [07]
+links_to:
+  - CORE-SPEC-07
+  - CORE-LOGIC-07
+  - CORE-WORLD-01
+aliases: [universe_audit]
+---
 # Protocole : Univers Audit (Audit IMPITOYABLE — Étape 07/10)
 
 ## Connexions Systèmes

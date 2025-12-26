@@ -1,3 +1,16 @@
+---
+id: CORE-SPEC-10
+type: spec
+domain: spec
+phase: [10]
+links_to:
+  - AUDIT-SPEC-10
+  - CORE-STRUC-08
+  - CORE-STRUC-09
+requires:
+  - CORE-SPEC-08
+aliases: [chapter_outline, plan_bataille, scene_cards]
+---
 # Règle : Sommaire des Chapitres (Étape 10/10)
 
 ## Question Fondamentale

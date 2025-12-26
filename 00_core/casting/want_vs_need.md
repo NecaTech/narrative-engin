@@ -1,3 +1,15 @@
+---
+id: CORE-CAST-08
+type: rule
+domain: casting
+phase: [06]
+links_to:
+  - AUDIT-SPEC-06
+  - CORE-ARC-03
+requires:
+  - CORE-CAST-05
+aliases: [want_vs_need, moteur_psychologique]
+---
 # Règle : Want vs Need (Le Moteur Psychologique)
 
 ## Définition

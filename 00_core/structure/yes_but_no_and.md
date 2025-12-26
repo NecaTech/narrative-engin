@@ -1,3 +1,13 @@
+---
+id: CORE-STRUC-12
+type: rule
+domain: structure
+phase: [05, 10]
+links_to:
+  - AUDIT-SPEC-05
+  - AUDIT-STRUC-05
+aliases: [yes_but_no_and, mecanique_escalade]
+---
 # Règle : Yes, But / No, And (La Mécanique d'Escalade)
 
 ## Définition

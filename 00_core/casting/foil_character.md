@@ -1,3 +1,14 @@
+---
+id: CORE-CAST-04
+type: rule
+domain: casting
+phase: [06]
+links_to:
+  - AUDIT-SPEC-06
+requires:
+  - CORE-CAST-05
+aliases: [foil_character, contraste_revelateur]
+---
 # Règle : Foil Character (Le Contraste Révélateur)
 
 ## Définition

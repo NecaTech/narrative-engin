@@ -1,3 +1,12 @@
+---
+id: CORE-THEME-04
+type: rule
+domain: theme
+phase: [02, 10]
+links_to:
+  - AUDIT-THEME-01
+aliases: [symbolic_action, geste_preuve]
+---
 # Règle : Symbolic Action (Le Geste qui Prouve)
 
 ## Définition

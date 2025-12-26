@@ -1,3 +1,14 @@
+---
+id: AUDIT-STRUC-05
+type: audit
+domain: structure
+phase: [05, 08]
+links_to:
+  - CORE-STRUC-06
+  - CORE-STRUC-11
+  - CORE-TENS-07
+aliases: [tension_gradient_analysis, courbe_pression]
+---
 # Protocole : Tension Gradient Analysis (La Courbe de Pression)
 
 ## Connexions Systèmes

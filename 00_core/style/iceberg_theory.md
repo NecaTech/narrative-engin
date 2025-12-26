@@ -1,3 +1,13 @@
+---
+id: CORE-STYLE-03
+type: rule
+domain: style
+phase: [09]
+links_to:
+  - AUDIT-SPEC-09
+  - AUDIT-CHAR-05
+aliases: [iceberg_theory, masse_immergee]
+---
 # Règle : Iceberg Theory (La Masse Immergée)
 
 ## Définition

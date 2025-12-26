@@ -1,3 +1,13 @@
+---
+id: AUDIT-STYLE-06
+type: audit
+domain: style
+phase: [09]
+links_to:
+  - CORE-LOGIC-09
+  - CORE-CAST-07
+aliases: [show_vs_tell_detector, revelateur_expositions]
+---
 # Protocole : Show vs Tell Detector (Le Révélateur d'Expositions)
 
 ## Connexions Systèmes

@@ -1,3 +1,13 @@
+---
+id: CORE-TENS-01
+type: rule
+domain: tension
+phase: [05, 10]
+links_to:
+  - AUDIT-READER-04
+  - CORE-POV-04
+aliases: [dramatic_irony, information_asymetrique]
+---
 # Règle : Dramatic Irony (L'Information Asymétrique)
 
 ## Définition

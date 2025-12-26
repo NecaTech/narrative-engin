@@ -1,3 +1,12 @@
+---
+id: AUDIT-IMMER-02
+type: audit
+domain: immersion
+phase: [09]
+links_to:
+  - CORE-STYLE-07
+aliases: [spatial_anchoring_audit, detecteur_pieces_blanches]
+---
 # Protocole : Spatial Anchoring Audit (Le Détecteur de Pièces Blanches)
 
 ## Connexions Systèmes

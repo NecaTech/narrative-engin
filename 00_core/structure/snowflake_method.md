@@ -1,3 +1,13 @@
+---
+id: CORE-STRUC-09
+type: rule
+domain: structure
+phase: [08, 10]
+links_to:
+  - AUDIT-SPEC-08
+  - AUDIT-SPEC-10
+aliases: [snowflake_method, expansion_fractale]
+---
 # Règle : Snowflake Method (L'Expansion Fractale)
 
 ## Définition

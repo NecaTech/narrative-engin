@@ -1,3 +1,14 @@
+---
+id: CORE-STRUC-04
+type: rule
+domain: structure
+phase: [10]
+links_to:
+  - AUDIT-SPEC-10
+  - AUDIT-STRUC-03
+  - AUDIT-NARR-03
+aliases: [late_in_early_out, economie_scene]
+---
 # Règle : Late In, Early Out (L'Économie de Scène)
 
 ## Définition

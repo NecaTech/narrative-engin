@@ -1,3 +1,15 @@
+---
+id: CORE-CAST-06
+type: rule
+domain: casting
+phase: [06]
+links_to:
+  - AUDIT-SPEC-06
+  - CORE-THEME-01
+requires:
+  - CORE-CAST-01
+aliases: [sympathetic_antagonist, ennemi_comprehensible]
+---
 # Règle : Sympathetic Antagonist (L'Ennemi Compréhensible)
 
 ## Définition

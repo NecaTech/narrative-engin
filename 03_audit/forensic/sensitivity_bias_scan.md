@@ -1,3 +1,11 @@
+---
+id: AUDIT-FOREN-02
+type: audit
+domain: forensic
+phase: []
+links_to: []
+aliases: [sensitivity_bias_scan, scanner_representation]
+---
 # Protocole : Sensitivity Bias Scan (Le Scanner de Représentation)
 
 ## Connexions Systèmes

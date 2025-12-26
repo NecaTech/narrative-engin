@@ -1,3 +1,13 @@
+---
+id: CORE-THEME-02
+type: rule
+domain: theme
+phase: [02, 10]
+links_to:
+  - AUDIT-THEME-01
+  - AUDIT-THEME-02
+aliases: [motif_recurrence, tissage_symbolique]
+---
 # Règle : Motif Recurrence (Le Tissage Symbolique)
 
 ## Définition

@@ -1,3 +1,13 @@
+---
+id: CORE-LOGIC-07
+type: rule
+domain: logic
+phase: [07]
+links_to:
+  - AUDIT-SPEC-07
+  - AUDIT-FOREN-03
+aliases: [sanderson_law_1, magie_resolution]
+---
 # Règle : Sanderson's First Law (Magie et Résolution)
 
 ## Définition

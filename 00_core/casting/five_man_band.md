@@ -1,3 +1,15 @@
+---
+id: CORE-CAST-03
+type: rule
+domain: casting
+phase: [06]
+links_to:
+  - AUDIT-SPEC-06
+  - CORE-STYLE-09
+requires:
+  - CORE-CAST-04
+aliases: [five_man_band, equipe_archetypale]
+---
 # Règle : Five-Man Band (L'Équipe Archétypale)
 
 ## Définition

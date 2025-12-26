@@ -1,3 +1,16 @@
+---
+id: CORE-SPEC-02
+type: spec
+domain: spec
+phase: [02]
+links_to:
+  - AUDIT-SPEC-02
+  - CORE-THEME-01
+  - CORE-THEME-03
+requires:
+  - CORE-SPEC-01
+aliases: [theme, systeme_moral]
+---
 # Règle : Thème (Étape 2/10)
 
 ## Question Fondamentale

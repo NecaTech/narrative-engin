@@ -1,3 +1,13 @@
+---
+id: CORE-LOGIC-01
+type: rule
+domain: logic
+phase: [08, 10]
+links_to:
+  - AUDIT-NARR-02
+  - AUDIT-SPEC-08
+aliases: [chekhovs_gun, fusil_tchekhov]
+---
 # Règle : Chekhov's Gun (Le Fusil de Tchekhov)
 
 ## Définition

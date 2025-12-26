@@ -1,3 +1,13 @@
+---
+id: AUDIT-READER-03
+type: audit
+domain: reader_experience
+phase: [04, 10]
+links_to:
+  - CORE-STRUC-03
+  - CORE-TENS-03
+aliases: [opening_hook_strength, testeur_premiere_impression]
+---
 # Protocole : Opening Hook Strength (Le Testeur de Première Impression)
 
 ## Connexions Systèmes

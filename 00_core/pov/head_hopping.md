@@ -1,3 +1,15 @@
+---
+id: CORE-POV-03
+type: rule
+domain: pov
+phase: [09]
+links_to:
+  - AUDIT-SPEC-09
+  - AUDIT-VOICE-02
+requires:
+  - CORE-POV-05
+aliases: [head_hopping, anti_pattern_pov]
+---
 # Règle : Head-Hopping (L'Anti-Pattern du POV)
 
 ## Définition

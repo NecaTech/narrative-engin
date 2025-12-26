@@ -1,3 +1,14 @@
+---
+id: CORE-SPEC-01
+type: spec
+domain: spec
+phase: [01]
+links_to:
+  - AUDIT-SPEC-01
+  - CORE-THEME-01
+  - CORE-THEME-05
+aliases: [intention, urgence_vitale]
+---
 # Règle : Intention (Étape 1/10)
 
 ## Question Fondamentale

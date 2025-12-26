@@ -1,3 +1,14 @@
+---
+id: CORE-ARC-02
+type: rule
+domain: arc
+phase: [06]
+links_to:
+  - AUDIT-SPEC-06
+requires:
+  - CORE-CAST-05
+aliases: [negative_arc, chute_tragique]
+---
 # Règle : Negative Arc (La Chute Tragique)
 
 ## Définition

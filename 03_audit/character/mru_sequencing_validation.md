@@ -1,3 +1,12 @@
+---
+id: AUDIT-CHAR-03
+type: audit
+domain: character
+phase: [09, 10]
+links_to:
+  - CORE-STYLE-04
+aliases: [mru_sequencing_validation, sequenceur_reactions]
+---
 # Protocole : MRU Sequencing Validation (Le Séquenceur de Réactions)
 
 ## Connexions Systèmes

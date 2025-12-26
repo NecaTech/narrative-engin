@@ -1,3 +1,12 @@
+---
+id: AUDIT-CHAR-02
+type: audit
+domain: character
+phase: [06]
+links_to:
+  - CORE-CAST-05
+aliases: [melodrama_detector, calibreur_emotionnel]
+---
 # Protocole : Melodrama Detector (Le Calibreur Émotionnel)
 
 ## Connexions Systèmes

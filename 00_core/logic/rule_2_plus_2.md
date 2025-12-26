@@ -1,3 +1,12 @@
+---
+id: CORE-LOGIC-05
+type: rule
+domain: logic
+phase: [08, 10]
+links_to:
+  - AUDIT-READER-01
+aliases: [rule_2_plus_2, arithmetique_lecteur]
+---
 # Règle : 2 + 2 Rule (L'Arithmétique du Lecteur)
 
 ## Définition

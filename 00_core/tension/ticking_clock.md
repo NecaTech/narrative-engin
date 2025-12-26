@@ -1,3 +1,13 @@
+---
+id: CORE-TENS-07
+type: rule
+domain: tension
+phase: [05, 08]
+links_to:
+  - AUDIT-SPEC-05
+  - AUDIT-STRUC-05
+aliases: [ticking_clock, compresseur_temporel]
+---
 # Règle : Ticking Clock (Le Compresseur Temporel)
 
 ## Définition

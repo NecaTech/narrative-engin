@@ -1,3 +1,12 @@
+---
+id: CORE-LOGIC-06
+type: rule
+domain: logic
+phase: [08, 10]
+links_to:
+  - AUDIT-STRUC-01
+aliases: [rule_of_three, pattern_ternaire]
+---
 # Règle : Rule of Three (Le Pattern Ternaire)
 
 ## Définition

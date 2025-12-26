@@ -1,3 +1,14 @@
+---
+id: CORE-STRUC-02
+type: rule
+domain: structure
+phase: [03, 08]
+links_to:
+  - AUDIT-SPEC-03
+  - AUDIT-SPEC-08
+  - CORE-STRUC-10
+aliases: [heros_journey, arc_mythique]
+---
 # Règle : Hero's Journey (L'Arc Mythique)
 
 ## Définition

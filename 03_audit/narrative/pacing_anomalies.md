@@ -1,3 +1,14 @@
+---
+id: AUDIT-NARR-03
+type: audit
+domain: narrative
+phase: [10]
+links_to:
+  - CORE-STRUC-04
+  - CORE-STRUC-08
+  - CORE-TENS-03
+aliases: [pacing_anomalies, detecteur_dysrythmies]
+---
 # Protocole : Pacing Anomalies (Le Détecteur de Dysrythmies)
 
 ## Connexions Systèmes

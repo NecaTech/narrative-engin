@@ -1,3 +1,15 @@
+---
+id: CORE-POV-01
+type: rule
+domain: pov
+phase: [09]
+links_to:
+  - AUDIT-SPEC-09
+  - AUDIT-STYLE-05
+requires:
+  - CORE-POV-05
+aliases: [deep_pov, immersion_totale]
+---
 # Règle : Deep POV (L'Immersion Totale)
 
 ## Définition

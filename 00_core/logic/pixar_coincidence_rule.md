@@ -1,3 +1,13 @@
+---
+id: CORE-LOGIC-04
+type: rule
+domain: logic
+phase: [08]
+links_to:
+  - AUDIT-NARR-04
+  - AUDIT-SPEC-08
+aliases: [pixar_coincidence_rule, loi_malchance]
+---
 # Règle : Pixar Coincidence Rule (La Loi de la Malchance)
 
 ## Définition

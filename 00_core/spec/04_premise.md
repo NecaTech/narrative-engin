@@ -1,3 +1,16 @@
+---
+id: CORE-SPEC-04
+type: spec
+domain: spec
+phase: [04]
+links_to:
+  - AUDIT-SPEC-04
+  - CORE-TENS-05
+  - CORE-STRUC-03
+requires:
+  - CORE-SPEC-03
+aliases: [premise, hook, killer_logline]
+---
 # Règle : Prémisse (Étape 4/10)
 
 ## Question Fondamentale

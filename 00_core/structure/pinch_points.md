@@ -1,3 +1,13 @@
+---
+id: CORE-STRUC-06
+type: rule
+domain: structure
+phase: [08]
+links_to:
+  - AUDIT-SPEC-08
+  - AUDIT-STRUC-05
+aliases: [pinch_points, rappels_menace]
+---
 # Règle : Pinch Points (Les Rappels de Menace)
 
 ## Définition

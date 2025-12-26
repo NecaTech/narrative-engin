@@ -1,3 +1,14 @@
+---
+id: CORE-STYLE-05
+type: rule
+domain: style
+phase: [09]
+links_to:
+  - AUDIT-SPEC-09
+  - AUDIT-STYLE-01
+  - AUDIT-CHAR-05
+aliases: [oblique_responses, danse_non_dits]
+---
 # Règle : Oblique Responses (La Danse des Non-Dits)
 
 ## Définition

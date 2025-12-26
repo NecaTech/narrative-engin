@@ -1,3 +1,17 @@
+---
+id: CORE-SPEC-07
+type: spec
+domain: spec
+phase: [07]
+links_to:
+  - AUDIT-SPEC-07
+  - CORE-LOGIC-07
+  - CORE-LOGIC-08
+  - CORE-WORLD-01
+requires:
+  - CORE-SPEC-05
+aliases: [universe, arene, friction_cout]
+---
 # Règle : Univers (Étape 7/10)
 
 ## Question Fondamentale

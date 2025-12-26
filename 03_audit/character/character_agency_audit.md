@@ -1,3 +1,13 @@
+---
+id: AUDIT-CHAR-01
+type: audit
+domain: character
+phase: [06]
+links_to:
+  - CORE-CAST-05
+  - CORE-CAST-01
+aliases: [character_agency_audit, moteur_protagoniste]
+---
 # Protocole : Character Agency Audit (Le Moteur du Protagoniste)
 
 ## Connexions Systèmes

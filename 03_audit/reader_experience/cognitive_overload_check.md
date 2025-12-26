@@ -1,3 +1,12 @@
+---
+id: AUDIT-READER-01
+type: audit
+domain: reader_experience
+phase: [10]
+links_to:
+  - CORE-LOGIC-05
+aliases: [cognitive_overload_check, regulateur_charge]
+---
 # Protocole : Cognitive Overload Check (Le Régulateur de Charge)
 
 ## Connexions Systèmes

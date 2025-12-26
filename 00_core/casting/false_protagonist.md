@@ -1,3 +1,13 @@
+---
+id: CORE-CAST-02
+type: rule
+domain: casting
+phase: [06]
+links_to:
+  - AUDIT-NARR-04
+  - CORE-STRUC-03
+aliases: [false_protagonist, leurre_narratif]
+---
 # Règle : False Protagonist (Le Leurre Narratif)
 
 ## Définition

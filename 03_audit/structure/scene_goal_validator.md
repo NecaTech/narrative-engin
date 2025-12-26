@@ -1,3 +1,12 @@
+---
+id: AUDIT-STRUC-03
+type: audit
+domain: structure
+phase: [10]
+links_to:
+  - CORE-STRUC-04
+aliases: [scene_goal_validator, testeur_fonctionnalite]
+---
 # Protocole : Scene Goal Validator (Le Testeur de Fonctionnalité Scénique)
 
 ## Connexions Systèmes

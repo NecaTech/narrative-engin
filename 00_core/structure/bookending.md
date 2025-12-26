@@ -1,3 +1,13 @@
+---
+id: CORE-STRUC-01
+type: rule
+domain: structure
+phase: [08, 10]
+links_to:
+  - AUDIT-SPEC-08
+  - AUDIT-THEME-02
+aliases: [bookending, boucle_narrative]
+---
 # Règle : Bookending (La Boucle Narrative)
 
 ## Définition

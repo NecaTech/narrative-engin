@@ -1,3 +1,17 @@
+---
+id: AUDIT-SPEC-06
+type: audit
+domain: spec
+phase: [06]
+links_to:
+  - CORE-SPEC-06
+  - CORE-CAST-05
+  - CORE-CAST-08
+  - CORE-ARC-01
+  - CORE-ARC-02
+  - CORE-ARC-03
+aliases: [characters_audit]
+---
 # Protocole : Personnages Audit (Audit IMPITOYABLE — Étape 06/10)
 
 ## Connexions Systèmes

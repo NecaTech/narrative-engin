@@ -1,3 +1,13 @@
+---
+id: AUDIT-STRUC-01
+type: audit
+domain: structure
+phase: [08]
+links_to:
+  - CORE-STRUC-07
+  - CORE-LOGIC-06
+aliases: [beat_structure_audit, verificateur_architecture]
+---
 # Protocole : Beat Structure Audit (Le Vérificateur d'Architecture)
 
 ## Connexions Systèmes

@@ -1,3 +1,13 @@
+---
+id: AUDIT-VOICE-02
+type: audit
+domain: voice
+phase: [09]
+links_to:
+  - CORE-POV-03
+  - CORE-POV-05
+aliases: [pov_consistency, gardien_focalisation]
+---
 # Protocole : POV Consistency (Le Gardien de la Focalisation)
 
 ## Connexions Systèmes

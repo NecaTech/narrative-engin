@@ -1,3 +1,12 @@
+---
+id: AUDIT-VOICE-03
+type: audit
+domain: voice
+phase: [09]
+links_to:
+  - CORE-STYLE-09
+aliases: [voice_fingerprinting, cartographe_empreintes]
+---
 # Protocole : Voice Fingerprinting (Le Cartographe des Empreintes)
 
 ## Connexions Systèmes

@@ -1,3 +1,13 @@
+---
+id: AUDIT-CHAR-05
+type: audit
+domain: character
+phase: [09]
+links_to:
+  - CORE-STYLE-03
+  - CORE-STYLE-05
+aliases: [subtext_density_test, scanner_profondeur]
+---
 # Protocole : Subtext Density Test (Le Scanner de Profondeur)
 
 ## Connexions Systèmes

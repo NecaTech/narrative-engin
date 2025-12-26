@@ -1,3 +1,16 @@
+---
+id: CORE-CAST-01
+type: rule
+domain: casting
+phase: [06]
+links_to:
+  - AUDIT-SPEC-06
+  - AUDIT-CHAR-01
+  - CORE-THEME-01
+requires:
+  - CORE-CAST-05
+aliases: [antagonist_mirror, reflet_sombre]
+---
 # Règle : Antagonist Mirror (Le Reflet Sombre)
 
 ## Définition

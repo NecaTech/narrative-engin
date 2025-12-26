@@ -1,3 +1,13 @@
+---
+id: CORE-WORLD-01
+type: rule
+domain: worldbuilding
+phase: [07]
+links_to:
+  - AUDIT-SPEC-07
+  - AUDIT-FOREN-03
+aliases: [lived_in_universe, univers_habite]
+---
 # Règle : Lived-in Universe (L'Univers Habité)
 
 ## Définition

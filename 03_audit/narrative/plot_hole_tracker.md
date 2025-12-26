@@ -1,3 +1,15 @@
+---
+id: AUDIT-NARR-04
+type: audit
+domain: narrative
+phase: [08]
+links_to:
+  - CORE-LOGIC-02
+  - CORE-POV-04
+  - CORE-POV-07
+  - CORE-TENS-06
+aliases: [plot_hole_tracker, chasseur_failles]
+---
 # Protocole : Plot Hole Tracker (Le Chasseur de Failles)
 
 ## Connexions Systèmes

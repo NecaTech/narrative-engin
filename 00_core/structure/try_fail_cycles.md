@@ -1,3 +1,14 @@
+---
+id: CORE-STRUC-11
+type: rule
+domain: structure
+phase: [05, 08]
+links_to:
+  - AUDIT-SPEC-05
+  - AUDIT-SPEC-08
+  - AUDIT-STRUC-05
+aliases: [try_fail_cycles, mecanique_echec]
+---
 # Règle : Try-Fail Cycles (La Mécanique de l'Échec)
 
 ## Définition

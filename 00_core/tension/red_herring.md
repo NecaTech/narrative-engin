@@ -1,3 +1,12 @@
+---
+id: CORE-TENS-06
+type: rule
+domain: tension
+phase: [08, 10]
+links_to:
+  - AUDIT-NARR-04
+aliases: [red_herring, fausse_piste]
+---
 # Règle : Red Herring (La Fausse Piste Délibérée)
 
 ## Définition

@@ -1,3 +1,12 @@
+---
+id: CORE-LOGIC-03
+type: rule
+domain: logic
+phase: [04, 05]
+links_to:
+  - AUDIT-SPEC-05
+aliases: [macguffin, pretexte_narratif]
+---
 # Règle : MacGuffin (Le Prétexte Narratif)
 
 ## Définition

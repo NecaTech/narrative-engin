@@ -1,3 +1,13 @@
+---
+id: AUDIT-NARR-02
+type: audit
+domain: narrative
+phase: [08, 10]
+links_to:
+  - CORE-TENS-02
+  - CORE-LOGIC-01
+aliases: [foreshadowing_payoff, comptable_promesses]
+---
 # Protocole : Foreshadowing Payoff (Le Comptable des Promesses)
 
 ## Connexions Systèmes

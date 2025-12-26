@@ -1,3 +1,14 @@
+---
+id: CORE-POV-06
+type: rule
+domain: pov
+phase: [09]
+links_to:
+  - AUDIT-STYLE-05
+requires:
+  - CORE-POV-05
+aliases: [stream_of_consciousness, flux_mental]
+---
 # Règle : Stream of Consciousness (Le Flux Mental)
 
 ## Définition

@@ -1,3 +1,13 @@
+---
+id: CORE-TENS-05
+type: rule
+domain: tension
+phase: [04, 08]
+links_to:
+  - AUDIT-SPEC-04
+  - AUDIT-NARR-02
+aliases: [promise_delay_deliver, cycle_attente]
+---
 # Règle : Promise-Delay-Deliver (Le Cycle de l'Attente)
 
 ## Définition

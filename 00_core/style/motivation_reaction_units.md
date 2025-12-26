@@ -1,3 +1,13 @@
+---
+id: CORE-STYLE-04
+type: rule
+domain: style
+phase: [09, 10]
+links_to:
+  - AUDIT-CHAR-03
+  - AUDIT-STYLE-04
+aliases: [motivation_reaction_units, mru]
+---
 # Règle : Motivation-Reaction Units (MRU)
 
 ## Définition

@@ -1,3 +1,13 @@
+---
+id: CORE-LOGIC-08
+type: rule
+domain: logic
+phase: [07]
+links_to:
+  - AUDIT-SPEC-07
+  - CORE-LOGIC-07
+aliases: [sanderson_law_2, limites_drame]
+---
 # Règle : Sanderson's Second Law (Les Limites Créent le Drame)
 
 ## Définition

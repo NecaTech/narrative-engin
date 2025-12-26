@@ -1,3 +1,16 @@
+---
+id: CORE-SPEC-09
+type: spec
+domain: spec
+phase: [09]
+links_to:
+  - AUDIT-SPEC-09
+  - CORE-POV-01
+  - CORE-STYLE-09
+requires:
+  - CORE-SPEC-06
+aliases: [voice, charte_graphique, kill_list]
+---
 # Règle : Voix (Étape 9/10)
 
 ## Question Fondamentale

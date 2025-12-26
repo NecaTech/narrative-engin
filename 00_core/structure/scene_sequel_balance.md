@@ -1,3 +1,13 @@
+---
+id: CORE-STRUC-08
+type: rule
+domain: structure
+phase: [10]
+links_to:
+  - AUDIT-SPEC-10
+  - AUDIT-NARR-03
+aliases: [scene_sequel_balance, rythme_binaire]
+---
 # Règle : Scene vs Sequel (Le Rythme Binaire)
 
 ## Définition
