@@ -131,7 +131,7 @@ L'agent rédige le fichier dans `01_spec/[NN]_[nom].md` avec ce format :
 | **06 Personnages** | `spec/06_characters.md` | `casting/ghost_wound_lie.md`, `casting/want_vs_need.md`, `casting/antagonist_mirror.md`, `arc/positive_arc.md` |
 | **07 Univers** | `spec/07_universe.md` | `worldbuilding/lived_in_universe.md`, `logic/sanderson_law_2.md` |
 | **08 Structure** | `spec/08_structure.md` | `structure/three_act_structure.md`, `structure/midpoint_reversal.md`, `structure/pinch_points.md`, `structure/save_the_cat.md` |
-| **09 Voix** | `spec/09_voice.md` | `pov/deep_pov.md`, `style/voice_contrast.md`, `style/show_dont_tell.md` |
+| **09 Voix** | `spec/09_voice.md` | `pov/deep_pov.md`, `style/voice_contrast.md`, `logic/show_dont_tell.md` |
 | **10 Sommaire** | `spec/10_chapter_outline.md` | `structure/scene_sequel_balance.md`, `structure/late_in_early_out.md` |
 
 ---

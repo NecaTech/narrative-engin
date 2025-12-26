@@ -142,7 +142,7 @@ Si l'utilisateur valide :
 |---|---|---|
 | **01 Intention** | `03_audit/spec/01_intention_audit.md` | — |
 | **02 Thème** | `03_audit/spec/02_theme_audit.md` | `theme/symbolic_motif_coherence.md` |
-| **03 Genre** | `03_audit/spec/03_genre_audit.md` | `reader_experience/genre_expectation.md` |
+| **03 Genre** | `03_audit/spec/03_genre_audit.md` | `reader_experience/genre_expectation_audit.md` |
 | **04 Prémisse** | `03_audit/spec/04_premise_audit.md` | `reader_experience/opening_hook_strength.md` |
 | **05 Conflit** | `03_audit/spec/05_conflict_audit.md` | `structure/tension_gradient_analysis.md` |
 | **06 Personnages** | `03_audit/spec/06_characters_audit.md` | `character/character_agency_audit.md` |
