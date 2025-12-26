@@ -1,336 +1,190 @@
 ---
-description: Auditer, corriger et valider une spécification pour une étape donnée (01-10)
+description: Auditer, corriger et valider une spécification avec une sévérité impitoyable
 ---
 
-# Workflow : Auditer et Corriger (Cycle de Validation)
+# Workflow : Audit Impitoyable (Système Boucher)
 
-Ce workflow est un cycle **Audit → Correction Automatique → Validation**. L'agent agit comme un "Boucher" impitoyable (Phase Audit), puis comme un "Chirurgien" (Phase Correction automatique). La validation reste bloquée par le veto humain.
+Ce workflow soumet chaque spec à un tribunal multi-perspectives. Score en %, itérations jusqu'à ~100%.
 
 ---
 
 ## Utilisation
 
 ```
-/audit-spec [numéro_étape]
+/audit-spec [NN]
 ```
-
-**Exemples :**
-- `/audit-spec 01` → Audite et corrige la spec Intention
-- `/audit-spec 06` → Audite et corrige la spec Personnages
 
 ---
 
-## Flux d'Exécution
+## Philosophie : Zéro Complaisance
 
-```
-Phase 0 : Traçabilité (noter l'Origine)
-    ↓
-Phase 1 : Chargement EXHAUSTIF
-    ↓
-Phase 2 : Audit Impitoyable → Score /10
-    ↓
-Phase 3 : Correction Automatique (TOUJOURS si Score < 8)
-    ↓
-Phase 4 : Génération du Rapport
-    ↓
-Phase 5 : Veto Humain
-    ↓ (SI approuvé ET Origine ≠ AGENT)
-Phase 6 : Verrouillage Final
-```
+> **Un premier jet réaliste doit scorer entre 5-15%.** C'est NORMAL.
+> L'excellence s'obtient par l'itération, pas par la chance.
+
+L'audit n'est pas un tampon : c'est une **épreuve de choc**.
+
+---
+
+## Les 5 Juges (Multi-Perspectives)
+
+Chaque spec passe devant 5 "casquettes" qui jugent selon leur expertise :
+
+| Juge | Expertise | Question Fatale |
+|------|-----------|-----------------|
+| **🎭 Le Critique Littéraire** | Style, originalité, profondeur | "Est-ce que ça MÉRITE d'être lu ?" |
+| **📐 L'Éditeur Développemental** | Structure, arcs, beats, rythme | "Est-ce que ça FONCTIONNE narrativement ?" |
+| **😢 Le Lecteur Beta** | Émotion, engagement, clarté | "Est-ce que ça me TOUCHE ?" |
+| **💼 L'Auteur Publié** | Standards pro, marché, pitch | "Est-ce que ça se VEND ?" |
+| **🧠 Le Psychologue du Personnage** | Cohérence psy, motivations, vraisemblance | "Est-ce que ces personnages EXISTENT ?" |
+
+---
+
+## Grille de Scoring (100%)
+
+| Axe | Poids | 0% | 50% | 100% |
+|-----|-------|-----|-----|------|
+| **Complétude** | 15% | Livrables manquants | Présents mais vagues | Tous présents, détaillés |
+| **Spécificité** | 20% | Générique, interchangeable | Partiellement unique | Impossible à confondre |
+| **Profondeur** | 20% | Surface, cliché | Tentative d'originalité | Vérité humaine brute |
+| **Cohérence** | 15% | Contradictions majeures | Quelques incohérences | Système hermétique |
+| **Originalité** | 15% | Déjà-vu intégral | Twist sur un trope | Territoire inexploré |
+| **Impact** | 15% | Indifférence | Intérêt modéré | Viscéral, inoubliable |
+
+**Score Final = Σ (Axe × Poids)**
 
 ---
 
 ## Protocole d'Exécution
 
-### Phase 0 : Vérification de Traçabilité
+### Phase 0 : Traçabilité
 
 // turbo
-1. **Charger la Spec** (`01_spec/[NN]_[nom].md`)
-2. **Noter le champ `Origine du Contenu`** :
-   - `AGENT` → Plafonnement à la validation (pas de blocage immédiat)
-   - `MIXTE` → Malus -1 sur critère "Profondeur"
-   - `AUTEUR` → Audit normal
-   - ABSENT → Considérer comme `AGENT`
+1. Charger la Spec (`01_spec/[NN]_[nom].md`)
+2. Noter le champ `Origine` : AUTEUR / MIXTE / AGENT
 
-> ⚠️ **IMPORTANT** : L'Origine ne bloque PAS l'audit ni les corrections.
-> Elle bloque uniquement la VALIDATION finale (Phase 6).
-
-### Phase 1 : Chargement EXHAUSTIF
+### Phase 1 : Chargement Dynamique
 
 // turbo
-1. **Charger l'Index Kernel** (`00_core/spec/00_cross_reference_index.md`)
-2. **Charger la Spec à auditer** (`01_spec/[NN]_[nom].md`)
-3. **Charger le Protocole d'Audit Principal** (cf. Mapping ci-dessous)
-4. **Charger TOUTES les Règles Créatrices** (les mêmes que `/create-spec` a utilisées)
-5. **Charger TOUS les Audits Satellites** (cf. Mapping ci-dessous)
-6. **Charger les Audits Transversaux OBLIGATOIRES** :
-   - `03_audit/forensic/consistency_check.md`
-   - `03_audit/narrative/cliche_blacklist.md`
-   - `03_audit/forensic/sensitivity_bias_scan.md`
+1. Charger l'Index (`00_core/spec/00_cross_reference_index.md`)
+2. Scanner toutes les règles pour `phase: [NN]` dans leurs frontmatters
+3. Scanner tous les audits pour `phase: [NN]`
+4. Charger les audits transversaux : AUDIT-FOREN-01, AUDIT-FOREN-02, AUDIT-NARR-01
 
-### Phase 2 : Audit Impitoyable (Le Boucher)
+### Phase 2 : Jugement Multi-Perspectives
 
 // turbo-all
-**OBLIGATION : L'agent DOIT appliquer CHAQUE point de contrôle du protocole d'audit.**
-
-Pour CHAQUE critère du protocole d'audit chargé :
-1. Vérifier si le critère est satisfait dans la spec
-2. Si OUI → Citer le passage prouvant la conformité
-3. Si NON → Signaler l'échec avec la raison précise
-
-**Grille d'évaluation :**
-
-| Critère | Question | Score |
-|---|---|---|
-| **Livrables Complets** | Tous les livrables strictes sont-ils présents ? | /2 |
-| **Spécificité** | Les réponses sont-elles précises (pas de générique) ? | /2 |
-| **Anti-patterns** | Aucun anti-pattern détecté ? (CITATION OBLIGATOIRE) | /2 |
-| **Cohérence Amont** | Compatible avec les specs précédentes ? | /2 |
-| **Profondeur** | La spec a-t-elle de la "matière humaine" ? | /2 |
-
-**Score Total : /10** (Malus -1 si Origine = MIXTE)
-
-> ⚠️ **RÈGLE DE CITATION OBLIGATOIRE** :
-> Pour cocher un anti-pattern comme "Absent", l'agent DOIT citer le passage de la spec qui PROUVE l'absence.
-> Si l'agent ne peut pas citer → l'anti-pattern est considéré PRÉSENT.
-
-| Score | Verdict |
-|---|---|
-| **8-10** | ✅ PRÊT POUR VALIDATION |
-| **5-7** | ⚠️ À CORRIGER (Passage à Phase 3) |
-| **0-4** | ❌ REJETÉ (Retour à `/create-spec`) |
-
-### Phase 3 : Correction Automatique (Le Chirurgien)
-
-**DÉCLENCHEMENT AUTOMATIQUE si Score < 8**
-
-// turbo-all
-1. **Identifier toutes les faiblesses** : Lister les points précis à corriger.
-2. **Réécrire les sections faibles** : Appliquer les règles du 00_core pour renforcer.
-3. **Éliminer les Anti-patterns** : Supprimer toute trace de cliché ou de générique.
-4. **Ajouter les éléments manquants** : Compléter les Scene Cards, liens causaux, beats absents.
-5. **Mettre à jour le champ Origine** : Si corrections substantielles → `Origine: AGENT`
-6. **Mettre à jour le fichier** : Écraser `01_spec/[NN]_[nom].md` avec la version corrigée.
-7. **Mettre à jour le statut** : `CORRIGÉ PAR L'AGENT - EN ATTENTE DE VETO`
-
-> **L'agent NE DEMANDE PAS la permission pour corriger.**
-> Les corrections sont appliquées immédiatement.
-> Le veto humain intervient APRÈS les corrections (Phase 5).
-
-### Phase 4 : Génération du Rapport d'Audit
-
-// turbo
-L'agent génère un rapport dans `03_audit/report/` :
-
-**Fichier** : `03_audit/report/[YYYY-MM-DD]_[NN]_[nom]_audit.md`
+Pour CHAQUE juge, évaluer chaque axe de la grille :
 
 ```markdown
-# Rapport d'Audit : [Nom de l'Étape]
-
-**Date** : [YYYY-MM-DD]
-**Spec Auditée** : `01_spec/[NN]_[nom].md`
-**Origine du Contenu** : [AUTEUR / MIXTE / AGENT]
-**Score Avant Correction** : [X/10]
-**Score Après Correction** : [Y/10]
-**Verdict** : [PRÊT / CORRIGÉ / REJETÉ]
-**Blocage Validation** : [OUI si Origine = AGENT / NON]
-
----
-
-## Traçabilité
-
-| Critère | Résultat |
-|---|---|
-| Origine | [AUTEUR / MIXTE / AGENT] |
-| Correction Automatique | ✅ Appliquée / ❌ Non requise |
-| Validation Possible | ✅ Oui / 🔒 Bloquée (enrichissement requis) |
-
----
-
-## Grille d'Évaluation
-
-| Critère | Score Avant | Score Après | Commentaire |
-|---|---|---|---|
-| Livrables Complets | /2 | /2 | [Détail] |
-| Spécificité | /2 | /2 | [Détail] |
-| Anti-patterns | /2 | /2 | [Détail + CITATIONS] |
-| Cohérence Amont | /2 | /2 | [Détail] |
-| Profondeur | /2 | /2 | [Détail] |
-
----
-
-## Corrections Appliquées
-
-1. **[Correction 1]** : [Ce qui a été modifié]
-2. **[Correction 2]** : [Ce qui a été modifié]
+## 🎭 Critique Littéraire
+| Axe | Score | Justification (CITATION OBLIGATOIRE) |
+|-----|-------|--------------------------------------|
+| Complétude | X% | "[citation]" → Verdict |
 ...
-
----
-
-## Prochain État
-
-| Origine | Validation Possible ? | Action Requise |
-|---|---|---|
-| AUTEUR | ✅ Oui | Utilisateur valide ou modifie |
-| MIXTE | ⚠️ Avec réserve | Utilisateur enrichit les sections AGENT |
-| AGENT | 🔒 Non | Utilisateur DOIT modifier puis changer Origine |
 ```
 
-### Phase 5 : Veto Humain (POINT DE BLOCAGE)
+**RÈGLE DE CITATION** : Chaque score DOIT citer le passage de la spec qui justifie la note. Pas de citation = 0%.
 
-**L'agent n'a pas le droit de s'auto-valider.**
+### Phase 3 : Calcul du Score Final
 
-L'agent DOIT demander à l'utilisateur :
-> "J'ai audité et corrigé la spec. Score après correction : [X/10]. Voulez-vous valider ?"
+```
+Score Critique Littéraire    : XX.X%
+Score Éditeur Développemental: XX.X%
+Score Lecteur Beta           : XX.X%
+Score Auteur Publié          : XX.X%
+Score Psychologue            : XX.X%
+─────────────────────────────────────
+SCORE GLOBAL                 : XX.X%
+```
 
-**Options de l'utilisateur :**
-- `oui` ou `valide` → Passage à Phase 6 (si Origine ≠ AGENT)
-- `non` ou `modifie` → L'utilisateur fait ses propres modifications
-- `relance` → Relancer `/audit-spec [NN]` après modifications
+**Seuils :**
+- < 30% : ❌ ÉCHEC FATAL → Refonte complète
+- 30-60% : ⚠️ INSUFFISANT → Corrections majeures
+- 60-85% : 🔄 ACCEPTABLE → Corrections mineures
+- 85-100% : ✅ VALIDABLE → Veto humain final
 
-### Phase 6 : Verrouillage Final
+### Phase 4 : Génération du Rapport
 
-// turbo
-**CONDITION PRÉALABLE** : Origine ≠ AGENT
+Créer `03_audit/report/[YYYY-MM-DD]_[NN]_audit.md` :
 
-Si l'utilisateur valide :
+```markdown
+# Rapport d'Audit Impitoyable
 
-1. **Vérifier l'Origine** :
-   - Si `AGENT` → **REFUSER** avec message :
-     > "🔒 Validation impossible. Origine = AGENT. Modifiez le contenu et changez l'Origine en AUTEUR."
-   - Sinon → Continuer
+**Spec** : [NN]_[nom].md
+**Date** : YYYY-MM-DD
+**Score Global** : XX.X%
+**Itération** : N
+**Verdict** : [ÉCHEC/INSUFFISANT/ACCEPTABLE/VALIDABLE]
 
-2. **Vérifier les placeholders** : Si `[À ENRICHIR]` présent → **REFUSER**
+## Scores par Perspective
+| Juge | Score | Faiblesses Critiques |
+|------|-------|---------------------|
+| 🎭 Critique | XX% | [liste] |
+...
 
-3. **Mettre à jour le statut** : `VERROUILLÉ`
+## Anti-Patterns Détectés
+- [TAG:TYPE] : Description + Citation
+- [TAG:TYPE] : Description + Citation
 
-4. **Ajouter la date de validation** au fichier spec
+## Recommandations Prioritaires
+1. [Priorité haute] Description
+2. [Priorité haute] Description
 
-5. **Confirmer le passage** à l'étape N+1
+## Règles Défaillantes (pour /refine-rules)
+| ID Règle | Échec Fréquent ? | Suggestion |
+|----------|------------------|------------|
+| CORE-X-Y | Oui/Non | Reformuler/Compléter |
+```
 
----
+### Phase 5 : Correction Automatique (si score < 85%)
 
-## Mapping EXHAUSTIF des Audits
+// turbo-all
+1. **Lister toutes les faiblesses** par ordre de gravité
+2. **Réécrire les sections** en appliquant les règles du 00_core
+3. **Enrichir la profondeur** avec du contenu spécifique
+4. **Mettre à jour Origine** → AGENT si modifications substantielles
+5. **Sauvegarder** la spec corrigée
 
-### Étape 01 : Intention
+### Phase 6 : Boucle Itérative
 
-| Type | Fichiers à Charger |
-|---|---|
-| **Protocole Principal** | `03_audit/spec/01_intention_audit.md` |
-| **Règles Créatrices** | `00_core/spec/01_intention.md`, `00_core/theme/controlling_idea.md`, `00_core/theme/thematic_question.md` |
-| **Audits Satellites** | — |
+```
+TANT QUE score < 85% ET itération < 5:
+    Appliquer corrections
+    Relancer audit (Phase 2)
+    itération++
+FIN TANT QUE
+```
 
----
+### Phase 7 : Veto Humain
 
-### Étape 02 : Thème
+> "Audit terminé. Score : XX.X% après N itérations. Validez-vous ?"
 
-| Type | Fichiers à Charger |
-|---|---|
-| **Protocole Principal** | `03_audit/spec/02_theme_audit.md` |
-| **Règles Créatrices** | `00_core/spec/02_theme.md`, `00_core/theme/controlling_idea.md`, `00_core/theme/objective_correlative.md`, `00_core/theme/symbolic_action.md`, `00_core/theme/motif_recurrence.md` |
-| **Audits Satellites** | `03_audit/theme/symbolic_motif_coherence.md`, `03_audit/theme/thematic_thread_tracer.md` |
-
----
-
-### Étape 03 : Genre
-
-| Type | Fichiers à Charger |
-|---|---|
-| **Protocole Principal** | `03_audit/spec/03_genre_audit.md` |
-| **Règles Créatrices** | `00_core/spec/03_genre.md`, `00_core/structure/save_the_cat.md`, `00_core/structure/heros_journey.md`, `00_core/structure/three_act_structure.md` |
-| **Audits Satellites** | `03_audit/reader_experience/genre_expectation_audit.md` |
-
----
-
-### Étape 04 : Prémisse
-
-| Type | Fichiers à Charger |
-|---|---|
-| **Protocole Principal** | `03_audit/spec/04_premise_audit.md` |
-| **Règles Créatrices** | `00_core/spec/04_premise.md`, `00_core/structure/in_medias_res.md`, `00_core/tension/promise_delay_deliver.md` |
-| **Audits Satellites** | `03_audit/reader_experience/opening_hook_strength.md` |
-
----
-
-### Étape 05 : Conflit
-
-| Type | Fichiers à Charger |
-|---|---|
-| **Protocole Principal** | `03_audit/spec/05_conflict_audit.md` |
-| **Règles Créatrices** | `00_core/spec/05_conflict.md`, `00_core/structure/try_fail_cycles.md`, `00_core/structure/yes_but_no_and.md`, `00_core/tension/ticking_clock.md` |
-| **Audits Satellites** | `03_audit/structure/tension_gradient_analysis.md` |
+**Blocages :**
+- Origine = AGENT → Validation impossible sans modification humaine
+- Score < 85% après 5 itérations → Retour à `/create-spec`
 
 ---
 
-### Étape 06 : Personnages
+## Tags pour Analyse (/refine-rules)
 
-| Type | Fichiers à Charger |
-|---|---|
-| **Protocole Principal** | `03_audit/spec/06_characters_audit.md` |
-| **Règles Créatrices** | `00_core/spec/06_characters.md`, `00_core/casting/ghost_wound_lie.md`, `00_core/casting/want_vs_need.md`, `00_core/casting/antagonist_mirror.md`, `00_core/arc/positive_arc.md`, `00_core/arc/negative_arc.md`, `00_core/arc/relationship_arc.md` |
-| **Audits Satellites** | `03_audit/character/character_agency_audit.md`, `03_audit/character/melodrama_detector.md`, `03_audit/character/relationship_matrix_tracker.md`, `03_audit/character/subtext_density_test.md` |
+Utiliser ces tags normalisés dans les rapports :
 
----
-
-### Étape 07 : Univers
-
-| Type | Fichiers à Charger |
-|---|---|
-| **Protocole Principal** | `03_audit/spec/07_universe_audit.md` |
-| **Règles Créatrices** | `00_core/spec/07_universe.md`, `00_core/worldbuilding/lived_in_universe.md`, `00_core/logic/sanderson_law_1.md`, `00_core/logic/sanderson_law_2.md` |
-| **Audits Satellites** | `03_audit/forensic/worldbuilding_clash.md`, `03_audit/immersion/spatial_anchoring_audit.md`, `03_audit/immersion/sensory_balance_check.md` |
-
----
-
-### Étape 08 : Structure
-
-| Type | Fichiers à Charger |
-|---|---|
-| **Protocole Principal** | `03_audit/spec/08_structure_audit.md` |
-| **Règles Créatrices** | `00_core/spec/08_structure.md`, `00_core/structure/three_act_structure.md`, `00_core/structure/midpoint_reversal.md`, `00_core/structure/pinch_points.md`, `00_core/structure/save_the_cat.md`, `00_core/structure/try_fail_cycles.md` |
-| **Audits Satellites** | `03_audit/structure/beat_structure_audit.md`, `03_audit/structure/tension_gradient_analysis.md`, `03_audit/structure/subplot_orphan_detector.md`, `03_audit/narrative/plot_hole_tracker.md`, `03_audit/narrative/pacing_anomalies.md` |
-
----
-
-### Étape 09 : Voix
-
-| Type | Fichiers à Charger |
-|---|---|
-| **Protocole Principal** | `03_audit/spec/09_voice_audit.md` |
-| **Règles Créatrices** | `00_core/spec/09_voice.md`, `00_core/pov/deep_pov.md`, `00_core/pov/psychic_distance.md`, `00_core/style/voice_contrast.md`, `00_core/logic/show_dont_tell.md` |
-| **Audits Satellites** | `03_audit/voice/pov_consistency.md`, `03_audit/voice/narrator_voice_stability.md`, `03_audit/voice/voice_fingerprinting.md`, `03_audit/style/filter_word_ruthless.md`, `03_audit/style/show_vs_tell_detector.md`, `03_audit/style/readability_metrics.md` |
-
----
-
-### Étape 10 : Sommaire
-
-| Type | Fichiers à Charger |
-|---|---|
-| **Protocole Principal** | `03_audit/spec/10_chapter_audit.md` |
-| **Règles Créatrices** | `00_core/spec/10_chapter_outline.md`, `00_core/structure/scene_sequel_balance.md`, `00_core/structure/late_in_early_out.md` |
-| **Audits Satellites** | `03_audit/structure/scene_goal_validator.md`, `03_audit/structure/beat_structure_audit.md`, `03_audit/narrative/foreshadowing_payoff.md` |
-
----
-
-## Règles de Sécurité
-
-1. **Correction Automatique** : L'agent corrige SANS demander. Le veto vient APRÈS.
-2. **IA Juge ≠ IA Artisan** : L'agent qui corrige n'est pas celui qui valide.
-3. **Suspicion de Facilité** : Si le texte semble "trop bien écrit", suspecter du remplissage IA.
-4. **Zéro Complaisance** : Chercher activement la faille, le cliché, la paresse intellectuelle.
-5. **Veto Inviolable** : Aucune validation sans intervention humaine explicite.
-6. **Blocage Origine AGENT** : Validation impossible si Origine = AGENT, même après correction.
-7. **Citation Obligatoire** : Chaque anti-pattern "Absent" DOIT être prouvé par une citation.
-8. **Chargement Exhaustif** : L'agent DOIT charger TOUTES les règles listées dans le mapping.
+| Tag | Signification |
+|-----|--------------|
+| `MISSING:LIVRABLE` | Élément obligatoire absent |
+| `GENERIC:CONTENT` | Contenu interchangeable |
+| `CLICHE:DETECTED` | Formule morte identifiée |
+| `WEAK:DEPTH` | Surface sans profondeur |
+| `INCOHERENT:LOGIC` | Contradiction interne |
+| `COLD:EMOTION` | Aucun impact émotionnel |
+| `RULE:FAILED` | Une règle 00_core a échoué |
 
 ---
 
 ## Après ce Workflow
 
-| État | Origine | Action Suivante |
-|---|---|---|
-| **REJETÉ** | Any | Retour à `/create-spec [NN]` |
-| **CORRIGÉ** | AUTEUR | Utilisateur valide → VERROUILLÉ |
-| **CORRIGÉ** | MIXTE | Utilisateur enrichit sections AGENT → relance audit |
-| **CORRIGÉ** | AGENT | Utilisateur modifie + change Origine → relance audit |
-| **VALIDÉ** | AUTEUR | Statut VERROUILLÉ, passage à `/create-spec [NN+1]` |
+| Score | Action |
+|-------|--------|
+| < 30% | `/create-spec [NN]` (refonte) |
+| 30-85% | Itérations automatiques |
+| > 85% | Veto humain → VERROUILLÉ |

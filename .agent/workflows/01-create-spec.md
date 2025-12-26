@@ -47,13 +47,21 @@ Ce workflow guide la création d'un **brouillon de spécification** pour l'une d
 
 ## Protocole d'Exécution
 
-### Phase 1 : Chargement des Dépendances
+### Phase 1 : Chargement des Dépendances (Dynamique)
 
 // turbo
-1. **Charger l'Index Kernel** (`00_core/spec/00_cross_reference_index.md`)
+1. **Charger l'Index Kernel** (`00_core/spec/00_cross_reference_index.md` ou version auto-générée)
 2. **Vérifier les dépendances** : Si N > 01, confirmer que les étapes N-1 sont VERROUILLÉES.
 3. **Charger la Règle Mère** (`00_core/spec/[NN]_[nom].md`)
-4. **Charger les Règles Satellites** (cf. Mapping ci-dessous)
+4. **Charger les Règles Satellites par Phase** : Scanner les fichiers dont le frontmatter YAML contient `phase: [NN]`
+   - Alternative : Utiliser le Mapping statique ci-dessous si le scan dynamique est impossible
+
+**Méthode de Scan Dynamique (PowerShell)** :
+```powershell
+Get-ChildItem 00_core -Recurse -Filter *.md | Where-Object {
+    (Get-Content $_ -Raw) -match "phase:.*\[$NN\]"
+}
+```
 
 ### Phase 2 : Imprégnation Obligatoire
 
@@ -88,6 +96,7 @@ L'agent rédige le fichier dans `01_spec/[NN]_[nom].md` avec ce format :
 **Statut** : BROUILLON (Non Validé)
 **Date de Création** : [YYYY-MM-DD]
 **Dépendances** : [Lister les specs précédentes]
+**Origine du Contenu** : [AUTEUR / AGENT / MIXTE]
 
 ---
 
@@ -142,6 +151,7 @@ L'agent rédige le fichier dans `01_spec/[NN]_[nom].md` avec ce format :
 2. **Terminologie Stricte** : Utiliser les termes techniques des règles (Ghost, Lie, Controlling Idea, etc.).
 3. **Signalement Immédiat** : Si un Anti-pattern est détecté, interrompre et alerter.
 4. **Pas d'Auto-Validation** : Le brouillon est un BROUILLON. Seul le workflow `/02-audit-spec` peut valider.
+5. **Refus de Délégation** : Si l'auteur demande "à ta charge" ou équivalent, l'agent DOIT refuser et relancer la question. Tout contenu généré par l'agent sera marqué `Origine: AGENT` et plafonné à 5/10 maximum à l'audit.
 
 ---
 
